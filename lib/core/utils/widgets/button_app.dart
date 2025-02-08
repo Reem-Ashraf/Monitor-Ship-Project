@@ -4,9 +4,10 @@ import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class ButtonApp extends StatelessWidget {
   const ButtonApp({
-    super.key,
+    super.key, required this.onPressed, required this.text,
   });
-
+  final void Function() onPressed;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -17,9 +18,9 @@ class ButtonApp extends StatelessWidget {
         ),
         minimumSize: Size(double.infinity, 55),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
-        'Continue to payment',
+       text ,
         style: TextStyles.buttonStyle,
       ),
     );
