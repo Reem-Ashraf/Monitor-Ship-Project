@@ -1,0 +1,123 @@
+import 'dart:developer';
+
+import 'package:flutter/material.dart';
+import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import 'package:monitor_ship_project/core/utils/widgets/text_from_field_app.dart';
+import 'package:monitor_ship_project/features/checkout_process/widgets/text_rich_checking.dart';
+
+class ShippingInformationForm extends StatelessWidget {
+  const ShippingInformationForm({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TextFromFieldApp(
+          label: 'First Name',
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        TextFromFieldApp(
+          label: 'Last Name',
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        DropdownButtonFormField<String>(
+          borderRadius: BorderRadius.circular(15),
+          items: [
+            'Egypt',
+            'USA',
+            'UK',
+            'KSA',
+            'Russia',
+            'China',
+            'Emirates',
+            'Qatar',
+            'Kuwait',
+            'Bahrain',
+            'Oman',
+            'Iraq',
+            'Syria',
+            'Lebanon',
+            'Jordan',
+            'Germany',
+            'France',
+            'Italy',
+            'Spain',
+            'Portugal',
+            'Brazil',
+            'Morocco',
+            'Tunisia',
+            'Algeria',
+            'Libya',
+            'Sudan',
+            'Nigeria',
+            'Ghana',
+            'Mauritania',
+            'Mali',
+            'Senegal',
+          ]
+              .map((country) => DropdownMenuItem(
+                    value: country,
+                    child: Text(country,
+                        style: TextStyles.inputStyle.copyWith(
+                          color: AppColors.darkGray,
+                        )),
+                  ))
+              .toList(),
+          onChanged: (value) {
+            log(value.toString());
+          },
+          icon: Icon(
+            Icons.keyboard_arrow_down_rounded,
+            size: 30,
+          ),
+          iconEnabledColor: AppColors.darkGray,
+          iconDisabledColor: AppColors.darkGray,
+          decoration: InputDecoration(
+            label: TextRichChecking(text1: 'Country'),
+            fillColor: AppColors.darkGray,
+            border: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.darkGray),
+            ),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.darkGray),
+            ),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: AppColors.darkGray),
+            ),
+          ),
+          // hint: Text('Select Country'),
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        TextFromFieldApp(
+          label: 'Street Name',
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        TextFromFieldApp(
+          label: 'City',
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        TextFromFieldApp(
+          label: 'Zip Code',
+        ),
+        SizedBox(
+          height: 15,
+        ),
+        TextFromFieldApp(
+          label: 'Phone Number',
+        ),
+      ],
+    );
+  }
+}
