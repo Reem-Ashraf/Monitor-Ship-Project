@@ -34,4 +34,10 @@ class TextStyles {
     fontFamily: Constants.productSansFont,
     fontWeight: FontWeight.w700,
   );
+  static TextStyle textStyle14W400 = TextStyle(
+    color: AppColors.darkBrown,
+    fontSize: 14,
+    fontFamily: Constants.productSansFont,
+    fontWeight: FontWeight.w400,
+  );
 }
