@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
 import 'package:monitor_ship_project/features/checkout_process/widgets/appbar_checking.dart';
@@ -58,7 +60,12 @@ class CheckoutFirst extends StatelessWidget {
                 SizedBox(
                   height: 60,
                 ),
-                ButtonApp(),
+                ButtonApp(
+                  onPressed: () {
+                    context.push(AppRouter.checkoutSecond);
+                  },
+                  text: 'Continue to payment',
+                ),
                 SizedBox(
                   height: 50,
                 ),

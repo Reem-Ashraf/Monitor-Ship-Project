@@ -23,18 +23,24 @@ class AppBarChecking extends StatelessWidget implements PreferredSizeWidget {
         child: SizedBox(
           width: 36,
           height: 36,
-          child: Card(
-            elevation: 1,
-            color: AppColors.white,
-            shape: CircleBorder(),
-            child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: AppColors.white,
-              ),
-              child: Center(
-                child: Icon(
-                  Icons.arrow_back_ios_new_rounded,
+          child: InkWell(
+            customBorder: CircleBorder(),
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Card(
+              elevation: 1,
+              color: AppColors.white,
+              shape: CircleBorder(),
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: AppColors.white,
+                ),
+                child: Center(
+                  child: Icon(
+                    Icons.arrow_back_ios_new_rounded,
+                  ),
                 ),
               ),
             ),
