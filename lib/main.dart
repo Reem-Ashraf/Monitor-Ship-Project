@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/bloc_observer.dart';
-import 'package:monitor_ship_project/features/checkout_process/screens/checkout1.dart';
+import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 
 void main() {
   Bloc.observer = MyBlocObserver();
@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: const CheckoutFirst(),
+      routerConfig: AppRouter.router,
     );
   }
 }
