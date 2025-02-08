@@ -4,8 +4,9 @@ import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 class CheckoutProgressIndicator extends StatelessWidget {
   const CheckoutProgressIndicator({
     super.key,
+    this.isDone = false,
   });
-
+  final bool? isDone;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -27,7 +28,7 @@ class CheckoutProgressIndicator extends StatelessWidget {
               height: 5,
               width: 9,
               decoration: BoxDecoration(
-                  shape: BoxShape.circle, color: Color(0xffC8C7CC)),
+                  shape: BoxShape.circle, color: AppColors.systemGray),
             ),
           ),
           SizedBox(
@@ -39,13 +40,14 @@ class CheckoutProgressIndicator extends StatelessWidget {
               height: 5,
               width: 9,
               decoration: BoxDecoration(
-                  shape: BoxShape.circle, color: Color(0xffC8C7CC)),
+                  shape: BoxShape.circle, color: AppColors.systemGray),
             ),
           ),
           SizedBox(
             width: 5,
           ),
-          Icon(Icons.check_circle_rounded, color: Color(0xffC8C7CC)),
+          Icon(Icons.check_circle_rounded,
+              color: isDone! ? AppColors.black : AppColors.systemGray),
         ],
       ),
     );
