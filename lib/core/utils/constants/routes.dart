@@ -1,10 +1,12 @@
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/features/checkout_process/screens/checkout_first.dart';
 import 'package:monitor_ship_project/features/checkout_process/screens/checkout_second.dart';
+import 'package:monitor_ship_project/features/order/screen/my_order.dart';
 
 class AppRouter {
   static final String checkoutFirst = '/';
   static final String checkoutSecond = '/checkoutSecond';
+  static final String myOrder = '/myOrder';
 
   static final GoRouter router = GoRouter(
     initialLocation: '/',
@@ -13,6 +15,7 @@ class AppRouter {
           path: checkoutFirst, builder: (context, state) => CheckoutFirst()),
       GoRoute(
           path: checkoutSecond, builder: (context, state) => CheckoutSecond()),
+          GoRoute(path: myOrder, builder: (context, state) => MyOrder()),
     ],
   );
 }

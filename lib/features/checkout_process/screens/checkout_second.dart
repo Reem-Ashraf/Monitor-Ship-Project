@@ -55,7 +55,7 @@ class CheckoutSecond extends StatelessWidget {
                 ),
                 ButtonApp(
                   onPressed: () {
-                    context.push(AppRouter.checkoutSecond);
+                    context.push(AppRouter.myOrder);
                   },
                   text: 'Continue shopping',
                 ),

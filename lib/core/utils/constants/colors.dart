@@ -13,4 +13,9 @@ class AppColors {
   static final Color buttonBackgroundColor = Color(0xFF343434);
   static final Color darkBrown = Color(0xFF33302E);
   static final Color systemGray = Color(0xffC8C7CC);
+  static final Color tabBarColor = Color(0xFF43484B);
+  static final Color orderCardColor = Color(0xFF131416);
+  static final Color deliveredColor = Color(0xFF009154);
+  static final Color pendingColor = Color(0xFFCF6112);
+  static final Color cancelledColor = Color(0xFFC40000);
 }
