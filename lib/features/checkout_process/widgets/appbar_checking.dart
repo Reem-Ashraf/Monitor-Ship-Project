@@ -4,43 +4,57 @@ import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class AppBarChecking extends StatelessWidget implements PreferredSizeWidget {
   const AppBarChecking({
+    super.key, required this.title,
+  });
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      scrolledUnderElevation: 0,
+      title: Text(
+        title,
+        style: TextStyles.appbarStyle,
+      ),
+      centerTitle: true,
+      leadingWidth: 65,
+      leading: AppBarBackButton(),
+    );
+  }
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => Size.fromHeight(60);
+}
+
+class AppBarBackButton extends StatelessWidget {
+  const AppBarBackButton({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      scrolledUnderElevation: 0,
-      backgroundColor: AppColors.white,
-      title: Text(
-        'Check out',
-        style: TextStyles.appbarStyle,
-      ),
-      centerTitle: true,
-      leadingWidth: 65,
-      leading: Padding(
-        padding: const EdgeInsetsDirectional.only(start: 20),
-        child: SizedBox(
-          width: 36,
-          height: 36,
-          child: InkWell(
-            customBorder: CircleBorder(),
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Card(
-              elevation: 1,
-              color: AppColors.white,
-              shape: CircleBorder(),
-              child: Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.white,
-                ),
-                child: Center(
-                  child: Icon(
-                    Icons.arrow_back_ios_new_rounded,
-                  ),
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(start: 20),
+      child: SizedBox(
+        width: 36,
+        height: 36,
+        child: InkWell(
+          customBorder: CircleBorder(),
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Card(
+            elevation: 1,
+            color: AppColors.white,
+            shape: CircleBorder(),
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: AppColors.white,
+              ),
+              child: Center(
+                child: Icon(
+                  Icons.arrow_back_ios_new_rounded,
                 ),
               ),
             ),
@@ -49,8 +63,4 @@ class AppBarChecking extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
-
-  @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(60);
 }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
+import 'package:monitor_ship_project/core/utils/widgets/my_divider.dart';
 import 'package:monitor_ship_project/features/checkout_process/widgets/appbar_checking.dart';
 import 'package:monitor_ship_project/features/checkout_process/widgets/checkout_progress_indicator.dart';
 import 'package:monitor_ship_project/features/checkout_process/widgets/delivery_method_radio.dart';
@@ -15,8 +15,9 @@ class CheckoutFirst extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColors.white,
-        appBar: AppBarChecking(),
+        appBar: AppBarChecking(
+          title: 'Check out',
+        ),
         body: Padding(
           padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
           child: SingleChildScrollView(
@@ -41,13 +42,7 @@ class CheckoutFirst extends StatelessWidget {
                   height: 30,
                 ),
                 Text('Shipping method', style: TextStyles.titleStyle),
-                SizedBox(
-                  height: 15,
-                ),
                 MyDivider(),
-                SizedBox(
-                  height: 10,
-                ),
                 Padding(
                   padding:
                       const EdgeInsetsDirectional.symmetric(horizontal: 12),
@@ -73,20 +68,5 @@ class CheckoutFirst extends StatelessWidget {
             ),
           ),
         ));
-  }
-}
-
-class MyDivider extends StatelessWidget {
-  const MyDivider({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: 1,
-      decoration: BoxDecoration(color: AppColors.paleGray),
-    );
   }
 }
