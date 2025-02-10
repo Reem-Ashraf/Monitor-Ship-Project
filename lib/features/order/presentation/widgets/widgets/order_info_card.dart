@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/features/order/widgets/order_details_row.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/order_details_row.dart';
 
 class OrderInfoCard extends StatelessWidget {
   const OrderInfoCard({

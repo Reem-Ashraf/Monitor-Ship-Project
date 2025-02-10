@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/features/checkout_process/widgets/appbar_checking.dart';
-import 'package:monitor_ship_project/features/order/widgets/delivery_status_banner.dart';
-import 'package:monitor_ship_project/features/order/widgets/order_action_buttons.dart';
-import 'package:monitor_ship_project/features/order/widgets/order_info_card.dart';
-import 'package:monitor_ship_project/features/order/widgets/order_summary_card.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/appbar_checking.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/delivery_status_banner.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/order_action_buttons.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/order_info_card.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/order_summary_card.dart';
 
 class OrderDetails extends StatelessWidget {
   const OrderDetails({super.key, required this.order});

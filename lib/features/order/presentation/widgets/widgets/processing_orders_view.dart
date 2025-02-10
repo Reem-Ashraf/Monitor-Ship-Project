@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/features/order/widgets/card_order.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/card_order.dart';
 
 class ProcessingOrdersView extends StatelessWidget {
   const ProcessingOrdersView(

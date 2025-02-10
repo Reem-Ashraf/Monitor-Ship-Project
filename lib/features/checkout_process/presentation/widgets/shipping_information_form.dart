@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/text_from_field_app.dart';
-import 'package:monitor_ship_project/features/checkout_process/widgets/text_rich_checking.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/text_rich_checking.dart';
 
 class ShippingInformationForm extends StatelessWidget {
   const ShippingInformationForm({super.key});

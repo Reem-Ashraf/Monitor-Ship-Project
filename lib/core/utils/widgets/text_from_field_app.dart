@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/features/checkout_process/widgets/text_rich_checking.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/text_rich_checking.dart';
 
 class TextFromFieldApp extends StatelessWidget {
   const TextFromFieldApp({

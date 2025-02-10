@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/features/checkout_process/screens/checkout_first.dart';
-import 'package:monitor_ship_project/features/checkout_process/screens/checkout_second.dart';
-import 'package:monitor_ship_project/features/order/screen/details_order.dart';
-import 'package:monitor_ship_project/features/order/screen/my_order.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/pages/checkout_first.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/pages/checkout_second.dart';
+import 'package:monitor_ship_project/features/order/presentation/pages/details_order.dart';
+import 'package:monitor_ship_project/features/order/presentation/pages/my_order.dart';
 
 class AppRouter {
   static final String checkoutFirst = '/';

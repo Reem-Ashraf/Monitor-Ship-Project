@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/features/order/widgets/processing_orders_view.dart';
-import 'package:monitor_ship_project/features/order/widgets/tab_bar_app.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/processing_orders_view.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/tab_bar_app.dart';
 
 class MyOrder extends StatelessWidget {
   const MyOrder({super.key});

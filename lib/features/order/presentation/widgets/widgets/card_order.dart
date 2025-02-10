@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/features/order/widgets/text_rich_order.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/text_rich_order.dart';
 
 class CardOrder extends StatelessWidget {
   const CardOrder({

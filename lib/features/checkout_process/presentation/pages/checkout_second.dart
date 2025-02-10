@@ -5,8 +5,8 @@ import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
-import 'package:monitor_ship_project/features/checkout_process/widgets/appbar_checking.dart';
-import 'package:monitor_ship_project/features/checkout_process/widgets/checkout_progress_indicator.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/appbar_checking.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/checkout_progress_indicator.dart';
 
 class CheckoutSecond extends StatelessWidget {
   const CheckoutSecond({super.key});
