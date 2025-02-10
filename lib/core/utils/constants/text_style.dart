@@ -40,4 +40,46 @@ class TextStyles {
     fontFamily: Constants.productSansFont,
     fontWeight: FontWeight.w400,
   );
+  static TextStyle nunitoBold16 = TextStyle(
+    color: AppColors.white,
+    fontSize: 16,
+    fontFamily: Constants.nunitoFont,
+    fontWeight: FontWeight.w700,
+    letterSpacing: -0.08,
+  );
+  static TextStyle productBold16 = TextStyle(
+    color: AppColors.black,
+    fontSize: 16,
+    fontFamily: Constants.productSansFont,
+    fontWeight: FontWeight.w700,
+    letterSpacing: -0.08,
+  );
+  static TextStyle nunitoSemiBoldText10 = TextStyle(
+    color: AppColors.white,
+    fontSize: 10,
+    fontFamily: Constants.nunitoFont,
+    fontWeight: FontWeight.w600,
+    height: 1.60,
+    letterSpacing: -0.05,
+  );
+  static TextStyle product14LightW400 = TextStyle(
+    color: AppColors.black,
+    fontSize: 14,
+    fontFamily: Constants.productSansFont,
+    fontWeight: FontWeight.w400,
+    height: 1.71,
+  );
+  static TextStyle product16Medium = TextStyle(
+    color: AppColors.black,
+    fontSize: 16,
+    fontFamily: Constants.productSansFont,
+    fontWeight: FontWeight.w500,
+    height: 1.41,
+  );
+  static TextStyle nunito15W300 = TextStyle(
+    color: AppColors.black,
+    fontSize: 15,
+    fontFamily: Constants.nunitoFont,
+    fontWeight: FontWeight.w300,
+  );
 }

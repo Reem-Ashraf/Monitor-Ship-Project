@@ -17,5 +17,7 @@ class AppColors {
   static final Color orderCardColor = Color(0xFF131416);
   static final Color deliveredColor = Color(0xFF009154);
   static final Color pendingColor = Color(0xFFCF6112);
+  static final Color mediumGray = Color(0xFF575757);
   static final Color cancelledColor = Color(0xFFC40000);
+  static final Color shadowColor = Color(0x330E0E0E);
 }
