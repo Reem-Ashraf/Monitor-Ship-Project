@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/my_divider.dart';
-import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/order_details_row.dart';
-import 'package:monitor_ship_project/features/order/presentation/widgets/widgets/order_item_details_row.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/order_details_row.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/order_item_details_row.dart';
 
 class OrderSummaryCard extends StatelessWidget {
   const OrderSummaryCard({
