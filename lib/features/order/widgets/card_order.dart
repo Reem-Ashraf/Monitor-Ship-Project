@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/order/widgets/text_rich_order.dart';
 
@@ -18,6 +20,7 @@ class CardOrder extends StatelessWidget {
     return Card(
       elevation: 2,
       color: AppColors.white,
+      shadowColor: AppColors.shadowColor,
       child: Padding(
         padding:
             EdgeInsetsDirectional.only(start: 25, end: 12, top: 18, bottom: 15),
@@ -65,7 +68,10 @@ class CardOrder extends StatelessWidget {
                       side: WidgetStateProperty.all(
                           BorderSide(color: AppColors.lightGray)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push(AppRouter.orderDetails,
+                          extra: 'Order #$orderNum');
+                    },
                     child: Text(
                       'Details',
                       style: TextStyles.inputStyle
