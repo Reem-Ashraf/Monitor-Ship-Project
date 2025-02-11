@@ -1,12 +1,26 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/bloc_observer.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   Bloc.observer = MyBlocObserver();
-  runApp(const MyApp());
+
+  runApp(EasyLocalization(
+      supportedLocales: [
+        Locale('ar'),
+        Locale('en'),
+      ],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('ar'),
+      startLocale: const Locale('ar'),
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,10 +28,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log('Supported Locales: ${EasyLocalization.of(context)?.supportedLocales}');
+    log('Current Locale: ${EasyLocalization.of(context)?.locale}');
     return MaterialApp.router(
+      locale: context.locale,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.white,
-        appBarTheme:  AppBarTheme(
+        appBarTheme: AppBarTheme(
           backgroundColor: AppColors.white,
           elevation: 0,
         ),
