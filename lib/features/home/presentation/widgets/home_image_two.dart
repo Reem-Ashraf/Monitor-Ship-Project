@@ -53,11 +53,11 @@ class HomeImage2 extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 CircleAvatar(
-                  radius: 70,
+                  radius: 65,
                   backgroundColor: AppColors.lightgray,
                 ),
                 CircleAvatar(
-                  radius: 60,
+                  radius: 50,
                   backgroundColor: AppColors.offwhite,
                 ),
                 Image.asset(image),
