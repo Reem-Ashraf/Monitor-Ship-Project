@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'package:monitor_ship_project/features/home/presentation/widgets/recommended_item.dart';
+
+class RecommendedItemListView extends StatelessWidget {
+  const RecommendedItemListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 70,
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: 5,
+          itemBuilder: (context, indx) {
+            return const Padding(
+              padding: EdgeInsets.only(right: 50.0),
+              child: RecommendedItem(),
+            );
+          }),
+    );
+  }
+}
