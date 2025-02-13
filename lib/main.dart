@@ -18,8 +18,7 @@ void main() async {
         Locale('en'),
       ],
       path: 'assets/translations',
-      fallbackLocale: const Locale('ar'),
-      startLocale: const Locale('ar'),
+      startLocale: const Locale('ar'), // to test the app in English, change this to Locale('en')
       child: const MyApp()));
 }
 

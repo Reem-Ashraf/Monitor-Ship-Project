@@ -82,4 +82,11 @@ class TextStyles {
     fontFamily: Constants.nunitoFont,
     fontWeight: FontWeight.w300,
   );
+  static TextStyle product12W400 = TextStyle(
+    color: AppColors.grayish,
+    fontSize: 12,
+    fontFamily: Constants.productSansFont,
+    fontWeight: FontWeight.w400,
+    height: 1.33,
+  );
 }
