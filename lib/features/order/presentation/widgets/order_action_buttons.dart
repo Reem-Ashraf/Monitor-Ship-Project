@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
@@ -21,26 +22,31 @@ class OrderActionButtons extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         spacing: 24,
         children: [
-          OutlinedButton(
-              style: ButtonStyle(
-                side: WidgetStateProperty.all(
-                    BorderSide(color: AppColors.lightGray)),
-              ),
-              onPressed: () {
-                context.push(AppRouter.orderDetails, extra: 'Order #$order');
-              },
-              child: Text(
-                'Return home',
-                textAlign: TextAlign.center,
-                style:
-                    TextStyles.buttonStyle.copyWith(color: AppColors.lightGray),
-              )),
+          Expanded(
+            child: OutlinedButton(
+                style: ButtonStyle(
+                  side: WidgetStateProperty.all(
+                      BorderSide(color: AppColors.lightGray)),
+                ),
+                onPressed: () {
+                  context.push(AppRouter.orderDetails,
+                      extra: '${context.tr('Order')} #$order');
+                },
+                child: Text(
+                  'Return home'.tr(),
+                  textAlign: TextAlign.center,
+                  style: TextStyles.buttonStyle
+                      .copyWith(color: AppColors.lightGray),
+                )),
+          ),
           SizedBox(
             width: 120,
             height: 44,
             child: ButtonApp(
-              onPressed: () {},
-              text: 'Rate',
+              onPressed: () {
+                context.push(AppRouter.rateProduct);
+              },
+              text: context.tr('Rate'),
             ),
           ),
         ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
@@ -16,7 +17,7 @@ class MyOrder extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: Text(
-              'My Orders',
+              context.tr('My Orders'),
               style: TextStyles.appbarStyle,
             ),
             centerTitle: true,
@@ -36,17 +37,17 @@ class MyOrder extends StatelessWidget {
             child: TabBarView(
               children: [
                 ProcessingOrdersView(
-                  textState: 'PENDING',
+                  textState: context.tr('PENDING').toUpperCase(),
                   colorState: AppColors.pendingColor,
                   orderNum: 100,
                 ),
                 ProcessingOrdersView(
-                  textState: 'DELIVERED',
+                  textState: context.tr('Delivered').toUpperCase(),
                   colorState: AppColors.deliveredColor,
                   orderNum: 100,
                 ),
                 ProcessingOrdersView(
-                  textState: 'CANCELED',
+                  textState: context.tr('CANCELED').toUpperCase(),
                   colorState: AppColors.cancelledColor,
                   orderNum: 100,
                 ),
@@ -56,4 +57,3 @@ class MyOrder extends StatelessWidget {
         ));
   }
 }
-

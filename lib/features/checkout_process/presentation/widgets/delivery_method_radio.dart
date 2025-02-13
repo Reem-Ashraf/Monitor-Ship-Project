@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
@@ -31,14 +32,14 @@ class DeliveryMethodRadio extends StatelessWidget {
               TextSpan(
                 children: [
                   TextSpan(
-                    text: 'Free',
+                    text: context.tr('Free'),
                     style: TextStyles.inputStyle.copyWith(
                       color: AppColors.darkGray,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
                   TextSpan(
-                    text: '   Delivery to home',
+                    text: context.tr('Delivery to home'),
                     style: TextStyles.inputStyle.copyWith(
                       color: AppColors.coolGray,
                       fontWeight: FontWeight.w400,
@@ -47,7 +48,7 @@ class DeliveryMethodRadio extends StatelessWidget {
                 ],
               ),
             ),
-            Text('Delivery from 3 to 7 business days',
+            Text('Delivery from 3 to 7 business days'.tr(),
                 style: TextStyles.inputStyle.copyWith(
                   color: AppColors.silverGray,
                   fontSize: 12,

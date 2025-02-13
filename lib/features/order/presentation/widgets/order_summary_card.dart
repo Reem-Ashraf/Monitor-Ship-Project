@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/constants.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/my_divider.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/order_details_row.dart';
@@ -37,7 +39,8 @@ class OrderSummaryCard extends StatelessWidget {
             child: ListView.separated(
                 itemBuilder: (context, index) => OrderItemDetailsRow(
                     nameOrder: 'Maxi Dress',
-                    quantity: (index + 1 * 2).toString(),
+                    quantity:
+                        Constants.convertNumToArabic('${index + 1 * 2}', true),
                     price: (index + 1 * 2) * 4.5),
                 separatorBuilder: (context, index) => SizedBox(
                       height: 21,
@@ -49,13 +52,13 @@ class OrderSummaryCard extends StatelessWidget {
             height: 32,
           ),
           OrderDetailsRow(
-            text1: 'Subtotal ',
+            text1: context.tr('Subtotal'),
             text2: '120.00',
             style1: TextStyles.product14LightW400,
             style2: TextStyles.productBold16,
           ),
           OrderDetailsRow(
-            text1: 'Shipping ',
+            text1: context.tr('Shipping'),
             text2: '0.00',
             style1: TextStyles.product14LightW400,
             style2: TextStyles.productBold16,
@@ -66,8 +69,8 @@ class OrderSummaryCard extends StatelessWidget {
           ),
           MyDivider(),
           OrderDetailsRow(
-            text1: 'Total ',
-            text2: '\$ 120.00',
+            text1: context.tr('Total'),
+            text2: Constants.convertNumToArabic('120.00', true),
             style1: TextStyles.product14LightW400,
             style2: TextStyles.productBold16,
           ),

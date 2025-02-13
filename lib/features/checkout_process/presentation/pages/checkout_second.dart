@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
@@ -15,7 +16,7 @@ class CheckoutSecond extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBarChecking(
-          title: 'Check out',
+          title: context.tr('Check out'),
         ),
         body: Padding(
           padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
@@ -31,7 +32,7 @@ class CheckoutSecond extends StatelessWidget {
                   height: 43,
                 ),
                 Text(
-                  'Order Completed',
+                  context.tr('Order Completed'),
                   style: TextStyles.titleStyle,
                 ),
                 SizedBox(
@@ -45,7 +46,7 @@ class CheckoutSecond extends StatelessWidget {
                 ),
                 Center(
                   child: Text(
-                    'Thank you for your purchase.\nYou can view your order in ‘My Orders’ section.',
+                    context.tr('thank_you_message'),
                     textAlign: TextAlign.center,
                     style: TextStyles.textStyle14W400,
                   ),
@@ -57,7 +58,7 @@ class CheckoutSecond extends StatelessWidget {
                   onPressed: () {
                     context.push(AppRouter.myOrder);
                   },
-                  text: 'Continue shopping',
+                  text: context.tr('Continue shopping'),
                 ),
                 SizedBox(
                   height: 120,

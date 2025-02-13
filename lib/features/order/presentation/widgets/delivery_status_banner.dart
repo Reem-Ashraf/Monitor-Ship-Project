@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
@@ -27,11 +28,11 @@ class DeliveryStatusBanner extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Your order is delivered',
+                context.tr('Your order is delivered'),
                 style: TextStyles.nunitoBold16,
               ),
               Text(
-                'Rate product to get 5 points for collect.',
+                context.tr('Rate product to get 5 points for collect.'),
                 style: TextStyles.nunitoSemiBoldText10,
               )
             ],

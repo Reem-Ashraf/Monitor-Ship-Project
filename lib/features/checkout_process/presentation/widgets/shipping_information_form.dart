@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
@@ -15,13 +16,13 @@ class ShippingInformationForm extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextFromFieldApp(
-          label: 'First Name',
+          label: context.tr('First name'),
         ),
         SizedBox(
           height: 15,
         ),
         TextFromFieldApp(
-          label: 'Last Name',
+          label: context.tr('Last name'),
         ),
         SizedBox(
           height: 15,
@@ -79,7 +80,7 @@ class ShippingInformationForm extends StatelessWidget {
           iconEnabledColor: AppColors.darkGray,
           iconDisabledColor: AppColors.darkGray,
           decoration: InputDecoration(
-            label: TextRichChecking(text1: 'Country'),
+            label: TextRichChecking(text1: context.tr('Country')),
             fillColor: AppColors.darkGray,
             border: UnderlineInputBorder(
               borderSide: BorderSide(color: AppColors.darkGray),
@@ -97,25 +98,25 @@ class ShippingInformationForm extends StatelessWidget {
           height: 15,
         ),
         TextFromFieldApp(
-          label: 'Street Name',
+          label: context.tr('Street name'),
         ),
         SizedBox(
           height: 15,
         ),
         TextFromFieldApp(
-          label: 'City',
+          label: context.tr('City'),
         ),
         SizedBox(
           height: 15,
         ),
         TextFromFieldApp(
-          label: 'Zip Code',
+          label: context.tr('Zip-code'),
         ),
         SizedBox(
           height: 15,
         ),
         TextFromFieldApp(
-          label: 'Phone Number',
+          label: context.tr('Phone number'),
         ),
       ],
     );

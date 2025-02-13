@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
@@ -13,9 +14,9 @@ class TabBarApp extends StatelessWidget implements PreferredSizeWidget {
       preferredSize: Size.fromHeight(86),
       child: TabBar(
           tabs: [
-            Tab(text: 'Pending'),
-            Tab(text: 'Delivered'),
-            Tab(text: 'Cancelled'),
+            Tab(text: context.tr('Pending')),
+            Tab(text: context.tr('Delivered')),
+            Tab(text: context.tr('Cancelled')),
           ],
           padding: const EdgeInsets.symmetric(
             horizontal: 20,

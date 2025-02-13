@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/constants.dart';
 import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/text_rich_order.dart';
@@ -32,25 +34,26 @@ class CardOrder extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Order #$orderNum',
+                  context.tr('${context.tr('Order')} #$orderNum'),
                   style: TextStyles.appbarStyle
                       .copyWith(color: AppColors.orderCardColor),
                 ),
                 Text(
-                  '9/02/2025',
+                  Constants.convertNumToArabic('9/02/2025', true),
                   style: TextStyles.textStyle14W400
                       .copyWith(color: AppColors.lightGray),
                 )
               ],
             ),
-            TextRichOrder(text1: 'Tracking number: ', text2: 'IK987362341'),
+            TextRichOrder(
+                text1: context.tr('Tracking number:'), text2: 'IK987362341'),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextRichOrder(text1: 'Quantity: ', text2: '2'),
+                TextRichOrder(text1: context.tr('Quantity:'), text2: '2'),
                 TextRichOrder(
-                  text1: 'Subtotal: ',
-                  text2: '\$ 120.00',
+                  text1: context.tr('Subtotal'),
+                  text2: Constants.convertNumToArabic('120,00', true),
                   style2: TextStyles.buttonStyle
                       .copyWith(color: AppColors.orderCardColor),
                 ),
@@ -70,10 +73,11 @@ class CardOrder extends StatelessWidget {
                     ),
                     onPressed: () {
                       context.push(AppRouter.orderDetails,
-                          extra: 'Order #$orderNum');
+                          extra:
+                              context.tr('${context.tr('Order')} #$orderNum'));
                     },
                     child: Text(
-                      'Details',
+                      context.tr('Details'),
                       style: TextStyles.inputStyle
                           .copyWith(color: AppColors.black),
                     ))

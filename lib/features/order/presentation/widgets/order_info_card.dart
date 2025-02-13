@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/order_details_row.dart';
@@ -35,15 +36,15 @@ class OrderInfoCard extends StatelessWidget {
         spacing: 13,
         children: [
           OrderDetailsRow(
-            text1: 'Order ',
+            text1: context.tr('Order'),
             text2: order,
           ),
           OrderDetailsRow(
-            text1: 'Tracking number: ',
+            text1: context.tr('Tracking number:'),
             text2: 'IK987362341',
           ),
           OrderDetailsRow(
-            text1: 'Delivery address ',
+            text1: context.tr('Delivery address'),
             text2: 'SBI Building, Software Park',
           ),
         ],

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/routes.dart';
@@ -16,7 +17,7 @@ class CheckoutFirst extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBarChecking(
-          title: 'Check out',
+          title: context.tr('Check out'),
         ),
         body: Padding(
           padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
@@ -30,10 +31,10 @@ class CheckoutFirst extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  'STEP 1',
+                  context.tr('STEP 1'),
                   style: TextStyles.stepStyle,
                 ),
-                Text('Shipping', style: TextStyles.titleStyle),
+                Text('Shipping', style: TextStyles.titleStyle).tr(),
                 SizedBox(
                   height: 15,
                 ),
@@ -41,7 +42,7 @@ class CheckoutFirst extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
-                Text('Shipping method', style: TextStyles.titleStyle),
+                Text('Shipping method'.tr(), style: TextStyles.titleStyle),
                 MyDivider(),
                 Padding(
                   padding:
@@ -53,13 +54,14 @@ class CheckoutFirst extends StatelessWidget {
                 ),
                 MyDivider(),
                 SizedBox(
+                  //
                   height: 60,
                 ),
                 ButtonApp(
                   onPressed: () {
                     context.push(AppRouter.checkoutSecond);
                   },
-                  text: 'Continue to payment',
+                  text: context.tr('Continue to payment'),
                 ),
                 SizedBox(
                   height: 50,
