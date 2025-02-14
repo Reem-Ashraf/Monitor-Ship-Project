@@ -32,12 +32,22 @@ dependencies:
     sdk: flutter
 
   # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  # Use with the CupertinoIcons class for iOS style auth_icons.
   cupertino_icons: ^1.0.8
   easy_localization: ^3.0.7+1
   bloc: ^9.0.0
   flutter_bloc: ^9.0.0
-  
+  go_router: ^14.6.2
+  dio: ^5.5.0+1
+  shared_preferences: ^2.2.3
+  persistent_bottom_nav_bar: ^6.2.1
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.0.10+1
+  flutter_native_splash:
+  carousel_slider: ^5.0.0
+  smooth_page_indicator: ^1.2.0+3
+  flutter_flavor: ^3.1.4
+  device_preview: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -57,14 +67,14 @@ dev_dependencies:
 flutter:
 
   # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
+  # included with your application, so that you can use the auth_icons in
   # the material Icons class.
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
-  - assets/
-  #- images/a_dot_ham.jpeg
+  assets:
+   - assets/auth_images/
+   - assets/auth_images/auth_icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
