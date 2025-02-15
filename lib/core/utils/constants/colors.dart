@@ -21,4 +21,5 @@ class AppColors {
   static final Color cancelledColor = Color(0xFFC40000);
   static final Color shadowColor = Color(0x330E0E0E);
   static final Color grayish = Color(0xFF5A5A5A);
+  static final Color brownGray = Color(0xFF474340);
 }

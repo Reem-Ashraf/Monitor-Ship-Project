@@ -89,4 +89,11 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     height: 1.33,
   );
+  static TextStyle product11W400 = TextStyle(
+    color: AppColors.brownGray,
+    fontSize: 11,
+    letterSpacing: -0.11,
+    fontFamily: Constants.productSansFont,
+    fontWeight: FontWeight.w400,
+  );
 }
