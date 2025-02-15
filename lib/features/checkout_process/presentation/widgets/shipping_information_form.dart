@@ -28,6 +28,7 @@ class ShippingInformationForm extends StatelessWidget {
           height: 15,
         ),
         DropdownButtonFormField<String>(
+          dropdownColor: AppColors.white,
           borderRadius: BorderRadius.circular(15),
           items: [
             'Egypt',
