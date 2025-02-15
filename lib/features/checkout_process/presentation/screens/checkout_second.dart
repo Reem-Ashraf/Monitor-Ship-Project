@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
 import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/appbar_checking.dart';
@@ -40,7 +40,7 @@ class CheckoutSecond extends StatelessWidget {
                 ),
                 Center(
                     child: SvgPicture.asset(
-                        height: 120, width: 120, Assets.assetsImageOrder)),
+                        height: 120, width: 120, AppAssets.assetsImageOrder)),
                 SizedBox(
                   height: 55,
                 ),
@@ -56,7 +56,7 @@ class CheckoutSecond extends StatelessWidget {
                 ),
                 ButtonApp(
                   onPressed: () {
-                    context.push(AppRouter.myOrder);
+                    context.push(RoutesName.myOrder);
                   },
                   text: context.tr('Continue shopping'),
                 ),

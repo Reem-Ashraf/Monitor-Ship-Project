@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/constants/routes.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
 import 'package:monitor_ship_project/core/utils/widgets/my_divider.dart';
@@ -59,7 +59,7 @@ class CheckoutFirst extends StatelessWidget {
                 ),
                 ButtonApp(
                   onPressed: () {
-                    context.push(AppRouter.checkoutSecond);
+                    context.push(RoutesName.checkoutSecond);
                   },
                   text: context.tr('Continue to payment'),
                 ),

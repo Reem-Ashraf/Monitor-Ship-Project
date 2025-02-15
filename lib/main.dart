@@ -5,7 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/bloc_observer.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/routes.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      routerConfig: AppRouter.router,
+      routerConfig: RoutesPage.router,
     );
   }
 }

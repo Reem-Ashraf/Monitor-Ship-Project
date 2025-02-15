@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class DeliveryStatusBanner extends StatelessWidget {
@@ -16,7 +16,7 @@ class DeliveryStatusBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.push(AppRouter.trackOrder);
+        context.push(RoutesName.trackOrder);
       },
       child: Container(
         width: double.infinity,
@@ -43,7 +43,7 @@ class DeliveryStatusBanner extends StatelessWidget {
                 )
               ],
             ),
-            SvgPicture.asset(Assets.assetsImageDelivery)
+            SvgPicture.asset(AppAssets.assetsImageDelivery)
           ],
         ),
       ),

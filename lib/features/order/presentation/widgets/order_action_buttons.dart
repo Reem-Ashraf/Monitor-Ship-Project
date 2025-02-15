@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
 
@@ -29,7 +29,7 @@ class OrderActionButtons extends StatelessWidget {
                       BorderSide(color: AppColors.lightGray)),
                 ),
                 onPressed: () {
-                  context.push(AppRouter.orderDetails,
+                  context.push(RoutesName.orderDetails,
                       extra: '${context.tr('Order')} #$order');
                 },
                 child: Text(
@@ -44,7 +44,7 @@ class OrderActionButtons extends StatelessWidget {
             height: 44,
             child: ButtonApp(
               onPressed: () {
-                context.push(AppRouter.rateProduct);
+                context.push(RoutesName.rateProduct);
               },
               text: context.tr('Rate'),
             ),

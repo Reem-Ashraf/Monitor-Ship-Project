@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/constants.dart';
-import 'package:monitor_ship_project/core/utils/constants/routes.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/text_rich_order.dart';
 
@@ -72,7 +72,7 @@ class CardOrder extends StatelessWidget {
                           BorderSide(color: AppColors.lightGray)),
                     ),
                     onPressed: () {
-                      context.push(AppRouter.orderDetails,
+                      context.push(RoutesName.orderDetails,
                           extra:
                               context.tr('${context.tr('Order')} #$orderNum'));
                     },
