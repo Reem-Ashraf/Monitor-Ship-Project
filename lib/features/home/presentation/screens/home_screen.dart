@@ -28,7 +28,7 @@ class Homescreen extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: AppColors.white,
-        title: Text('Discover'),
+        title: Text('Gemstore'),
         actions: [Container()],
       ),
       body: Padding(
