@@ -41,5 +41,13 @@ static  TextStyle text13= TextStyle(
     fontFamily: 'ProductSans'
     
   );
+    static  TextStyle textw700Gray= TextStyle(
+    color:AppColors.gray,
+    fontWeight: FontWeight.w700,
+    fontSize: 16,
+    fontFamily: 'ProductSans'
+    
+  );
+    
     
 }

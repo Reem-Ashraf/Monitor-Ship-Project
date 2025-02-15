@@ -2,9 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/features/discover/presentation/screens/discover_full.dart';
 import 'package:monitor_ship_project/features/home/presentation/screens/home_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
+  const BottomNavigationBarScreen({super.key});
+
   @override
   _BottomNavigationBarScreenState createState() => _BottomNavigationBarScreenState();
 }
@@ -14,7 +17,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
 
   static final List<Widget> _pages = <Widget>[
     const Homescreen(),
-    const Center(child: Text('search Page', style: TextStyle(fontSize: 24))),
+    const DiscoverFullScreen(),
     const Center(child: Text('cart Page', style: TextStyle(fontSize: 24))),
    
     const Center(child: Text('Profile Page', style: TextStyle(fontSize: 24))),
