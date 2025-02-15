@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/features/checkout_process/presentation/pages/checkout_first.dart';
-import 'package:monitor_ship_project/features/checkout_process/presentation/pages/checkout_second.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/screens/checkout_first.dart';
+import 'package:monitor_ship_project/features/checkout_process/presentation/screens/checkout_second.dart';
 import 'package:monitor_ship_project/features/order/presentation/screens/details_order.dart';
 import 'package:monitor_ship_project/features/order/presentation/screens/my_order.dart';
 import 'package:monitor_ship_project/features/order/presentation/screens/rate_product.dart';

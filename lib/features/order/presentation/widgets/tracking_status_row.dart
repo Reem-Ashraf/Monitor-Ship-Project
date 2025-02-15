@@ -22,11 +22,12 @@ class TrackingStatusRow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              width: 20,
-              height: 20,
+              width: 18,
+              height: 18,
               decoration: ShapeDecoration(
                 shape: OvalBorder(
                   side: BorderSide(width: 1, color: AppColors.tabBarColor),
@@ -41,17 +42,15 @@ class TrackingStatusRow extends StatelessWidget {
               ),
             ),
             if (!isLast)
-              Column(
-                children: List.generate(
-                  3,
-                  (index) => Container(
-                    width: 5,
-                    height: 5,
-                    margin: const EdgeInsets.only(top: 6),
-                    decoration: ShapeDecoration(
-                      color: AppColors.tabBarColor,
-                      shape: OvalBorder(),
-                    ),
+              ...List.generate(
+                3,
+                (index) => Container(
+                  width: 5,
+                  height: 5,
+                  margin: const EdgeInsets.only(top: 6),
+                  decoration: ShapeDecoration(
+                    color: AppColors.tabBarColor,
+                    shape: OvalBorder(),
                   ),
                 ),
               ),
