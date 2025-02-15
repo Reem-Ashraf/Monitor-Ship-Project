@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/bloc_observer.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_page.dart';
@@ -30,19 +31,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     log('Supported Locales: ${EasyLocalization.of(context)?.supportedLocales}');
     log('Current Locale: ${EasyLocalization.of(context)?.locale}');
-    return MaterialApp.router(
-      locale: context.locale,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.white,
-        appBarTheme: AppBarTheme(
-          backgroundColor: AppColors.white,
-          elevation: 0,
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp.router(
+        locale: context.locale,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.white,
+          appBarTheme: AppBarTheme(
+            backgroundColor: AppColors.white,
+            elevation: 0,
+          ),
         ),
+        debugShowCheckedModeBanner: false,
+        routerConfig: RoutesPage.router,
       ),
-      debugShowCheckedModeBanner: false,
-      routerConfig: RoutesPage.router,
     );
   }
 }

@@ -1,8 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
 import 'package:monitor_ship_project/core/utils/widgets/rate_star.dart';
-import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/appbar_checking.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/order_status_app_bar.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/rating_submitted_dialog.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/text_from_field_rate.dart';
 
@@ -12,23 +13,25 @@ class RateProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarChecking(
+      appBar: OrderStatusAppBar(
         title: context.tr('Rate Product'),
       ),
       body: Padding(
-        padding:
-            const EdgeInsetsDirectional.symmetric(horizontal: 30, vertical: 30),
+        padding: EdgeInsetsDirectional.symmetric(
+          horizontal: 30.w,
+          vertical: 30.h,
+        ),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               StarScore(),
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
               TextFromFieldRate(),
               SizedBox(
-                height: 125,
+                height: 125.h,
               ),
               ButtonApp(
                   onPressed: () {
@@ -45,4 +48,3 @@ class RateProduct extends StatelessWidget {
     );
   }
 }
-

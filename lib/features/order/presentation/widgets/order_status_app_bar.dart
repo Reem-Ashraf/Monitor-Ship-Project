@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
-class AppBarChecking extends StatelessWidget implements PreferredSizeWidget {
-  const AppBarChecking({
-    super.key, required this.title,
+class OrderStatusAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const OrderStatusAppBar({
+    super.key,
+    required this.title,
   });
   final String title;
   @override
@@ -16,14 +18,13 @@ class AppBarChecking extends StatelessWidget implements PreferredSizeWidget {
         style: TextStyles.appbarStyle,
       ),
       centerTitle: true,
-      leadingWidth: 65,
+      leadingWidth: 65.w,
       leading: AppBarBackButton(),
     );
   }
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(60);
+  Size get preferredSize => Size.fromHeight(60.h);
 }
 
 class AppBarBackButton extends StatelessWidget {
@@ -34,10 +35,10 @@ class AppBarBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.only(start: 20),
+      padding: EdgeInsetsDirectional.only(start: 20.w),
       child: SizedBox(
-        width: 36,
-        height: 36,
+        width: 36.w,
+        height: 36.h,
         child: InkWell(
           customBorder: CircleBorder(),
           onTap: () {
@@ -55,6 +56,7 @@ class AppBarBackButton extends StatelessWidget {
               child: Center(
                 child: Icon(
                   Icons.arrow_back_ios_new_rounded,
+                  size: 18.sp,
                 ),
               ),
             ),

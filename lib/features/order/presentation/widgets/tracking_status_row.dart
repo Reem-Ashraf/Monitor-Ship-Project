@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TrackingStatusRow extends StatelessWidget {
   const TrackingStatusRow({
@@ -25,19 +26,21 @@ class TrackingStatusRow extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              width: 18,
-              height: 18,
-              decoration: ShapeDecoration(
-                shape: OvalBorder(
-                  side: BorderSide(width: 1, color: AppColors.tabBarColor),
+            CircleAvatar(
+              backgroundColor: AppColors.white,
+              radius: 10.r,
+              child: Container(
+                decoration: ShapeDecoration(
+                  shape: OvalBorder(
+                    side: BorderSide(width: 1.w, color: AppColors.tabBarColor),
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Icon(
-                  isCompleted ? Icons.check_circle_rounded : Icons.circle,
-                  color: AppColors.black,
-                  size: 14,
+                child: Center(
+                  child: Icon(
+                    isCompleted ? Icons.check_circle_rounded : Icons.circle,
+                    color: AppColors.black,
+                    size: 14.sp,
+                  ),
                 ),
               ),
             ),
@@ -45,9 +48,9 @@ class TrackingStatusRow extends StatelessWidget {
               ...List.generate(
                 3,
                 (index) => Container(
-                  width: 5,
-                  height: 5,
-                  margin: const EdgeInsets.only(top: 6),
+                  width: 5.w,
+                  height: 5.h,
+                  margin: EdgeInsets.only(top: 6.h),
                   decoration: ShapeDecoration(
                     color: AppColors.tabBarColor,
                     shape: OvalBorder(),
@@ -56,7 +59,7 @@ class TrackingStatusRow extends StatelessWidget {
               ),
           ],
         ),
-        const SizedBox(width: 12),
+        SizedBox(width: 12.w),
         Expanded(
           child: Text(
             statusText,

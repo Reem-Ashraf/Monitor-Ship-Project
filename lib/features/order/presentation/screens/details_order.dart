@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/appbar_checking.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/order_status_app_bar.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/delivery_status_banner.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/order_action_buttons.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/order_info_card.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/order_summary_card.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrderDetails extends StatelessWidget {
   const OrderDetails({super.key, required this.order});
@@ -11,32 +13,34 @@ class OrderDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBarChecking(
-          title: order,
+        appBar: OrderStatusAppBar(
+          title: context.tr(order),
         ),
-        body: Padding(
-          padding:
-              const EdgeInsetsDirectional.only(start: 24, end: 24, top: 30),
-          child: Column(
-            children: [
-            DeliveryStatusBanner(),
-            const SizedBox(
-              height: 26,
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsetsDirectional.only(
+              start: 24.w,
+              bottom: 24.h,
+              end: 24.w,
             ),
-            OrderInfoCard(order: order),
-            const SizedBox(
-              height: 41,
+            child: Column(
+              children: [
+                DeliveryStatusBanner(),
+                SizedBox(
+                  height: 22.h,
+                ),
+                OrderInfoCard(order: order),
+                SizedBox(
+                  height: 37.h,
+                ),
+                OrderSummaryCard(),
+                SizedBox(
+                  height: 36.h,
+                ),
+                OrderActionButtons(order: order),
+              ],
             ),
-            OrderSummaryCard(),
-            const SizedBox(
-              height: 40,
-            ),
-            OrderActionButtons(order: order),
-          ]),
+          ),
         ));
   }
 }
-
-
-
-

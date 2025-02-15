@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 class MyDivider extends StatelessWidget {
@@ -9,9 +10,9 @@ class MyDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 12),
+      margin:  EdgeInsets.symmetric(vertical: 12.h),
       width: double.infinity,
-      height: 1,
+      height: 1.h,
       decoration: BoxDecoration(color: AppColors.paleGray),
     );
   }

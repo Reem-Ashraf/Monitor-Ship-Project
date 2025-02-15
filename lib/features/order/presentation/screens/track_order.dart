@@ -1,8 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/features/checkout_process/presentation/widgets/appbar_checking.dart';
 import 'package:monitor_ship_project/features/order/data/models/track_status_model.dart';
+import 'package:monitor_ship_project/features/order/presentation/widgets/order_status_app_bar.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/text_rich_track.dart';
 import 'package:monitor_ship_project/features/order/presentation/widgets/tracking_status_row.dart';
 
@@ -12,9 +13,9 @@ class TrackOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarChecking(title: context.tr('Track Order')),
+      appBar: OrderStatusAppBar(title: context.tr('Track Order')),
       body: Padding(
-        padding: const EdgeInsetsDirectional.all(30),
+        padding: EdgeInsetsDirectional.all(30.r),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -22,16 +23,16 @@ class TrackOrder extends StatelessWidget {
               text1: 'Delivered on',
               text2: '15.02.25',
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16.h),
             TextRichTrack(
               text1: 'Tracking Number :',
               text2: 'IK287368838',
             ),
-            const SizedBox(height: 45),
+            SizedBox(height: 45.h),
             ListView.separated(
               shrinkWrap: true,
               itemCount: 6,
-              separatorBuilder: (context, index) => const SizedBox(height: 6),
+              separatorBuilder: (context, index) => SizedBox(height: 6.h),
               itemBuilder: (context, index) {
                 return TrackingStatusRow(
                   isCompleted: _trackStatusList(context)[index].isCompleted,

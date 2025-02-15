@@ -8,6 +8,7 @@ class AppColors {
   static final Color paleGray = Color(0xFFF1F2F3);
   static final Color systemGray = Color(0xffC8C7CC);
   static final Color silverGray = Color(0xFFA3A5AD);
+  static final Color neutralGray = Color(0xffb1b5c3); // Added new color
   static final Color lightGray = Color(0xFF777E90);
   static final Color coolGray = Color(0xFF737680);
   static final Color mediumGray = Color(0xFF575757);
