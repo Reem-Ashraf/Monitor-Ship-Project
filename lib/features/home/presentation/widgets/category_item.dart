@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class CategoryItem extends StatelessWidget {
- const CategoryItem({
+  const CategoryItem({
     super.key,
     required this.categoryname,
     required this.image,
@@ -21,37 +22,42 @@ class CategoryItem extends StatelessWidget {
           alignment: Alignment.center,
           children: [
             Container(
-              width: 55,
-              height: 55,
+              width: 60.w,
+              height: 60.h,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(width: 1, color:isActive == true ?  AppColors.brown:Colors.white),
-                 
+                border: Border.all(
+                    width: 1.w,
+                    color: isActive == true ? AppColors.brown : Colors.white),
               ),
               child: Container(
-                width: 45,
-                height: 45,
+                width: 50.w,
+                height: 50.h,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: isActive == true ? AppColors.brown : AppColors.lightgray,
-                  border: Border.all(width: 2, color: Colors.white),
+                  color:
+                      isActive == true ? AppColors.brown : AppColors.lightgray,
+                  border: Border.all(width: 2.w, color: Colors.white),
                 ),
                 child: Transform.scale(
-                  scale: .6,
+                  scale: .6.r,
                   child: SvgPicture.asset(
                     image,
-                  colorFilter:ColorFilter.mode(isActive!=true? AppColors.gray:AppColors.white, BlendMode.srcIn),
+                    colorFilter: ColorFilter.mode(
+                        isActive != true ? AppColors.gray : AppColors.white,
+                        BlendMode.srcIn),
                   ),
                 ),
               ),
             ),
           ],
         ),
-        const SizedBox(
-          height: 5,
+        SizedBox(
+          height: 5.h,
         ),
         Text(
           categoryname,
+          textScaler: TextScaler.noScaling,
           style: TextStyles.categoryTextStyle,
         )
       ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+
 class StarWidget extends StatelessWidget {
   const StarWidget({
     super.key,
@@ -10,8 +12,10 @@ class StarWidget extends StatelessWidget {
     return Row(
       children: [
         for (int i = 0; i < 5; i++)
-          Icon(Icons.star, color: AppColors.darkGreen, size: 12),
-          const SizedBox(width: 4,),
+          Icon(Icons.star, color: AppColors.darkGreen, size: 12.r),
+        SizedBox(
+          width: 4.w,
+        ),
         const Text('(56)'),
       ],
     );

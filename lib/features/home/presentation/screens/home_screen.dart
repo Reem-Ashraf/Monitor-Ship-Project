@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
@@ -22,8 +23,8 @@ class Homescreen extends StatelessWidget {
           scale: .35,
           child: SvgPicture.asset(
             AppAssets.icon,
-            height: 18,
-            width: 17,
+            height: 18.h,
+            width: 17.w,
           ),
         ),
         centerTitle: true,
@@ -32,7 +33,7 @@ class Homescreen extends StatelessWidget {
         actions: [Container()],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(25.0),
+        padding:  EdgeInsets.all(25.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,7 +70,7 @@ class Homescreen extends StatelessWidget {
               ),
            
               const HomeImage2(
-                text1: 'Summer Collection 2021',
+                text1: 'Summer Collection',
                 text2: 'Most sexy  ',
                 image: 'assets/images/image 69.png',
                 text3: '&design',

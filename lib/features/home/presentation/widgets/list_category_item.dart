@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/category_item.dart';
 
 class CategoryItemListView extends StatelessWidget {
@@ -27,13 +28,14 @@ class CategoryItemListView extends StatelessWidget {
       
     ];
     return SizedBox(
-      height: 100,
+      height: 100.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
+        physics: NeverScrollableScrollPhysics(),
           itemCount: categoryList.length,
           itemBuilder: (context, indx) {
             return Padding(
-              padding: const EdgeInsets.only(right: 30.0),
+              padding:  EdgeInsets.only(right: 8.0.w),
               child: CategoryItem(
                   categoryname: categoryList[indx]['categoryname'],
                   image: categoryList[indx]['image'],

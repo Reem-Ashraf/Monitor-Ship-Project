@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
@@ -13,11 +14,13 @@ class NumberOfItemWidget extends StatelessWidget {
       children: [
         Text(
           'jackets',
-          style: TextStyle(fontSize: 17,fontFamily: 'ProductSansLight'),
+           textScaler: TextScaler.noScaling,
+          style: TextStyle(fontSize: 17.sp,fontFamily: 'ProductSansLight'),
         ),
         Spacer(),
         Text(
           '143 items',
+           textScaler: TextScaler.noScaling,
           style: TextStyles.text13,
         ),
         IconButton(

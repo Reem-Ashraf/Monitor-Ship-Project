@@ -12,11 +12,12 @@ final String text;
       children: [
         Text(
           text,
+          textScaler: TextScaler.noScaling,
           style: TextStyles.appBarText,
         ),
         const Spacer(),
         TextButton(
-          child: Text('show all', style: TextStyles.text13),
+          child: Text('show all',textScaler: TextScaler.noScaling, style: TextStyles.text13),
           onPressed: () {},
         )
       ],

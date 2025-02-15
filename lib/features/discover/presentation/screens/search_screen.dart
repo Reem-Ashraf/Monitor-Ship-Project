@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/custom_search_bar.dart';
@@ -32,6 +33,7 @@ class SearchScreen extends StatelessWidget {
               children: [
                 Text(
                   'Recent Searches',
+                  textScaler: TextScaler.noScaling,
                   style: TextStyles.textw700Gray,
                 ),
                 Spacer(),
@@ -44,14 +46,15 @@ class SearchScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
-              spacing: 15,
+            Wrap(
+              spacing: 10.w,
+              runSpacing: 10.h,
               children: [
                 RecentSearchWidget(),
                 RecentSearchWidget(),
               ],
             ),
-            RecentSearchWidget(),
+           
           ],
         ),
       ),

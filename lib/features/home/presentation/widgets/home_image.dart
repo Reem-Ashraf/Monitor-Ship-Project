@@ -19,14 +19,17 @@ class HomeImage extends StatelessWidget {
             children: [
               Text(
                 'Autumn',
+                textScaler: TextScaler.noScaling,
                 style: TextStyles.text22,
               ),
               Text(
                 'Collection',
+                textScaler: TextScaler.noScaling,
                 style: TextStyles.text22,
               ),
               Text(
                 '2022',
+                textScaler: TextScaler.noScaling,
                 style: TextStyles.text22,
               ),
             ],

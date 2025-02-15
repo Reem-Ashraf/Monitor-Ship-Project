@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
-    super.key, required this.text,this.appBarIcon
-  });
-final String text;
-final IconData? appBarIcon;
+  const CustomAppBar({super.key, required this.text, this.appBarIcon});
+  final String text;
+  final IconData? appBarIcon;
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -18,21 +17,20 @@ final IconData? appBarIcon;
         children: [
           SvgPicture.asset(
             AppAssets.icon,
-            height: 18,
-            width: 17,
+            height: 18.h,
+            width: 17.w,
           ),
-          const SizedBox(
-            width: 90,
+          SizedBox(
+            width: 90.w,
           ),
           Text(
             text,
             style: TextStyles.appBarText,
           ),
-           const SizedBox(
-            width: 55,
+          SizedBox(
+            width: 55.w,
           ),
-           Icon(appBarIcon)
-
+          Icon(appBarIcon)
         ],
       ),
     );

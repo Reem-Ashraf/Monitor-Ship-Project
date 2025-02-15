@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
@@ -17,7 +18,7 @@ class HomeImage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 170,
+        height: 170.h,
         width: double.infinity,
         color: AppColors.offwhite,
         child: Row(
@@ -27,28 +28,31 @@ class HomeImage2 extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   Text(
                     text1,
+                    textScaler: TextScaler.noScaling,
                     style: TextStyles.text13,
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   Text(
                     text2,
+                    textScaler: TextScaler.noScaling,
                     style: TextStyles.text20,
                   ),
                   Text(
                     text3,
+                    textScaler: TextScaler.noScaling,
                     style: TextStyles.text20,
                   ),
                 ],
               ),
             ),
-           const Spacer(),
+            const Spacer(),
             Stack(
               alignment: Alignment.center,
               children: [

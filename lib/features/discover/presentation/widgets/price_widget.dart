@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
@@ -14,13 +14,15 @@ class PriceWidget extends StatelessWidget {
       children: [
         Text(
           r'$ 39.99 ',
+           textScaler: TextScaler.noScaling,
           style: TextStyles.textw700,
         ),
-        const SizedBox(
-          width: 5,
+        SizedBox(
+          width: 5.w,
         ),
         Text(
           r'$ 39.99 ',
+           textScaler: TextScaler.noScaling,
           style: TextStyles.text13.copyWith(
               decoration: TextDecoration.lineThrough,
               decorationColor: AppColors.gray),
@@ -29,5 +31,3 @@ class PriceWidget extends StatelessWidget {
     );
   }
 }
-
-

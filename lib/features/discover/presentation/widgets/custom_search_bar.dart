@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/features/discover/presentation/screens/search_screen.dart';
@@ -22,7 +23,7 @@ class CustomSearchBar extends StatelessWidget {
                     color: Colors.grey.shade100, offset: const Offset(0, 4)),
               ],
             ),
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: TextField(
               decoration: InputDecoration(
                 icon: IconButton(
@@ -35,12 +36,14 @@ class CustomSearchBar extends StatelessWidget {
                   icon: Icon(Icons.search, color: AppColors.gray),
                 ),
                 hintText: "Search",
+                hintStyle: TextStyle(fontSize:  MediaQuery.of(context).size.width*.02,), // Prevents scaling),
                 border: InputBorder.none,
               ),
+
             ),
           ),
         ),
-        const SizedBox(width: 10),
+        SizedBox(width: 10.w),
         Container(
           decoration: BoxDecoration(
             color: AppColors.offwhite,
@@ -52,8 +55,8 @@ class CustomSearchBar extends StatelessWidget {
           ),
           child: IconButton(
             icon: SizedBox(
-              width: 25,
-              height: 25,
+              width: 25.w,
+              height: 25.h,
               child: SvgPicture.asset(
                 'assets/images/page_info.svg',
               ),

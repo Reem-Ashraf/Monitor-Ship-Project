@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
@@ -20,8 +21,8 @@ class DiscoverFullScreen extends StatelessWidget {
           scale: .35,
           child: SvgPicture.asset(
             AppAssets.icon,
-            height: 18,
-            width: 17,
+            height: 18.h,
+            width: 17.w,
           ),
         ),
         centerTitle: true,
@@ -51,21 +52,21 @@ class DiscoverFullScreen extends StatelessWidget {
               ),
               ListViewNumberOfItem(),
               SearchCategoryItem(
-                text1: 'CLOTHING',
+                text1: 'COLLECTION',
                 image: 'assets/images/image 54.png',
                 backgroundColor: Color(0xFF999E87),
                 smallCircleColor: Color(0xFF8A8F7A),
                 bigCircleColor: Color(0xFFA4AC8A),
               ),
               SearchCategoryItem(
-                text1: 'ACCESSORIES',
+                text1: 'ACCESSORIE',
                 image: 'assets/images/image 54.png',
                 backgroundColor: Color(0xFFA79F9D),
                 smallCircleColor: Color(0xFF8D8785),
                 bigCircleColor: Color(0xFFA79F9D),
               ),
               SearchCategoryItem(
-                text1: 'ACCESSORIES',
+                text1: 'SHOES',
                 image: 'assets/images/image 54.png',
                 backgroundColor: Color(0xFFA79F9D),
                 smallCircleColor: Color(0xFF8D8785),

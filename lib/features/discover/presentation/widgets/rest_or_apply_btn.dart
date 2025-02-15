@@ -15,6 +15,7 @@ class RestOrApply extends StatelessWidget {
           onPressed: () {},
           child: Text(
             "Reset",
+            textScaler: TextScaler.noScaling,
             style: TextStyle(color: AppColors.black),
           ),
         ),
@@ -23,7 +24,7 @@ class RestOrApply extends StatelessWidget {
             Navigator.pop(context); // Apply filter & close modal
           },
           style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-          child: Text("Apply", style: TextStyle(color: Colors.white)),
+          child: Text("Apply", textScaler: TextScaler.noScaling,style: TextStyle(color: Colors.white)),
         ),
       ],
     );

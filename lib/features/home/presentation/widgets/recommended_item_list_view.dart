@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/recommended_item.dart';
 
 class RecommendedItemListView extends StatelessWidget {
@@ -7,7 +8,7 @@ class RecommendedItemListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 70,
+      height: 70.h,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: 5,

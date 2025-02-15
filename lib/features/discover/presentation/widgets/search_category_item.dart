@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class SearchCategoryItem extends StatelessWidget {
@@ -18,9 +19,9 @@ class SearchCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
-          height: 170,
+          height: 170.h,
           width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(18),
@@ -29,17 +30,18 @@ class SearchCategoryItem extends StatelessWidget {
           child: Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 20.0),
+                padding:  EdgeInsets.only(left: 20.0.w),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       text1,
+                       textScaler: TextScaler.noScaling,
                       style: TextStyles.text22,
                     ),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: 20.h,
                     ),
                   ],
                 ),
@@ -50,14 +52,14 @@ class SearchCategoryItem extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   CircleAvatar(
-                    radius: 65,
+                    radius: 65.r,
                     backgroundColor: smallCircleColor,
                   ),
                   CircleAvatar(
-                    radius: 45,
+                    radius: 45.r,
                     backgroundColor: bigCircleColor,
                   ),
-                  Positioned(right: -3, child: Image.asset(image)),
+                  Image.asset(image,width: 90.w,),
                 ],
               ),
             ],

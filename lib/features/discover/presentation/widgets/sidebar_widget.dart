@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/color_selection.dart';
@@ -31,86 +32,83 @@ class FilterSidBar extends StatelessWidget {
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            spacing: 10,
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Header
-              SidBarHeader(),
-              SizedBox(
-                height: 20,
-              ),
-              Divider(
-                thickness: 1,
-                color: AppColors.lightgray,
-              ),
-
-              Text(
-                'Price',
-                style: TextStyles.text20,
-              ),
-              RangeWidget(),
-
-              // Color Selection
-              Text("Color",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-              ColorSelection(colors: colors),
-              Text(
-                'Star Rating',
-                style: TextStyles.text20,
-              ),
-              StarRating(selectedRating: 3),
-              Text(
-                'Category',
-                style: TextStyles.text20,
-              ),
-              DropdownButtonFormField<String>(
-                value: selectedCategory,
-                items: ["Crop Tops", "Dresses", "Jeans", "Sweaters"]
-                    .map((item) =>
-                        DropdownMenuItem(value: item, child: Text(item)))
-                    .toList(),
-                onChanged: (value) {
-                  (selectedCategory = value!);
-                },
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)),
+          padding: EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              spacing: 10.h,
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Header
+                SidBarHeader(),
+                SizedBox(
+                  height: 20.h,
                 ),
-              ),
-              Text(
-                'Discount',
-                style: TextStyles.text20,
-              ),
-              Row(
-                spacing: 10,
-                children: [
-                  DiscountOff(),
-                  DiscountOff(),
-                ],
-              ),
-              Row(
-                spacing: 10,
-                children: [
-                  DiscountOff(),
-                  DiscountOff(),
-                ],
-              ),
+                Divider(
+                  thickness: 1,
+                  color: AppColors.lightgray,
+                ),
 
-              // Reset & Apply Buttons
-              RestOrApply()
-            ],
+                Text(
+                  'Price',
+                  textScaler: TextScaler.noScaling,
+                  style: TextStyles.text20,
+                ),
+                RangeWidget(),
+
+                // Color Selection
+                Text("Color",
+                    textScaler: TextScaler.noScaling,
+                    style: TextStyle(
+                        fontSize: 16.sp, fontWeight: FontWeight.w600)),
+                ColorSelection(colors: colors),
+                Text(
+                  'Star Rating',
+                  textScaler: TextScaler.noScaling,
+                  style: TextStyles.text20,
+                ),
+                StarRating(selectedRating: 3),
+                Text(
+                  'Category',
+                  textScaler: TextScaler.noScaling,
+                  style: TextStyles.text20,
+                ),
+                DropdownButtonFormField<String>(
+                  value: selectedCategory,
+                  items: ["Crop Tops", "Dresses", "Jeans", "Sweaters"]
+                      .map((item) =>
+                          DropdownMenuItem(value: item, child: Text(item,textScaler: TextScaler.noScaling,)))
+                      .toList(),
+                  onChanged: (value) {
+                    (selectedCategory = value!);
+                  },
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.r)),
+                  ),
+                ),
+                Text(
+                  'Discount',
+                  textScaler: TextScaler.noScaling,
+                  style: TextStyles.text20,
+                ),
+                Wrap(
+                  spacing: 10.w,
+                  runSpacing: 10.h,
+                  children: [
+                    DiscountOff(),
+                    DiscountOff(),
+                    DiscountOff(),
+                    DiscountOff(),
+                  ],
+                ),
+                // Reset & Apply Buttons
+                RestOrApply()
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-
-
-
-
-
-

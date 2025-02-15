@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ColorSelection extends StatelessWidget {
   const ColorSelection({
@@ -13,7 +14,7 @@ class ColorSelection extends StatelessWidget {
     return Row(
       children: colors.map((color) {
         return Padding(
-          padding: EdgeInsets.symmetric(horizontal: 4),
+          padding: EdgeInsets.symmetric(horizontal: 4.w),
           child: CircleAvatar(
             backgroundColor: color,
             radius: 14,

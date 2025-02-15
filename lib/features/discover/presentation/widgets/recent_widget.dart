@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
@@ -10,22 +11,22 @@ class RecentSearchWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
+      height: 45.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: AppColors.offwhite,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8),
         child: Row(
           spacing: 15,
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Sunglasses',
+              'Hoodie',
+              textScaler: TextScaler.noScaling,
               style: TextStyles.textw700Gray,
             ),
-    
             Icon(
               Icons.close,
               color: AppColors.gray,

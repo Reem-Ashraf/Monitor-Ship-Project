@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 class ProductImage extends StatelessWidget {
@@ -11,8 +12,8 @@ class ProductImage extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          width: 126,
-          height: 180,
+          width: 126.w,
+          height: 180.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             image: const DecorationImage(
@@ -22,11 +23,11 @@ class ProductImage extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: 5,
-          top: 8,
+          right: 5.w,
+          top: 8.h,
           child: Container(
-            height: 30,
-            width: 30,
+            height: 30.h,
+            width: 30.w,
             decoration: BoxDecoration(
                 shape: BoxShape.circle, color: AppColors.white),
             child: const Icon(

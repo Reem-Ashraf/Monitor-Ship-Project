@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StarRating extends StatelessWidget {
   const StarRating({
@@ -26,9 +27,11 @@ class StarRating extends StatelessWidget {
               children: [
                 Icon(Icons.star,
                     color: selectedRating == star ? Colors.white : Colors.black,
-                    size: 18),
+                    size: 18.r
+                    ),
                 Text(
                   (index + 1).toString(),
+                  textScaler: TextScaler.noScaling,
                   style: TextStyle(
                     color: selectedRating == star ? Colors.white : Colors.black,
                   ),

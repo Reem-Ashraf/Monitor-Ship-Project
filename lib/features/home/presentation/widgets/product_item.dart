@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class ProductItem extends StatelessWidget {
@@ -12,21 +13,29 @@ class ProductItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          width: 126,
-          height: 180,
+          width: 126.w,
+          height: 180.h,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-           
+            borderRadius: BorderRadius.circular(12).r,
             image: const DecorationImage(
               fit: BoxFit.fill,
               image: AssetImage('assets/images/image 55.png'),
             ),
           ),
         ),
-        const SizedBox(height: 16,),
-        Text('Turtleneck Sweater ',style: TextStyles.textw500,),
-     Text(r'$ 39.99 ',style: TextStyles.textw700,),
-    
+        SizedBox(
+          height: 16.h,
+        ),
+        Text(
+          'Turtleneck Sweater ',
+          textScaler: TextScaler.noScaling,
+          style: TextStyles.textw500,
+        ),
+        Text(
+          r'$ 39.99 ',
+          textScaler: TextScaler.noScaling,
+          style: TextStyles.textw700,
+        ),
       ],
     );
   }
