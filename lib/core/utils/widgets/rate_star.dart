@@ -10,7 +10,7 @@ class StarScore extends StatefulWidget {
   State<StarScore> createState() => _StarScoreState();
 }
 
-int indexRate = 1;
+int indexRate = 4;
 
 class _StarScoreState extends State<StarScore> {
   @override
