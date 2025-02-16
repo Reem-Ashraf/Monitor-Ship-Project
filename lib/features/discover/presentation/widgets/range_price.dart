@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RangeWidget extends StatefulWidget {
+  const RangeWidget({super.key});
+
   @override
   State<StatefulWidget> createState() => _RangeWidget();
 }

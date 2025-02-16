@@ -37,7 +37,7 @@ class CategoryItemListView extends StatelessWidget {
           itemCount: categoryList.length,
           itemBuilder: (context, indx) {
             return Padding(
-              padding:  EdgeInsets.only(right: 8.0.w),
+              padding:  EdgeInsets.only(right: 15.0.w),
               child: CategoryItem(
                   categoryname: categoryList[indx]['categoryname'],
                   image: categoryList[indx]['image'],

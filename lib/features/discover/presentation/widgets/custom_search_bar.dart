@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 class CustomSearchBar extends StatelessWidget {

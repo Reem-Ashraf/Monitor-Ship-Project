@@ -5,13 +5,13 @@ import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 class TextStyles {
   static TextStyle appBarText = TextStyle(
     color: Colors.black,
-    fontSize: 20.sp,
+    fontSize: 18.sp,
     fontWeight: FontWeight.w700,
     fontFamily: 'ProductSans',
   );
   static TextStyle categoryTextStyle = TextStyle(
     color: AppColors.brown,
-    fontSize: 10.sp,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w300,
     fontFamily: 'ProductSans',
   );
