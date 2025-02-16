@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/custom_search_bar.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/list_view_discover_product_item.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/custom_app_bar.dart';
+
+import '../../../home/presentation/widgets/custom_app_bar.dart';
+import '../widgets/custom_search_bar.dart';
+import '../widgets/list_view_Discover_product_item.dart';
 
 class FoundResultScreen extends StatelessWidget {
   const FoundResultScreen({super.key});

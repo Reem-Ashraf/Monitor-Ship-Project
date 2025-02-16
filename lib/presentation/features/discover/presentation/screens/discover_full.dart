@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/custom_search_bar.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/list_view_num_of_item.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/search_category_item.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/sidebar_widget.dart';
+
+import '../widgets/custom_search_bar.dart';
+import '../widgets/list_view_num_of_item.dart';
+import '../widgets/search_category_item.dart';
+import '../widgets/sidebar_widget.dart';
 
 class DiscoverFullScreen extends StatelessWidget {
   const DiscoverFullScreen({super.key});

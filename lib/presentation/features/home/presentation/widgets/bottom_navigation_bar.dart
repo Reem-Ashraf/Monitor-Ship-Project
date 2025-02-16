@@ -7,6 +7,9 @@ import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/features/discover/presentation/screens/discover_full.dart';
 import 'package:monitor_ship_project/features/home/presentation/screens/home_screen.dart';
 
+import '../../../discover/presentation/screens/discover_full.dart';
+import '../screens/home_screen.dart';
+
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});
 

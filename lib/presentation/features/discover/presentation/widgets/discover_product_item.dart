@@ -4,6 +4,9 @@ import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/price_widget.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/product_image.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/star_widget.dart';
+import 'package:monitor_ship_project/presentation/features/discover/presentation/widgets/price_widget.dart';
+import 'package:monitor_ship_project/presentation/features/discover/presentation/widgets/product_image.dart';
+import 'package:monitor_ship_project/presentation/features/discover/presentation/widgets/star_widget.dart';
 
 class DiscoverProductItem extends StatelessWidget {
   const DiscoverProductItem({

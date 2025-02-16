@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/category_item.dart';
 
+import 'category_item.dart';
+
 class CategoryItemListView extends StatelessWidget {
   const CategoryItemListView({super.key});
 

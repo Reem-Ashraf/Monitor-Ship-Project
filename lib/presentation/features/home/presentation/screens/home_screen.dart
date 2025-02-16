@@ -12,6 +12,9 @@ import 'package:monitor_ship_project/features/home/presentation/widgets/list_pro
 import 'package:monitor_ship_project/features/home/presentation/widgets/recommended_item_list_view.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/top_collection_row.dart';
 
+import '../widgets/home_image_two.dart';
+import '../widgets/top_collection_row.dart';
+
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
 

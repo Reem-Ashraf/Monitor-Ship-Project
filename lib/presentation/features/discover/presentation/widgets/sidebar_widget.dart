@@ -8,6 +8,11 @@ import 'package:monitor_ship_project/features/discover/presentation/widgets/rang
 import 'package:monitor_ship_project/features/discover/presentation/widgets/rest_or_apply_btn.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/side_bar_header.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/star_rating.dart';
+import 'package:monitor_ship_project/presentation/features/discover/presentation/widgets/range_price.dart';
+import 'package:monitor_ship_project/presentation/features/discover/presentation/widgets/rest_or_apply_btn.dart';
+
+import 'color_selection.dart';
+import 'discount_off.dart';
 
 class FilterSidBar extends StatelessWidget {
   const FilterSidBar({super.key});

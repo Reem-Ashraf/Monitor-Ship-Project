@@ -7,6 +7,10 @@ import 'package:monitor_ship_project/features/discover/presentation/widgets/cust
 import 'package:monitor_ship_project/features/discover/presentation/widgets/recent_widget.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/sidebar_widget.dart';
 
+import '../widgets/custom_search_bar.dart';
+import '../widgets/recent_widget.dart';
+import '../widgets/sidebar_widget.dart';
+
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
 
@@ -46,7 +50,7 @@ class SearchScreen extends StatelessWidget {
                   onPressed: () {},
                   icon: Icon(
                     Icons.delete_outline,
-                    color: AppColors.gray,
+                    color: AppColors.grey,
                   ),
                 ),
               ],
