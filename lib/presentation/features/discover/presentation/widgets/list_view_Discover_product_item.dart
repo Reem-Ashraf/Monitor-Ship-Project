@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/discover_product_item.dart';
 
-import 'discover_product_item.dart';
+
+import 'package:flutter/cupertino.dart';
+
+import '../../../../../features/discover/presentation/widgets/discover_product_item.dart';
 
 class ListViewDiscoverProductItem extends StatelessWidget {
   const ListViewDiscoverProductItem({

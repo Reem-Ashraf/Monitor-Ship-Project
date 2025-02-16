@@ -1,19 +1,19 @@
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/home_image.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/home_image_two.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/home_row_text.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/list_category_item.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/list_product_item.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/recommended_item_list_view.dart';
-import 'package:monitor_ship_project/features/home/presentation/widgets/top_collection_row.dart';
 
-import '../widgets/home_image_two.dart';
-import '../widgets/top_collection_row.dart';
+import '../../../../../core/utils/constants/app_assets.dart';
+import '../../../../../core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/text_style.dart';
+import '../../../../../features/home/presentation/widgets/home_image.dart';
+import '../../../../../features/home/presentation/widgets/home_image_two.dart';
+import '../../../../../features/home/presentation/widgets/home_row_text.dart';
+import '../../../../../features/home/presentation/widgets/list_category_item.dart';
+import '../../../../../features/home/presentation/widgets/list_product_item.dart';
+import '../../../../../features/home/presentation/widgets/recommended_item_list_view.dart';
+import '../../../../../features/home/presentation/widgets/top_collection_row.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});

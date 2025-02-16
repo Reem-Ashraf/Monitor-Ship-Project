@@ -1,15 +1,15 @@
+
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/custom_search_bar.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/recent_widget.dart';
-import 'package:monitor_ship_project/features/discover/presentation/widgets/sidebar_widget.dart';
 
-import '../widgets/custom_search_bar.dart';
-import '../widgets/recent_widget.dart';
-import '../widgets/sidebar_widget.dart';
+import '../../../../../core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/text_style.dart';
+import '../../../../../features/discover/presentation/widgets/custom_search_bar.dart';
+import '../../../../../features/discover/presentation/widgets/recent_widget.dart';
+import '../../../../../features/discover/presentation/widgets/sidebar_widget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});

@@ -7,7 +7,7 @@ class RoutesName {
   static const String checkOutScreen1= "/checkOutScreen1";
   static const String checkOutScreen2= "/checkOutScreen2";
   static const String orderScreen = "/orderScreen";
-  static const String emergencyScreen = "/emergencyScreen";
+  static const String searchScreen = "/searchScreen";
   static const String accountScreen = "/accountScreen";
   static const String carRescue = "/carRescue";
   static const String callAmbulance = "/callAmbulance";
