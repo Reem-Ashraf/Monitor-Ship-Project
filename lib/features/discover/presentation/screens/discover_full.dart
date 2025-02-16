@@ -51,6 +51,7 @@ class DiscoverFullScreen extends StatelessWidget {
                 bigCircleColor: Color(0xFFA4AC8A),
               ),
               ListViewNumberOfItem(),
+              
               SearchCategoryItem(
                 text1: 'COLLECTION',
                 image: AppAssets.thirdHomeImage,
