@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 
 class SidBarHeader extends StatelessWidget {
   const SidBarHeader({
@@ -19,7 +20,7 @@ class SidBarHeader extends StatelessWidget {
           width: 25.w,
           height: 25.h,
           child: SvgPicture.asset(
-            'assets/images/page_info.svg',
+           AppAssets.femaleIcon,
           ),
         ),
       ],

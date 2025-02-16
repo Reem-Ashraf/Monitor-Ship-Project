@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/discover/presentation/widgets/custom_search_bar.dart';
@@ -18,7 +19,11 @@ class SearchScreen extends StatelessWidget {
         backgroundColor: AppColors.white,
         leading: Padding(
           padding: const EdgeInsets.all(25.0),
-          child: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back_ios)),
+          child: IconButton(
+              onPressed: () {
+                GoRouter.of(context).pop();
+              },
+              icon: Icon(Icons.arrow_back_ios)),
         ),
         actions: [Container()],
       ),
@@ -54,7 +59,6 @@ class SearchScreen extends StatelessWidget {
                 RecentSearchWidget(),
               ],
             ),
-           
           ],
         ),
       ),

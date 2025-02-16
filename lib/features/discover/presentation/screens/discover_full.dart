@@ -20,7 +20,7 @@ class DiscoverFullScreen extends StatelessWidget {
         leading: Transform.scale(
           scale: .35,
           child: SvgPicture.asset(
-            AppAssets.icon,
+            AppAssets.menu,
             height: 18.h,
             width: 17.w,
           ),
@@ -45,7 +45,7 @@ class DiscoverFullScreen extends StatelessWidget {
               CustomSearchBar(),
               SearchCategoryItem(
                 text1: 'CLOTHING',
-                image: 'assets/images/image 48.png',
+                image: AppAssets.thirdHomeImage,
                 backgroundColor: Color(0xFF999E87),
                 smallCircleColor: Color(0xFF8A8F7A),
                 bigCircleColor: Color(0xFFA4AC8A),
@@ -53,21 +53,21 @@ class DiscoverFullScreen extends StatelessWidget {
               ListViewNumberOfItem(),
               SearchCategoryItem(
                 text1: 'COLLECTION',
-                image: 'assets/images/image 54.png',
+                image: AppAssets.thirdHomeImage,
                 backgroundColor: Color(0xFF999E87),
                 smallCircleColor: Color(0xFF8A8F7A),
                 bigCircleColor: Color(0xFFA4AC8A),
               ),
               SearchCategoryItem(
                 text1: 'ACCESSORIE',
-                image: 'assets/images/image 54.png',
+                image: AppAssets.thirdHomeImage,
                 backgroundColor: Color(0xFFA79F9D),
                 smallCircleColor: Color(0xFF8D8785),
                 bigCircleColor: Color(0xFFA79F9D),
               ),
               SearchCategoryItem(
                 text1: 'SHOES',
-                image: 'assets/images/image 54.png',
+                image: AppAssets.thirdHomeImage,
                 backgroundColor: Color(0xFFA79F9D),
                 smallCircleColor: Color(0xFF8D8785),
                 bigCircleColor: Color(0xFFA79F9D),

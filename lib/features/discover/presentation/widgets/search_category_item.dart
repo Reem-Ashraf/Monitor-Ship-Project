@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class SearchCategoryItem extends StatelessWidget {
@@ -19,7 +21,9 @@ class SearchCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+          context.push(RoutesName.searchScreen);
+      },
       child: Container(
           height: 170.h,
           width: double.infinity,

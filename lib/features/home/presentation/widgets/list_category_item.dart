@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/category_item.dart';
 
 class CategoryItemListView extends StatelessWidget {
@@ -10,20 +11,20 @@ class CategoryItemListView extends StatelessWidget {
     List<Map<String, dynamic>> categoryList = [
       {
         'categoryname': 'woman',
-        'image': 'assets/images/femalicon.svg',
+        'image': AppAssets.femaleIcon,
         
       },
       {
         'categoryname': 'man',
-        'image': 'assets/images/maleicon.svg',
+        'image': AppAssets.maleIcon,
       },
        {
         'categoryname': 'Accesory',
-        'image': 'assets/images/Vector (2).svg',
+        'image': AppAssets.acessoryIcon,
       },
       {
         'categoryname': 'beauty',
-        'image': 'assets/images/Frame 33153.svg',
+        'image': AppAssets.beautyIcon,
       },
       
     ];

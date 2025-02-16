@@ -16,7 +16,7 @@ class CustomAppBar extends StatelessWidget {
       title: Row(
         children: [
           SvgPicture.asset(
-            AppAssets.icon,
+            AppAssets.menu,
             height: 18.h,
             width: 17.w,
           ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/features/discover/presentation/screens/search_screen.dart';
 
 class CustomSearchBar extends StatelessWidget {
   const CustomSearchBar({
@@ -27,19 +29,15 @@ class CustomSearchBar extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 icon: IconButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return SearchScreen();
-                    }));
-                  },
+                  onPressed: () {},
                   icon: Icon(Icons.search, color: AppColors.gray),
                 ),
                 hintText: "Search",
-                hintStyle: TextStyle(fontSize:  MediaQuery.of(context).size.width*.02,), // Prevents scaling),
+                hintStyle: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * .04,
+                ), // Prevents scaling),
                 border: InputBorder.none,
               ),
-
             ),
           ),
         ),
@@ -58,7 +56,7 @@ class CustomSearchBar extends StatelessWidget {
               width: 25.w,
               height: 25.h,
               child: SvgPicture.asset(
-                'assets/images/page_info.svg',
+                AppAssets.filterIcon,
               ),
             ),
             onPressed: () {

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/features/discover/presentation/screens/discover_full.dart';
 import 'package:monitor_ship_project/features/home/presentation/screens/home_screen.dart';
@@ -40,7 +41,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: SvgPicture.asset(
-                'assets/images/Vector (1).svg',
+               AppAssets.homeIcon,
                 colorFilter: ColorFilter.mode(
                     _selectedIndex != 0 ? AppColors.lightgray : AppColors.black,
                     BlendMode.srcIn),

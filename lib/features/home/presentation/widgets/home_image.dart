@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class HomeImage extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomeImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset('assets/images/Mask Group@2x.png'),
+        Image.asset(AppAssets.firstHomeImage),
         Positioned(
           right: 5,
           top: 10,

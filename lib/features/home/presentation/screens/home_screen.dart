@@ -22,7 +22,7 @@ class Homescreen extends StatelessWidget {
         leading: Transform.scale(
           scale: .35,
           child: SvgPicture.asset(
-            AppAssets.icon,
+            AppAssets.menu,
             height: 18.h,
             width: 17.w,
           ),
@@ -50,7 +50,7 @@ class Homescreen extends StatelessWidget {
                 text1: 'NEW COLLECTION',
                 text2: 'HANG OUT',
                 text3: '& PARTY',
-                image: 'assets/images/image 64.png',
+                image: AppAssets.secondtHomeImage,
               ),
               const CustomFeatureProductsRow(
                 text: 'Recommended',
@@ -65,14 +65,14 @@ class Homescreen extends StatelessWidget {
               const HomeImage2(
                 text1: 'Sale up to 40%',
                 text2: 'FOR SLIM ',
-                image: 'assets/images/image 48.png',
+                image: AppAssets.thirdHomeImage,
                 text3: '& BEAUTY',
               ),
            
               const HomeImage2(
                 text1: 'Summer Collection',
                 text2: 'Most sexy  ',
-                image: 'assets/images/image 69.png',
+                image: AppAssets.fourthHomeImage,
                 text3: '&design',
               ),
             

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 
 class TopCollectionRow extends StatelessWidget {
   const TopCollectionRow({
@@ -16,7 +17,7 @@ class TopCollectionRow extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12).r,
             ),
-            child: Image.asset('assets/images/banner 3.png'),
+            child: Image.asset(AppAssets.bannr3HomeImage),
           ),
         ),
         Expanded(
@@ -26,7 +27,7 @@ class TopCollectionRow extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12).r,
             ),
-            child: Image.asset('assets/images/banner 4.png'),
+            child: Image.asset(AppAssets.bannr4HomeImage),
           ),
         ),
       ],

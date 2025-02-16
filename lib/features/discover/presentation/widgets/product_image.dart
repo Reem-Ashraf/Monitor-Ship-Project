@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 class ProductImage extends StatelessWidget {
@@ -18,7 +19,7 @@ class ProductImage extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             image: const DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/images/image 55.png'),
+              image: AssetImage(AppAssets.productTest),
             ),
           ),
         ),
