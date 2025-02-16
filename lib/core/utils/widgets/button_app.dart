@@ -1,26 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 
 class ButtonApp extends StatelessWidget {
   const ButtonApp({
-    super.key, required this.onPressed, required this.text,
+    super.key,
+    required this.onPressed,
+    required this.text,
+    this.width = double.infinity,
+    this.height,
   });
   final void Function() onPressed;
   final String text;
+  final double? height;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.buttonBackgroundColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(25.r),
         ),
-        minimumSize: Size(double.infinity, 55),
+        minimumSize: Size(width, height ?? 50.h),
       ),
       onPressed: onPressed,
       child: Text(
-       text ,
+        text,
         style: TextStyles.buttonStyle,
       ),
     );
