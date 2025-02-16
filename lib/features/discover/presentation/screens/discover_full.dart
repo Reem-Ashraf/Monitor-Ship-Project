@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,7 +15,6 @@ class DiscoverFullScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.white,
       endDrawer: FilterSidBar(),
       appBar: AppBar(
         leading: Transform.scale(
@@ -27,7 +27,7 @@ class DiscoverFullScreen extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: AppColors.white,
-        title: Text('Discover'),
+        title: Text(context.tr('Discover')),
         actions: [Container()],
       ),
       body: Padding(

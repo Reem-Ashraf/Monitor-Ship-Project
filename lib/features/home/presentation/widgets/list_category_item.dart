@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
@@ -10,20 +11,20 @@ class CategoryItemListView extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> categoryList = [
       {
-        'categoryname': 'woman',
+        'categoryname': context.tr('woman'),
         'image': AppAssets.femaleIcon,
         
       },
       {
-        'categoryname': 'man',
+        'categoryname': context.tr('man'),
         'image': AppAssets.maleIcon,
       },
        {
-        'categoryname': 'Accesory',
+        'categoryname': context.tr('Accesory'),
         'image': AppAssets.acessoryIcon,
       },
       {
-        'categoryname': 'beauty',
+        'categoryname': context.tr('beauty'),
         'image': AppAssets.beautyIcon,
       },
       

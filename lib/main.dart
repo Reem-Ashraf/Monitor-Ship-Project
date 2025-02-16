@@ -1,13 +1,24 @@
+import 'dart:developer';
 import 'package:bloc/bloc.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_routes/routes_page.dart';
+import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 import 'core/bloc_opserver.dart';
 
 void main() {
   Bloc.observer = MyBlocObserver();
-  runApp(const MyApp());
+  runApp(EasyLocalization(
+      supportedLocales: [
+        Locale('ar'),
+        Locale('en'),
+      ],
+      path: 'assets/translations',
+      startLocale: const Locale(
+          'ar'), // to test the app in English, change this to Locale('en')
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,9 +26,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log('Supported Locales: ${EasyLocalization.of(context)?.supportedLocales}');
+    log('Current Locale: ${EasyLocalization.of(context)?.locale}');
     return ScreenUtilInit(
-      designSize: Size(315, 819),
+      designSize: const Size(360, 690),
       child: MaterialApp.router(
+        locale: context.locale,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.white,
+          appBarTheme: AppBarTheme(
+            backgroundColor: AppColors.white,
+            elevation: 0,
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         routerConfig: RoutesPage.router,
       ),

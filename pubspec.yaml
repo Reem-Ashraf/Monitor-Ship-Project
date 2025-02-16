@@ -70,6 +70,7 @@ flutter:
     - assets/app_icons/
     - assets/home_images/
     - assets/home_images/home_icons/
+    - assets/translations/
 
   #- images/a_dot_ham.jpeg
 
