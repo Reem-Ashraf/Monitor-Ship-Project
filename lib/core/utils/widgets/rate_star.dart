@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 class StarScore extends StatefulWidget {
@@ -51,13 +52,13 @@ class RatingStar extends StatelessWidget {
       child = Icon(
         Icons.star_rounded,
         color: AppColors.mintGreen,
-        size: 40,
+        size: 40.r,
       );
     } else {
       child = Icon(
         Icons.star_rounded,
-        color: Color(0xffb1b5c3),
-        size: 40,
+        color: AppColors.neutralGray,
+        size: 40.r,
       );
     }
     return GestureDetector(onTap: onTap, child: child);

@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
@@ -17,10 +18,10 @@ class OrderActionButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.symmetric(horizontal: 14),
+      padding: EdgeInsetsDirectional.symmetric(horizontal: 14.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        spacing: 24,
+        spacing: 24.w,
         children: [
           Expanded(
             child: OutlinedButton(
@@ -40,8 +41,8 @@ class OrderActionButtons extends StatelessWidget {
                 )),
           ),
           SizedBox(
-            width: 120,
-            height: 44,
+            width: 120.w,
+            height: 40.h,
             child: ButtonApp(
               onPressed: () {
                 context.push(RoutesName.rateProduct);

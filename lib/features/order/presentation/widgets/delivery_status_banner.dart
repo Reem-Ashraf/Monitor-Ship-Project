@@ -6,6 +6,7 @@ import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DeliveryStatusBanner extends StatelessWidget {
   const DeliveryStatusBanner({
@@ -20,11 +21,11 @@ class DeliveryStatusBanner extends StatelessWidget {
       },
       child: Container(
         width: double.infinity,
-        height: 92,
+        height: 92.h,
         decoration: ShapeDecoration(
           color: AppColors.mediumGray,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10.r),
           ),
         ),
         child: Row(
@@ -43,7 +44,11 @@ class DeliveryStatusBanner extends StatelessWidget {
                 )
               ],
             ),
-            SvgPicture.asset(AppAssets.assetsImageDelivery)
+            SvgPicture.asset(
+              AppAssets.assetsImageDelivery,
+              width: 48.w,
+              height: 48.h,
+            )
           ],
         ),
       ),
