@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Text(
                 "Log into your account",
-                style: TextStyle(color: AppColors.black, fontSize: 24),
+                style: TextStyle(color: AppColors.black, fontSize: 24.sp),
                 textAlign: TextAlign.start,
               ),
               SizedBox(
@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 alignment: Alignment.center,
                 child: Text(
                   "Or Login with ",
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: 12.sp),
                   textAlign: TextAlign.center,
                 ),
               ),

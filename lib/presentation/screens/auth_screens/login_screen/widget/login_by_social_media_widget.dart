@@ -22,7 +22,7 @@ class LoginBySocialMediaWidget extends StatelessWidget {
             onTap: appleIconTap,
             child: Image.asset(
               AppAssets.appleIcon,
-              width: 40,
+              width: 40.w,
             )),
         SizedBox(
           width: 10.w,
@@ -31,7 +31,7 @@ class LoginBySocialMediaWidget extends StatelessWidget {
           onTap: googleIconTap,
           child: Image.asset(
             AppAssets.googleIcon,
-            width: 40,
+            width: 40.w,
           ),
         ),
         SizedBox(
@@ -41,7 +41,7 @@ class LoginBySocialMediaWidget extends StatelessWidget {
           onTap: faceBookIconTap,
           child: Image.asset(
             AppAssets.faceBookIcon,
-            width: 40,
+            width: 40.w,
           ),
         ),
       ],

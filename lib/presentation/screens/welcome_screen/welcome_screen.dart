@@ -40,7 +40,7 @@ class WelcomeScreen extends StatelessWidget {
                 Text(
                   "Welcome to GemStore!",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -52,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                 Text(
                   "The home for a fashionista",
                   style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 12.sp,
                       color: AppColors.white,
                       fontWeight: FontWeight.w600),
                   textAlign: TextAlign.center,

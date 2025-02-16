@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
@@ -33,6 +34,12 @@ class AppTextFormField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.greyShade2, width: 1.5), // Default underline color
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.greyShade2, width: 2), // Focused underline color
+        ),
         //isDense: true,
         // contentPadding: contentPadding ??
         //     EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
@@ -66,7 +73,7 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
-    //    hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
+      //  hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
       ///  fillColor: backgroundColor ?? ColorsManager.moreLightGray,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 
 class AppButton extends StatelessWidget {
@@ -12,8 +13,8 @@ class AppButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        width: 193, // Set width
-        height: 50, // Set height
+        width: 260.w, // Set width
+        height: 40.h, // Set height
         alignment: Alignment.center, // Center text
         decoration: BoxDecoration(
           color: AppColors.black, // Frosted glass effect

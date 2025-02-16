@@ -75,6 +75,8 @@ flutter:
   assets:
    - assets/auth_images/
    - assets/auth_images/auth_icons/
+   - assets/app_icons/
+   - assets/app_images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
