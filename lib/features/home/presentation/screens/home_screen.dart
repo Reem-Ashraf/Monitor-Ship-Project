@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/home_image.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/home_image_two.dart';
 import 'package:monitor_ship_project/features/home/presentation/widgets/home_row_text.dart';
@@ -29,7 +30,7 @@ class Homescreen extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: AppColors.white,
-        title: Text('Gemstore'),
+        title: Text('Gemstore',style: TextStyles.appBarText,),
         actions: [Container()],
       ),
       body: Padding(
