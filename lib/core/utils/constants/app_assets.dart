@@ -49,4 +49,5 @@ static const productTest="${homePath}product test.png";
 
   ///app assets
   static const String completedOrder = "${assetsPath}order completed .png";
+static const String productImage = "${assetsPath}order completed .png";
 }
