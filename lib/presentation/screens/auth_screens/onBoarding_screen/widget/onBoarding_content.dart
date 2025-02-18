@@ -5,7 +5,7 @@ import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 class OnboardingContent extends StatelessWidget {
   final String title, subtitle, image;
 
-  const OnboardingContent({
+  const OnboardingContent({super.key, 
     required this.title,
     required this.subtitle,
     required this.image,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
@@ -10,12 +9,12 @@ class DeliveryOptionTile extends StatelessWidget {
   final VoidCallback onTap;
 
   const DeliveryOptionTile({
-    Key? key,
+    super.key,
     required this.isSelected,
     required this.title,
     required this.subtitle,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

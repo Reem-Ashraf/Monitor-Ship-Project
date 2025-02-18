@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
@@ -12,7 +11,7 @@ class OrderCard extends StatelessWidget {
   final String status;
   final Color statusColor;
 
-  OrderCard({
+  const OrderCard({super.key, 
     required this.orderId,
     required this.trackingNumber,
     required this.quantity,
@@ -60,7 +59,7 @@ class OrderCard extends StatelessWidget {
                 Text("Tracking number: ",
                     style: TextStyle(
                         color: AppColors.greyShade3, fontSize: 14.sp)),
-                Text("$trackingNumber",
+                Text(trackingNumber,
                     style: TextStyle(color: AppColors.black, fontSize: 14.sp)),
               ],
             ),

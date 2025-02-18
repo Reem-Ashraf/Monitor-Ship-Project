@@ -1,9 +1,7 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/build_dots.dart';
 import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/onBoarding_content.dart';
 import 'package:monitor_ship_project/presentation/widget/blur_button.dart';
@@ -11,12 +9,14 @@ import 'package:monitor_ship_project/presentation/widget/blur_button.dart';
 import '../../../../core/utils/app_routes/routes_name.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  PageController _pageController = PageController(viewportFraction: 0.75); // Slightly wider view
+  final PageController _pageController = PageController(viewportFraction: 0.75); // Slightly wider view
 
   @override
   Widget build(BuildContext context) {

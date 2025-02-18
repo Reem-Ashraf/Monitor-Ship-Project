@@ -6,7 +6,7 @@ class OrdersList extends StatelessWidget {
   final String status;
   final Color color;
 
-  OrdersList({required this.status, required this.color});
+  OrdersList({super.key, required this.status, required this.color});
 
   final List<Map<String, dynamic>> orders = [
     {
