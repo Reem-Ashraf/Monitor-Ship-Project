@@ -5,7 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/constants/app_assets.dart';
-import '../../../../../features/home/presentation/widgets/category_item.dart';
+import 'category_item.dart';
+
 
 class CategoryItemListView extends StatelessWidget {
   const CategoryItemListView({super.key});

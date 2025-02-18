@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/constants/text_style.dart';
 
-import '../../../../../features/home/presentation/widgets/custom_app_bar.dart';
+import '../../home/widgets/custom_app_bar.dart';
 import '../widgets/custom_search_bar.dart';
 import '../widgets/list_view_Discover_product_item.dart';
 

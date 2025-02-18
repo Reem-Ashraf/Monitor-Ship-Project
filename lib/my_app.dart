@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:device_preview/device_preview.dart';
@@ -38,4 +37,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

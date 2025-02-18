@@ -1,11 +1,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'core/bloc_opserver.dart';
+import 'core/bloc_observer.dart';
 import 'my_app.dart';
 
-void main() {
+void main() async{
   Bloc.observer = MyBlocObserver();
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   runApp(EasyLocalization(
       supportedLocales: [
         Locale('ar'),

@@ -2,8 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../features/home/presentation/widgets/product_item.dart';
+import 'package:monitor_ship_project/presentation/screens/home/widgets/product_item.dart';
 
 class ProductItemListView extends StatelessWidget {
   const ProductItemListView({super.key});

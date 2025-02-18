@@ -6,13 +6,13 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/constants/app_assets.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../../../../core/utils/constants/text_style.dart';
-import '../../../../../features/home/presentation/widgets/home_image.dart';
-import '../../../../../features/home/presentation/widgets/home_image_two.dart';
-import '../../../../../features/home/presentation/widgets/home_row_text.dart';
-import '../../../../../features/home/presentation/widgets/list_category_item.dart';
-import '../../../../../features/home/presentation/widgets/list_product_item.dart';
-import '../../../../../features/home/presentation/widgets/recommended_item_list_view.dart';
-import '../../../../../features/home/presentation/widgets/top_collection_row.dart';
+import '../widgets/home_image.dart';
+import '../widgets/home_image_two.dart';
+import '../widgets/home_row_text.dart';
+import '../widgets/list_category_item.dart';
+import '../widgets/list_product_item.dart';
+import '../widgets/recommended_item_list_view.dart';
+import '../widgets/top_collection_row.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});

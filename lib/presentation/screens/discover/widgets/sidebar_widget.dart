@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monitor_ship_project/presentation/screens/discover/widgets/range_price.dart';
+import 'package:monitor_ship_project/presentation/screens/discover/widgets/rest_or_apply_btn.dart';
+import 'package:monitor_ship_project/presentation/screens/discover/widgets/side_bar_header.dart';
+import 'package:monitor_ship_project/presentation/screens/discover/widgets/star_rating.dart';
 
 import '../../../../../core/utils/constants/colors.dart';
 import '../../../../../core/utils/constants/text_style.dart';
-import '../../../../../features/discover/presentation/widgets/color_selection.dart';
-import '../../../../../features/discover/presentation/widgets/discount_off.dart';
-import '../../../../../features/discover/presentation/widgets/range_price.dart';
-import '../../../../../features/discover/presentation/widgets/rest_or_apply_btn.dart';
-import '../../../../../features/discover/presentation/widgets/side_bar_header.dart';
-import '../../../../../features/discover/presentation/widgets/star_rating.dart';
+import 'color_selection.dart';
+import 'discount_off.dart';
 
 class FilterSidBar extends StatelessWidget {
   const FilterSidBar({super.key});

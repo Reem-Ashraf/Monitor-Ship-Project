@@ -1,13 +1,15 @@
 class AppAssets{
-static const path1="assets/";
-static const iconsPath1="${path1}app_icons/";
-static const homePath="${path1}home_images/";
+  // ignore_for_file: prefer_single_quotes
+  AppAssets._();
+static const path="assets/";
+static const iconsPath1="${path}app_icons/";
+static const homePath="${path}home_images/";
 static const homeIconsPath="${homePath}home_icons/";
 ///app icons
 static const menu="${iconsPath1}menu icon.svg";
 static const homeIcon="${iconsPath1}home icon.svg";
 static const filterIcon="${iconsPath1}filter icon.svg";
-///home icons 
+///home icons
 static const femaleIcon="${homeIconsPath}femalicon.svg";
 static const maleIcon="${homeIconsPath}maleicon.svg";
 static const beautyIcon="${homeIconsPath}beauty icon.svg";
@@ -21,12 +23,24 @@ static const bannr3HomeImage="${homePath}banner 3.png";
 static const bannr4HomeImage="${homePath}banner 4.png";
 static const productTest="${homePath}product test.png";
 
-  static const String path = "assets/";
   static const String authPath = "${path}auth_images/";
   static const String authIcons = "${authPath}auth_icons/";
   static const String iconsPath = "${path}app_icons/";
   static const String assetsPath = "${path}app_images/";
 
+  /// Assets for assetsImageDelivery
+  /// assets/image/delivery.svg
+  static const String assetsImageDelivery = "${path}image/delivery.svg";
+
+  /// Assets for assetsImageMore
+  /// دول بتوع ال order و checking
+  /// لو مش عندك svg خليهم
+  /// assets/image/more.svg
+  static const String assetsImageMore = "${path}image/more.svg";
+
+  /// Assets for assetsImageOrder
+  /// assets/image/order.svg
+  static const String assetsImageOrder = "${path}image/order.svg";
   ///auth assets
   static const String welcomeScreenBackGround =
       "${authPath}welcome screen backGround.png";

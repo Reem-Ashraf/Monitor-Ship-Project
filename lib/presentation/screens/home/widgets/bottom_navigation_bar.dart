@@ -5,8 +5,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/utils/constants/app_assets.dart';
 import '../../../../../core/utils/constants/colors.dart';
-import '../../../../../features/discover/presentation/screens/discover_full.dart';
-import '../../../../../features/home/presentation/screens/home_screen.dart';
+import '../../discover/screens/discover_full.dart';
+import '../screens/home_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});

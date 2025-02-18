@@ -1,8 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../features/home/presentation/widgets/recommended_item.dart';
+import 'package:monitor_ship_project/presentation/screens/home/widgets/recommended_item.dart';
 
 class RecommendedItemListView extends StatelessWidget {
   const RecommendedItemListView({super.key});
