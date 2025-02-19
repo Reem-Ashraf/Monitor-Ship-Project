@@ -11,6 +11,8 @@ class WishlistItem extends StatelessWidget {
     Product('images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
   ];
 
+  const WishlistItem({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +111,7 @@ class WishlistItem extends StatelessWidget {
 class ProductItem extends StatelessWidget {
   final Product product;
 
-  ProductItem({required this.product});
+  const ProductItem({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {

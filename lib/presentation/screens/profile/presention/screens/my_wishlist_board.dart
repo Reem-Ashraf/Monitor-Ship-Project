@@ -1,12 +1,13 @@
 
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../data/models/drawer.dart';
 import 'my_wishlist_all.dart';
 
 class WishlistScreen extends StatefulWidget {
+  const WishlistScreen({super.key});
+
   @override
   _WishlistScreenState createState() => _WishlistScreenState();
 }
@@ -157,7 +158,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
 class CategoryCard extends StatelessWidget {
   final Category category;
 
-  CategoryCard({required this.category});
+  const CategoryCard({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -175,7 +176,7 @@ class CategoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 160,
               child: ListView(
                 scrollDirection: Axis.horizontal,

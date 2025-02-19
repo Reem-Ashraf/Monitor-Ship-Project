@@ -9,10 +9,10 @@ class CustomDrawer extends StatelessWidget {
   final VoidCallback toggleTheme;
 
   const CustomDrawer({
-    Key? key,
+    super.key,
     required this.isDarkMode,
     required this.toggleTheme,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

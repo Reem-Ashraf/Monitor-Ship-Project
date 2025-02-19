@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class CategoryCard extends StatelessWidget {
   final Category category;
 
-  CategoryCard({required this.category});
+  const CategoryCard({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class CategoryCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
             height: 160,
             child: ListView(
               scrollDirection: Axis.horizontal,
