@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/build_dots.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/onBoarding_content.dart';
-import 'package:monitor_ship_project/presentation/widget/blur_button.dart';
+import '../../../../core/utils/constants/app_assets.dart';
+import 'widget/build_dots.dart';
+import 'widget/onBoarding_content.dart';
+import '../../../widget/blur_button.dart';
 
 import '../../../../core/utils/app_routes/routes_name.dart';
 

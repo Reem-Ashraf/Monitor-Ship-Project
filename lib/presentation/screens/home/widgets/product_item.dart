@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import '../../../../core/utils/constants/app_assets.dart';
+import '../../../../core/utils/constants/text_style.dart';
 
 class ProductItem extends StatelessWidget {
   const ProductItem({

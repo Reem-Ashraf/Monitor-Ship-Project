@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/presentation/screens/Search/presentation/view/widget/home_search_body.dart';
+import 'widget/home_search_body.dart';
 
 
 class HomeSearch extends StatelessWidget {

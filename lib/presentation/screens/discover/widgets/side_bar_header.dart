@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
+import '../../../../core/utils/constants/app_assets.dart';
 
 class SidBarHeader extends StatelessWidget {
   const SidBarHeader({

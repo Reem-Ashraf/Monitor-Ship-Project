@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/drop_down_menue.dart';
-import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/location_complete_mark_widget.dart';
-import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/selected_radio_button.dart';
+import '../../../core/utils/app_routes/routes_name.dart';
+import '../../../core/utils/constants/app_assets.dart';
+import '../../../core/utils/constants/colors.dart';
+import 'widget/drop_down_menue.dart';
+import 'widget/location_complete_mark_widget.dart';
+import 'widget/selected_radio_button.dart';
 
 import '../../widget/app_button.dart';
 import '../../widget/app_text_field.dart';

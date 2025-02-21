@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/presentation/screens/profile/presention/screens/profile_setting.dart';
+import 'profile_setting.dart';
 
 import 'my_wishlist_board.dart';
 

@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/constants.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import '../../../../../core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/constants.dart';
+import '../../../../../core/utils/constants/text_style.dart';
 
 class TextRichTrack extends StatelessWidget {
   const TextRichTrack({

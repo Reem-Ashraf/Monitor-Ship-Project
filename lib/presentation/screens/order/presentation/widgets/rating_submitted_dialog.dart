@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/core/utils/widgets/button_app.dart';
+import '../../../../../core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/text_style.dart';
+import '../../../../../core/utils/widgets/button_app.dart';
 
 class RatingSubmittedDialog extends StatelessWidget {
   const RatingSubmittedDialog({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:monitor_ship_project/presentation/screens/Search/presentation/view/widget/product_details.dart';
+import 'product_details.dart';
 
 import '../../../../../../core/utils/constants/app_assets.dart';
 

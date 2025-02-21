@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import '../../../../core/utils/constants/app_assets.dart';
+import '../../../../core/utils/constants/text_style.dart';
 
 class HomeImage extends StatelessWidget {
   const HomeImage({

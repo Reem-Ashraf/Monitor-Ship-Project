@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/colors.dart';
 
 class OnboardingContent extends StatelessWidget {
   final String title, subtitle, image;

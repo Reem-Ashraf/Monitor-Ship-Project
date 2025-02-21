@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/constants.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/core/utils/widgets/my_divider.dart';
+import '../../../../../core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/constants.dart';
+import '../../../../../core/utils/constants/text_style.dart';
+import '../../../../../core/utils/widgets/my_divider.dart';
 
 import 'order_details_row.dart';
 import 'order_item_details_row.dart';

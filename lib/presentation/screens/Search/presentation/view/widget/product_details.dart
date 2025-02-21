@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:monitor_ship_project/presentation/screens/Search/presentation/view/widget/review_card.dart';
-import 'package:monitor_ship_project/presentation/screens/Search/presentation/view/widget/similar_product_item.dart';
+import 'review_card.dart';
+import 'similar_product_item.dart';
 
 import '../../../../../../core/utils/constants/app_assets.dart';
 

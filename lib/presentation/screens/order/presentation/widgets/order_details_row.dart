@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import '../../../../../core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/text_style.dart';
 
 class OrderDetailsRow extends StatelessWidget {
   const OrderDetailsRow({

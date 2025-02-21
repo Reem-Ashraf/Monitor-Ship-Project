@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import '../../../../core/utils/constants/text_style.dart';
 class CustomFeatureProductsRow extends StatelessWidget {
   const CustomFeatureProductsRow({
     super.key, required this.text,

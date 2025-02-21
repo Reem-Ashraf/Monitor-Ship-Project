@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
+import 'routes_name.dart';
 import '../../../presentation/screens/auth_screens/login_screen/login_screen.dart';
 import '../../../presentation/screens/auth_screens/onBoarding_screen/onBoarding_screen1.dart';
 import '../../../presentation/screens/checkout_screen/checkout_screen1.dart';
