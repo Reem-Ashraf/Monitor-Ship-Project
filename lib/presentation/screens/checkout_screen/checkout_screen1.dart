@@ -12,8 +12,10 @@ import '../../widget/app_button.dart';
 import '../../widget/app_text_field.dart';
 
 class CheckoutScreen1 extends StatefulWidget {
-   CheckoutScreen1({super.key});
-   bool isSelected = false;
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+  // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
+  CheckoutScreen1({super.key});
+  bool isSelected = false;
   @override
   State<CheckoutScreen1> createState() => _CheckoutScreen1State();
 }
@@ -33,6 +35,7 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
         ),
         centerTitle: true,
         title: Text(
+          // TODO: Use Strings class
           "Check out",
           style: TextStyle(fontSize: 24.sp),
         ),
@@ -43,13 +46,15 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LocationCompleteMarkWidget(isCheckout1Screen: true,),
+              LocationCompleteMarkWidget(
+                isCheckout1Screen: true,
+              ),
               SizedBox(
                 height: 18.h,
               ),
               Text(
                 "STEP1",
-                style: TextStyle( fontSize: 8,fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 8, fontWeight: FontWeight.w400),
                 textAlign: TextAlign.start,
               ),
               Text(
@@ -136,18 +141,17 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
               ),
               Center(
                   child: AppButton(
-                    onTap: () {
-                      context.pushNamed(RoutesName.checkOutScreen2);
-                    },
-                    text: 'Continue To Payment',
-                  )),
+                onTap: () {
+                  context.pushNamed(RoutesName.checkOutScreen2);
+                },
+                text: 'Continue To Payment',
+              )),
               SizedBox(
                 height: 12.h,
               ),
               SizedBox(
                 height: 20.h,
               ),
-
             ],
           ),
         ),

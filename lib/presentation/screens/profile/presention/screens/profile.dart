@@ -4,6 +4,8 @@ import 'profile_setting.dart';
 import 'my_wishlist_board.dart';
 
 class MyApp extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+  //TODO: Remove MaterialApp
   const MyApp({super.key});
 
   @override

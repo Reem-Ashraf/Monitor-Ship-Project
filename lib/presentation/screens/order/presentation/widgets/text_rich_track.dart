@@ -22,13 +22,13 @@ class TextRichTrack extends StatelessWidget {
           TextSpan(
             text: context.tr(text1),
             style: TextStyles.product12W400.copyWith(
-              letterSpacing: -0.12,
+              // letterSpacing: -0.12,
             ),
           ),
           TextSpan(
             text: Constants.convertNumToArabic('  $text2', false),
             style: TextStyles.textStyle14W400.copyWith(
-              letterSpacing: -0.12,
+              // letterSpacing: -0.12,
               color: AppColors.orderCardColor,
             ),
           ),

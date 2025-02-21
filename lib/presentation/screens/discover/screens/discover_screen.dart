@@ -19,7 +19,7 @@ class FoundResultScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const CustomAppBar(
-              text:  'Discover',
+              text: 'Discover',
             ),
             SizedBox(
               height: 20.h,

@@ -10,7 +10,8 @@ class OrdersScreen extends StatefulWidget {
   _OrdersScreenState createState() => _OrdersScreenState();
 }
 
-class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderStateMixin {
+class _OrdersScreenState extends State<OrdersScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -28,7 +29,6 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
           "My Orders",
           style: TextStyle(fontSize: 24.sp),
         ),
-
         elevation: 0,
         leading: Icon(Icons.menu, color: AppColors.black),
         bottom: TabBar(
@@ -36,7 +36,7 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
           dividerColor: Colors.transparent,
           controller: _tabController,
           labelColor: AppColors.white,
-          indicatorPadding: EdgeInsets.symmetric(vertical: 8,horizontal: 5),
+          indicatorPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
           unselectedLabelColor: AppColors.black,
           indicatorColor: Colors.transparent,
           indicatorSize: TabBarIndicatorSize.tab,
@@ -45,7 +45,9 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
             borderRadius: BorderRadius.circular(20), // Rounded container
           ),
           tabs: [
-            Tab(text: "Pending",),
+            Tab(
+              text: "Pending",
+            ),
             Tab(text: "Delivered"),
             Tab(text: "Cancelled"),
           ],
@@ -54,7 +56,8 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
       body: TabBarView(
         controller: _tabController,
         children: [
-          OrdersList(status: "PENDING", color:AppColors.orange),
+          // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
+          OrdersList(status: "PENDING", color: AppColors.orange),
           OrdersList(status: "DELIVERED", color: AppColors.green),
           OrdersList(status: "CANCELLED", color: AppColors.red),
         ],
@@ -62,7 +65,3 @@ class _OrdersScreenState extends State<OrdersScreen> with SingleTickerProviderSt
     );
   }
 }
-
-
-
-

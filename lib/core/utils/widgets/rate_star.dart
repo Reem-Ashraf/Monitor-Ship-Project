@@ -11,7 +11,7 @@ class StarScore extends StatefulWidget {
   State<StarScore> createState() => _StarScoreState();
 }
 
-int indexRate = 4;
+int _indexRate = 4;
 
 class _StarScoreState extends State<StarScore> {
   @override
@@ -22,10 +22,10 @@ class _StarScoreState extends State<StarScore> {
       children: List.generate(5, (index) {
         return RatingStar(
           index: index,
-          rate: indexRate,
+          rate: _indexRate,
           onTap: () {
             setState(() {
-              indexRate = index + 1;
+              _indexRate = index + 1;
             });
           },
         );
@@ -34,6 +34,9 @@ class _StarScoreState extends State<StarScore> {
   }
 }
 
+// TODO: 1. Move RatingStar to its own file.
+// TODO: 2. In line with Clean Code guidelines (preferably <2 function arguments),
+// TODO: create a model with onTap, rate, and index to streamline argument handling.
 class RatingStar extends StatelessWidget {
   const RatingStar({
     super.key,

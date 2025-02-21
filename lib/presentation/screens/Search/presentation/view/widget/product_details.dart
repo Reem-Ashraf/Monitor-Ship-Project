@@ -5,8 +5,9 @@ import 'similar_product_item.dart';
 
 import '../../../../../../core/utils/constants/app_assets.dart';
 
-
 class ProductDetails extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   const ProductDetails({super.key});
 
   @override
@@ -18,22 +19,26 @@ class ProductDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
               Stack(
                 children: [
                   const AspectRatio(
-                   aspectRatio: 2.5/3,
-                   child: Image(image: AssetImage(AppAssets.productImage),
-                   fit: BoxFit.fill,),
-                 ),
-                  Positioned(
-                    top: 20,
-                    left: 10,
-                    child: IconButton(onPressed: ()
-                    {
-                      Navigator.pop(context);
-                    }, icon: const Icon(Icons.arrow_back_ios))
+                    aspectRatio: 2.5 / 3,
+                    child: Image(
+                      image: AssetImage(AppAssets.productImage),
+                      fit: BoxFit.fill,
+                    ),
                   ),
+                  Positioned(
+                      top: 20,
+                      left: 10,
+                      child: IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: const Icon(Icons.arrow_back_ios))),
                   const Positioned(
                     top: 20,
                     right: 10,
@@ -45,14 +50,19 @@ class ProductDetails extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: MediaQuery.of(context).size.height*0.03,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text("Sportwear Set", style: TextStyle(fontSize: 18,color: Colors.black),),
+                      const Text(
+                        "Sportwear Set",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                       RatingBar.builder(
                         initialRating: 4,
                         minRating: 1,
@@ -60,7 +70,8 @@ class ProductDetails extends StatelessWidget {
                         direction: Axis.horizontal,
                         allowHalfRating: true,
                         itemCount: 5,
-                        itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                        itemPadding:
+                            const EdgeInsets.symmetric(horizontal: 4.0),
                         itemBuilder: (context, _) => const Icon(
                           Icons.star,
                           color: Colors.indigoAccent,
@@ -71,30 +82,47 @@ class ProductDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Text("\$ 80.88", style: TextStyle(
-                      fontSize: 26, fontWeight: FontWeight.w600,color: Colors.black),),
+                  const Text(
+                    "\$ 80.88",
+                    style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
+                  ),
                 ],
               ),
-              SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-              const Text("Description", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),),
-              const Text("Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.",
-              maxLines: 4,overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 16, color: Colors.grey),),
-              SizedBox(height: MediaQuery.of(context).size.height*0.02,),
-              const ReviewCard(),
-              const Text("Similar Product", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),),
               SizedBox(
-                height: MediaQuery.of(context).size.height*0.33,
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const Text(
+                "Description",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              ),
+              const Text(
+                "Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.",
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 16, color: Colors.grey),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const ReviewCard(),
+              const Text(
+                "Similar Product",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.33,
                 child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 6,
-                    itemBuilder: (context, index){
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 6,
+                    itemBuilder: (context, index) {
                       return const Padding(
                         padding: EdgeInsets.all(6.0),
                         child: SimilarProductItem(),
                       );
-                    }
-                ),
+                    }),
               ),
               Container(
                 height: 60,
@@ -103,8 +131,14 @@ class ProductDetails extends StatelessWidget {
                   color: Color(0xff343434),
                   // borderRadius: BorderRadius.circular(22),
                 ),
-                child: const Center(child: Text("add to cart", style: TextStyle(
-                    fontSize: 22, fontWeight: FontWeight.w600,color: Colors.white),)),
+                child: const Center(
+                    child: Text(
+                  "add to cart",
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
+                )),
               )
             ],
           ),
@@ -113,4 +147,3 @@ class ProductDetails extends StatelessWidget {
     );
   }
 }
-

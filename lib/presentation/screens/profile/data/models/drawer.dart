@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import '../../presention/screens/profile.dart';
 import '../../presention/screens/setting.dart';
 
-
 class CustomDrawer extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   final bool isDarkMode;
   final VoidCallback toggleTheme;
 

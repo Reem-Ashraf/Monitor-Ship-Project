@@ -1,3 +1,3 @@
-class EndPoints{
-  static final String baseUrl="";
+class EndPoints {
+  static final String baseUrl = "";
 }

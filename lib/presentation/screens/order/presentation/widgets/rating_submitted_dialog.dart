@@ -6,6 +6,8 @@ import '../../../../../core/utils/constants/text_style.dart';
 import '../../../../../core/utils/widgets/button_app.dart';
 
 class RatingSubmittedDialog extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   const RatingSubmittedDialog({
     super.key,
   });

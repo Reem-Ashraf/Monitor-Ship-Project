@@ -3,12 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'widget/location_complete_mark_widget.dart';
 
-
 import '../../../core/utils/constants/app_assets.dart';
 import '../../../core/utils/constants/colors.dart';
 import '../../widget/app_button.dart';
 
 class CheckOutScreen2 extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
   const CheckOutScreen2({super.key});
 
   @override
@@ -36,7 +36,9 @@ class CheckOutScreen2 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LocationCompleteMarkWidget(isCheckout1Screen: false,),
+              LocationCompleteMarkWidget(
+                isCheckout1Screen: false,
+              ),
               SizedBox(
                 height: 18.h,
               ),
@@ -48,7 +50,12 @@ class CheckOutScreen2 extends StatelessWidget {
               SizedBox(
                 height: 40.h,
               ),
-              Center(child: Image.asset(AppAssets.completedOrder,height: 110.h,width: 110.w,)),
+              Center(
+                  child: Image.asset(
+                AppAssets.completedOrder,
+                height: 110.h,
+                width: 110.w,
+              )),
               SizedBox(
                 height: 40.h,
               ),
@@ -62,11 +69,9 @@ class CheckOutScreen2 extends StatelessWidget {
               ),
               Center(
                   child: AppButton(
-                    onTap: () {
-
-                    },
-                    text: 'Continue To Payment',
-                  )),
+                onTap: () {},
+                text: 'Continue To Payment',
+              )),
             ],
           ),
         ),

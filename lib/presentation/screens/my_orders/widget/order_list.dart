@@ -7,7 +7,6 @@ class OrdersList extends StatelessWidget {
   final Color color;
 
   OrdersList({super.key, required this.status, required this.color});
-
   final List<Map<String, dynamic>> orders = [
     {
       "id": "#1524",
@@ -39,6 +38,7 @@ class OrdersList extends StatelessWidget {
       itemCount: orders.length,
       itemBuilder: (context, index) {
         return OrderCard(
+          // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model to streamline argument handling.
           orderId: orders[index]["id"],
           trackingNumber: orders[index]["tracking"],
           quantity: orders[index]["quantity"],

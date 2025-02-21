@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../data/models/drawer.dart';
 
-
 class HomeScreen extends StatelessWidget {
   final VoidCallback toggleTheme;
   final bool isDarkMode;
 
-  const HomeScreen({super.key, required this.toggleTheme, required this.isDarkMode});
+  const HomeScreen(
+      {super.key, required this.toggleTheme, required this.isDarkMode});
 
   @override
   Widget build(BuildContext context) {

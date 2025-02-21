@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'core/bloc_observer.dart';
 import 'my_app.dart';
 
-void main() async{
+void main() async {
   Bloc.observer = MyBlocObserver();
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
@@ -18,7 +18,3 @@ void main() async{
           'en'), // to test the app in English, change this to Locale('en')
       child: const MyApp()));
 }
-
-
-
-

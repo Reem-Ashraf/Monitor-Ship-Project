@@ -34,10 +34,13 @@ class AppTextFormField extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         enabledBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: AppColors.greyShade2, width: 1.5), // Default underline color
+          borderSide: BorderSide(
+              color: AppColors.greyShade2,
+              width: 1.5), // Default underline color
         ),
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: AppColors.greyShade2, width: 2), // Focused underline color
+          borderSide: BorderSide(
+              color: AppColors.greyShade2, width: 2), // Focused underline color
         ),
         //isDense: true,
         // contentPadding: contentPadding ??
@@ -72,10 +75,11 @@ class AppTextFormField extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
-      //  hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
+        //  hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
-      ///  fillColor: backgroundColor ?? ColorsManager.moreLightGray,
+
+        ///  fillColor: backgroundColor ?? ColorsManager.moreLightGray,
         //filled: true,
       ),
       obscureText: isObscureText ?? false,

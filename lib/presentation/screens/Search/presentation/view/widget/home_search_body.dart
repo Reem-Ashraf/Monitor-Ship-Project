@@ -29,8 +29,7 @@ class HomeSearchBody extends StatelessWidget {
                     ),
                   ),
                 ),
-                IconButton(
-                    onPressed: () {}, icon: const Icon(Icons.menu_sharp))
+                IconButton(onPressed: () {}, icon: const Icon(Icons.menu_sharp))
               ],
             ),
           ],

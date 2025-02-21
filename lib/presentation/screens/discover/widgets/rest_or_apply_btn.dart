@@ -24,7 +24,9 @@ class RestOrApply extends StatelessWidget {
             Navigator.pop(context); // Apply filter & close modal
           },
           style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-          child: Text("Apply", textScaler: TextScaler.noScaling,style: TextStyle(color: Colors.white)),
+          child: Text("Apply",
+              textScaler: TextScaler.noScaling,
+              style: TextStyle(color: Colors.white)),
         ),
       ],
     );

@@ -11,6 +11,7 @@ import 'discount_off.dart';
 
 class FilterSidBar extends StatelessWidget {
   const FilterSidBar({super.key});
+// TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
 
   @override
   Widget build(BuildContext context) {
@@ -76,8 +77,12 @@ class FilterSidBar extends StatelessWidget {
                 DropdownButtonFormField<String>(
                   value: selectedCategory,
                   items: ["Crop Tops", "Dresses", "Jeans", "Sweaters"]
-                      .map((item) =>
-                          DropdownMenuItem(value: item, child: Text(item,textScaler: TextScaler.noScaling,)))
+                      .map((item) => DropdownMenuItem(
+                          value: item,
+                          child: Text(
+                            item,
+                            textScaler: TextScaler.noScaling,
+                          )))
                       .toList(),
                   onChanged: (value) {
                     (selectedCategory = value!);

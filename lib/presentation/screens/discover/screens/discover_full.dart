@@ -43,6 +43,7 @@ class DiscoverFullScreen extends StatelessWidget {
               //   text: 'Discover',
               //   appBarIcon: Icons.notifications_outlined,
               // ),
+              // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
               CustomSearchBar(),
               SearchCategoryItem(
                 text1: 'CLOTHING',

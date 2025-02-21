@@ -12,21 +12,23 @@ class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
-
-bool isObscureText = true;
+// TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
 
 class _LoginScreenState extends State<LoginScreen> {
+  bool _isObscureText = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 50),
+        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 50.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 "Log into your account",
+                // TODO: Use TextStyles class
                 style: TextStyle(color: AppColors.black, fontSize: 24.sp),
                 textAlign: TextAlign.start,
               ),
@@ -35,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               AppTextFormField(
                 hintText: 'Email Address',
+                // TODO: Later, extract validation functions and call them here to improve code clarity and maintainability.
                 validator: (String) {},
               ),
               SizedBox(
@@ -44,14 +47,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 suffixIcon: InkWell(
                   onTap: () {
                     setState(() {
-                      isObscureText = !isObscureText;
+                      _isObscureText = !_isObscureText;
                     });
                   },
                   child: Icon(
-                    isObscureText ? Icons.visibility_off : Icons.visibility,
+                    _isObscureText ? Icons.visibility_off : Icons.visibility,
                   ),
                 ),
-                isObscureText: isObscureText,
+                isObscureText: _isObscureText,
                 hintText: 'Password',
                 validator: (String) {},
               ),

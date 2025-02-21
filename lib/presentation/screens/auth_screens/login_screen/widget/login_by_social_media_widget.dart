@@ -5,6 +5,7 @@ import '../../../../../core/utils/constants/app_assets.dart';
 
 class LoginBySocialMediaWidget extends StatelessWidget {
   LoginBySocialMediaWidget(
+      // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model to streamline argument handling.
       {super.key,
       required this.appleIconTap,
       required this.faceBookIconTap,

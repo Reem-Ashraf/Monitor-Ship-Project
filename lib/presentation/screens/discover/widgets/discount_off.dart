@@ -20,7 +20,10 @@ class DiscountOff extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text("50% off",textScaler: TextScaler.noScaling,),
+          Text(
+            "50% off",
+            textScaler: TextScaler.noScaling,
+          ),
           SizedBox(
             width: 10.w,
           ),

@@ -1,19 +1,9 @@
 import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_exports.dart';
 import 'routes_name.dart';
-import '../../../presentation/screens/auth_screens/login_screen/login_screen.dart';
-import '../../../presentation/screens/auth_screens/onBoarding_screen/onBoarding_screen1.dart';
-import '../../../presentation/screens/checkout_screen/checkout_screen1.dart';
-import '../../../presentation/screens/checkout_screen/checkout_screen2.dart';
-import '../../../presentation/screens/discover/screens/discover_full.dart';
-import '../../../presentation/screens/home/screens/home_screen.dart';
-import '../../../presentation/screens/home/widgets/bottom_navigation_bar.dart';
-import '../../../presentation/screens/my_orders/my_orders.dart';
-import '../../../presentation/screens/order/presentation/screens/rate_product.dart';
-import '../../../presentation/screens/order/presentation/screens/track_order.dart';
-import '../../../presentation/screens/welcome_screen/welcome_screen.dart';
 
 class GroupRoutes {
-   final GoRouter router = GoRouter(
+  final GoRouter router = GoRouter(
     routes: [
       GoRoute(
         name: RoutesName.welcomeScreen,
@@ -81,4 +71,3 @@ class GroupRoutes {
     ],
   );
 }
-

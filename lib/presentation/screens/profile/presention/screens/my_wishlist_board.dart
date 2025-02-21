@@ -1,11 +1,11 @@
-
-
 import 'package:flutter/material.dart';
 
 import '../../data/models/drawer.dart';
 import 'my_wishlist_all.dart';
 
 class WishlistScreen extends StatefulWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   const WishlistScreen({super.key});
 
   @override
@@ -215,6 +215,7 @@ class CategoryCard extends StatelessWidget {
     );
   }
 }
+// TODO: why category model is not in the models folder.
 
 class Category {
   final List<String> images;

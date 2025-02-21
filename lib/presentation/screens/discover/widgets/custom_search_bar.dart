@@ -5,6 +5,8 @@ import '../../../../core/utils/constants/app_assets.dart';
 import '../../../../core/utils/constants/colors.dart';
 
 class CustomSearchBar extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   const CustomSearchBar({
     super.key,
   });

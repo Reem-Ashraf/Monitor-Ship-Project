@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -9,6 +8,7 @@ import '../../../core/utils/constants/colors.dart';
 import '../../widget/blur_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
   const WelcomeScreen({super.key});
 
   @override

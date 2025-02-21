@@ -6,13 +6,14 @@ import '../../../../../../core/utils/constants/app_assets.dart';
 
 class BuildSearchResult extends StatelessWidget {
   const BuildSearchResult({super.key});
-
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetails()));
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ProductDetails()));
       },
       child: Container(
         decoration: BoxDecoration(
@@ -36,37 +37,69 @@ class BuildSearchResult extends StatelessWidget {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
-                    child:  const AspectRatio(
-                        aspectRatio: 1.6/2,
-                        child:Image(image: AssetImage(AppAssets.productImage),
-                        fit: BoxFit.fill,)
-                    ),
+                    child: const AspectRatio(
+                        aspectRatio: 1.6 / 2,
+                        child: Image(
+                          image: AssetImage(AppAssets.productImage),
+                          fit: BoxFit.fill,
+                        )),
                   ),
                   Positioned(
-                    top: 2,right: 2,
+                    top: 2,
+                    right: 2,
                     child: IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.favorite_border,color: Colors.grey,size: 30,),
+                      icon: const Icon(
+                        Icons.favorite_border,
+                        color: Colors.grey,
+                        size: 30,
+                      ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
-              const Text("Filted Waist Dress",
-                style: TextStyle(color:Colors.black,fontWeight: FontWeight.w600,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              const Text(
+                "Filted Waist Dress",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                ),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.005,
+              ),
               const Row(
                 children: [
-                  Text("\$ 200", style: TextStyle(color:Colors.black,fontSize: 18,fontWeight: FontWeight.w600,),),
-                  SizedBox(width: 8,),
-                  Text("\$ 200", style: TextStyle(
-                    decoration: TextDecoration.lineThrough, color:Colors.black,fontSize: 18,fontWeight: FontWeight.w600,),),
+                  Text(
+                    "\$ 200",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "\$ 200",
+                    style: TextStyle(
+                      decoration: TextDecoration.lineThrough,
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ],
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.005,
+              ),
               RatingBar.builder(
                 initialRating: 4,
                 minRating: 1,
@@ -90,4 +123,3 @@ class BuildSearchResult extends StatelessWidget {
     );
   }
 }
-

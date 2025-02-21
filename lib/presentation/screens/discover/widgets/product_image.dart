@@ -29,8 +29,8 @@ class ProductImage extends StatelessWidget {
           child: Container(
             height: 30.h,
             width: 30.w,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle, color: AppColors.white),
+            decoration:
+                BoxDecoration(shape: BoxShape.circle, color: AppColors.white),
             child: const Icon(
               Icons.favorite,
               color: Colors.red,

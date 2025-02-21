@@ -14,13 +14,13 @@ class NumberOfItemWidget extends StatelessWidget {
       children: [
         Text(
           'jackets',
-           textScaler: TextScaler.noScaling,
-          style: TextStyle(fontSize: 17.sp,fontFamily: 'ProductSansLight'),
+          textScaler: TextScaler.noScaling,
+          style: TextStyle(fontSize: 17.sp, fontFamily: 'ProductSansLight'),
         ),
         Spacer(),
         Text(
           '143 items',
-           textScaler: TextScaler.noScaling,
+          textScaler: TextScaler.noScaling,
           style: TextStyles.text13,
         ),
         IconButton(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProfileApp extends StatelessWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   ProfileApp({super.key});
 
   final TextEditingController firstNameController =

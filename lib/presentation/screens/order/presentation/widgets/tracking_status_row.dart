@@ -4,6 +4,9 @@ import '../../../../../core/utils/constants/text_style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TrackingStatusRow extends StatelessWidget {
+  // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model with onTap, rate, and index to streamline argument handling.
+// TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   const TrackingStatusRow({
     super.key,
     required this.isCompleted,

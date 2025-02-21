@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'price_widget.dart';
@@ -19,12 +17,12 @@ class DiscoverProductItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const ProductImage(),
-         SizedBox(
+        SizedBox(
           height: 16.h,
         ),
         Text(
           'Turtleneck Sweater ',
-           textScaler: TextScaler.noScaling,
+          textScaler: TextScaler.noScaling,
           style: TextStyles.textw500,
         ),
         const PriceWidget(),

@@ -8,6 +8,7 @@ import '../../../../../core/utils/widgets/my_divider.dart';
 
 import 'order_details_row.dart';
 import 'order_item_details_row.dart';
+
 class OrderSummaryCard extends StatelessWidget {
   const OrderSummaryCard({
     super.key,
@@ -48,6 +49,7 @@ class OrderSummaryCard extends StatelessWidget {
                 itemCount: 50),
           ),
           // MyDivider(),
+          // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
           SizedBox(
             height: 32.h,
           ),

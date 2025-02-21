@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../data/models/drawer.dart';
 
 class SettingsScreen extends StatefulWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
   const SettingsScreen({super.key});
 
   @override

@@ -6,6 +6,8 @@ import '../../../../core/utils/constants/text_style.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
+    // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model with onTap, rate, and index to streamline argument handling.
+
     super.key,
     required this.categoryname,
     required this.image,

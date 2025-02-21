@@ -20,7 +20,7 @@ class SidBarHeader extends StatelessWidget {
           width: 25.w,
           height: 25.h,
           child: SvgPicture.asset(
-           AppAssets.femaleIcon,
+            AppAssets.femaleIcon,
           ),
         ),
       ],

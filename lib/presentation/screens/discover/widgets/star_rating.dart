@@ -27,8 +27,7 @@ class StarRating extends StatelessWidget {
               children: [
                 Icon(Icons.star,
                     color: selectedRating == star ? Colors.white : Colors.black,
-                    size: 18.r
-                    ),
+                    size: 18.r),
                 Text(
                   (index + 1).toString(),
                   textScaler: TextScaler.noScaling,

@@ -5,7 +5,6 @@ import '../../../../../core/utils/constants/colors.dart';
 
 import 'order_details_row.dart';
 
-
 class OrderInfoCard extends StatelessWidget {
   const OrderInfoCard({
     super.key,

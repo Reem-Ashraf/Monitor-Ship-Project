@@ -4,11 +4,11 @@ import 'colors.dart';
 import 'constants.dart';
 
 class TextStyles {
-
   static TextStyle appBarText = TextStyle(
     color: Colors.black,
     fontSize: 18.sp,
     fontWeight: FontWeight.w700,
+    // TODO: Create a font families file, add fonts to it, and reference them here.
     fontFamily: 'ProductSans',
   );
   static TextStyle stepStyle = TextStyle(
@@ -31,11 +31,13 @@ class TextStyles {
   );
   static TextStyle text13 = TextStyle(
     color: AppColors.gray,
-    fontSize: 13.sp,);
+    fontSize: 13.sp,
+  );
   static TextStyle inputStyle = TextStyle(
     color: AppColors.lightGray,
     fontSize: 14.sp,
-    fontFamily: Constants.productSansFont,);
+    fontFamily: Constants.productSansFont,
+  );
   static TextStyle text20 = TextStyle(
       color: AppColors.blackLight,
       fontSize: 20.sp,

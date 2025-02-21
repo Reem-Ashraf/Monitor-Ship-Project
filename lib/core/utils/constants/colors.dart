@@ -33,7 +33,7 @@ class AppColors {
   static final Color darkGray = Color(0xff9D9D9D);
   static final Color brown = Color(0xff3A2C27);
   static Color offwhite = const Color(0xffF8F8FA);
-  static final darkGreen=Color(0xff508A7B);
+  static final darkGreen = Color(0xff508A7B);
 
   // Green
   static final Color mintGreen = Color(0xFF508A7B);

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/constants/colors.dart';
 
 class OrderCard extends StatelessWidget {
+  // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model to streamline argument handling.
   final String orderId;
   final String trackingNumber;
   final int quantity;
@@ -11,7 +12,8 @@ class OrderCard extends StatelessWidget {
   final String status;
   final Color statusColor;
 
-  const OrderCard({super.key, 
+  const OrderCard({
+    super.key,
     required this.orderId,
     required this.trackingNumber,
     required this.quantity,
@@ -96,22 +98,21 @@ class OrderCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(status,
-                    style: TextStyle(
-                        color: statusColor, fontSize: 16.sp)),
+                    style: TextStyle(color: statusColor, fontSize: 16.sp)),
                 SizedBox(
                   height: 30.h,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 5,horizontal: 20),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 20),
                       foregroundColor: Colors.black,
                       backgroundColor: AppColors.white,
                       side: BorderSide(color: Colors.grey.shade400),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(33)),
                     ),
-                    child:Text("Details",
-                        style: TextStyle( fontSize: 16.sp)),
+                    child: Text("Details", style: TextStyle(fontSize: 16.sp)),
                   ),
                 ),
               ],

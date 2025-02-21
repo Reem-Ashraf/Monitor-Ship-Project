@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class BlurButton extends StatelessWidget {
-   BlurButton({super.key,required this.text,required this.onTap});
-String text ;
-VoidCallback onTap;
+  BlurButton({super.key, required this.text, required this.onTap});
+  String text;
+  VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(

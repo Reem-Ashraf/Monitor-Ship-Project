@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -32,17 +31,21 @@ class Homescreen extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: AppColors.white,
-        title: Text('Gemstore',style: TextStyles.appBarText,),
+        title: Text(
+          'Gemstore',
+          style: TextStyles.appBarText,
+        ),
         actions: [Container()],
       ),
       body: Padding(
-        padding:  EdgeInsets.all(25.0),
+        padding: EdgeInsets.all(25.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 10,
             children: [
               //  const CustomAppBar(text: 'Gemstore',),
+              // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
               const CategoryItemListView(),
               const HomeImage(),
               const CustomFeatureProductsRow(
@@ -58,27 +61,27 @@ class Homescreen extends StatelessWidget {
               const CustomFeatureProductsRow(
                 text: 'Recommended',
               ),
-             
+
               const RecommendedItemListView(),
-             
+
               const CustomFeatureProductsRow(
                 text: 'Top Collection',
               ),
-             
+
               const HomeImage2(
                 text1: 'Sale up to 40%',
                 text2: 'FOR SLIM ',
                 image: AppAssets.thirdHomeImage,
                 text3: '& BEAUTY',
               ),
-           
+
               const HomeImage2(
                 text1: 'Summer Collection',
                 text2: 'Most sexy  ',
                 image: AppAssets.fourthHomeImage,
                 text3: '&design',
               ),
-            
+
               TopCollectionRow(),
             ],
           ),
@@ -87,4 +90,3 @@ class Homescreen extends StatelessWidget {
     );
   }
 }
-

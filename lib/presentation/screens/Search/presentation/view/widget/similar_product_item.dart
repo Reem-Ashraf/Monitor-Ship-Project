@@ -15,11 +15,8 @@ class SimilarProductItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-         decoration: BoxDecoration(
-           borderRadius: BorderRadius.circular(18),
-           color: Colors.grey
-
-         ),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18), color: Colors.grey),
           child: Image(
             image: const AssetImage(AppAssets.productImage),
             fit: BoxFit.fill,
@@ -27,12 +24,14 @@ class SimilarProductItem extends StatelessWidget {
             width: width * 0.3,
           ),
         ),
-        const Text("Rise Crop Hoodie",
+        const Text(
+          "Rise Crop Hoodie",
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
         ),
-        const Text("\$ 80.88",
+        const Text(
+          "\$ 80.88",
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
         )
       ],

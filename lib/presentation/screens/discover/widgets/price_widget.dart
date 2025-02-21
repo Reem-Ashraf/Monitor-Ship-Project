@@ -14,7 +14,7 @@ class PriceWidget extends StatelessWidget {
       children: [
         Text(
           r'$ 39.99 ',
-           textScaler: TextScaler.noScaling,
+          textScaler: TextScaler.noScaling,
           style: TextStyles.textw700,
         ),
         SizedBox(
@@ -22,7 +22,7 @@ class PriceWidget extends StatelessWidget {
         ),
         Text(
           r'$ 39.99 ',
-           textScaler: TextScaler.noScaling,
+          textScaler: TextScaler.noScaling,
           style: TextStyles.text13.copyWith(
               decoration: TextDecoration.lineThrough,
               decorationColor: AppColors.gray),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/constants/colors.dart';
@@ -15,8 +14,8 @@ class ListViewNumberOfItem extends StatelessWidget {
     return SizedBox(
       height: 500.h,
       child: ListView.separated(
-        shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
           itemBuilder: (context, indx) {
             return NumberOfItemWidget();
           },
@@ -28,4 +27,3 @@ class ListViewNumberOfItem extends StatelessWidget {
     );
   }
 }
-

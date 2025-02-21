@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../core/utils/constants/colors.dart';
 
 class AppButton extends StatelessWidget {
-   AppButton({super.key,required this.onTap,required this.text});
+  AppButton({super.key, required this.onTap, required this.text});
 
-  String text ;
+  String text;
   VoidCallback onTap;
   @override
   Widget build(BuildContext context) {

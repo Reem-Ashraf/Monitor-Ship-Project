@@ -1,5 +1,3 @@
-
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,6 +7,7 @@ import '../../../../../core/utils/constants/constants.dart';
 import '../../../../../core/utils/constants/text_style.dart';
 
 class TextFromFieldRate extends StatelessWidget {
+  // TODO: Create or use a reusable component for the entire app
   const TextFromFieldRate({
     super.key,
   });

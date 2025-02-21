@@ -1,27 +1,30 @@
-class AppAssets{
+class AppAssets {
   // ignore_for_file: prefer_single_quotes
   AppAssets._();
-static const path="assets/";
-static const iconsPath1="${path}app_icons/";
-static const homePath="${path}home_images/";
-static const homeIconsPath="${homePath}home_icons/";
-///app icons
-static const menu="${iconsPath1}menu icon.svg";
-static const homeIcon="${iconsPath1}home icon.svg";
-static const filterIcon="${iconsPath1}filter icon.svg";
-///home icons
-static const femaleIcon="${homeIconsPath}femalicon.svg";
-static const maleIcon="${homeIconsPath}maleicon.svg";
-static const beautyIcon="${homeIconsPath}beauty icon.svg";
-static const acessoryIcon="${homeIconsPath}acessory icon.svg";
-///home images
-static const firstHomeImage="${homePath}first_home_image.png";
-static const secondtHomeImage="${homePath}second_home_image.png";
-static const thirdHomeImage="${homePath}third_home_image.png";
-static const fourthHomeImage="${homePath}fourth_home_image.png";
-static const bannr3HomeImage="${homePath}banner 3.png";
-static const bannr4HomeImage="${homePath}banner 4.png";
-static const productTest="${homePath}product test.png";
+  static const path = "assets/";
+  static const iconsPath1 = "${path}app_icons/";
+  static const homePath = "${path}home_images/";
+  static const homeIconsPath = "${homePath}home_icons/";
+
+  ///app icons
+  static const menu = "${iconsPath1}menu icon.svg";
+  static const homeIcon = "${iconsPath1}home icon.svg";
+  static const filterIcon = "${iconsPath1}filter icon.svg";
+
+  ///home icons
+  static const femaleIcon = "${homeIconsPath}femalicon.svg";
+  static const maleIcon = "${homeIconsPath}maleicon.svg";
+  static const beautyIcon = "${homeIconsPath}beauty icon.svg";
+  static const acessoryIcon = "${homeIconsPath}acessory icon.svg";
+
+  ///home images
+  static const firstHomeImage = "${homePath}first_home_image.png";
+  static const secondtHomeImage = "${homePath}second_home_image.png";
+  static const thirdHomeImage = "${homePath}third_home_image.png";
+  static const fourthHomeImage = "${homePath}fourth_home_image.png";
+  static const bannr3HomeImage = "${homePath}banner 3.png";
+  static const bannr4HomeImage = "${homePath}banner 4.png";
+  static const productTest = "${homePath}product test.png";
 
   static const String authPath = "${path}auth_images/";
   static const String authIcons = "${authPath}auth_icons/";
@@ -41,6 +44,7 @@ static const productTest="${homePath}product test.png";
   /// Assets for assetsImageOrder
   /// assets/image/order.svg
   static const String assetsImageOrder = "${path}image/order.svg";
+
   ///auth assets
   static const String welcomeScreenBackGround =
       "${authPath}welcome screen backGround.png";
@@ -63,5 +67,5 @@ static const productTest="${homePath}product test.png";
 
   ///app assets
   static const String completedOrder = "${assetsPath}order completed .png";
-static const String productImage = "${assetsPath}order completed .png";
+  static const String productImage = "${assetsPath}order completed .png";
 }

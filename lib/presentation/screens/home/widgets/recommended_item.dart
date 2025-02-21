@@ -37,7 +37,7 @@ class RecommendedItem extends StatelessWidget {
               ),
               Text(
                 r'$ 39.99 ',
-                 textScaler: TextScaler.noScaling,
+                textScaler: TextScaler.noScaling,
                 style: TextStyles.textw700,
               ),
             ],

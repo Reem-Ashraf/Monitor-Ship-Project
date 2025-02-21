@@ -3,9 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/constants/colors.dart';
 
 class OnboardingContent extends StatelessWidget {
+  // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model with onTap, rate, and index to streamline argument handling.
   final String title, subtitle, image;
 
-  const OnboardingContent({super.key, 
+  const OnboardingContent({
+    super.key,
     required this.title,
     required this.subtitle,
     required this.image,
@@ -14,14 +16,17 @@ class OnboardingContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             title,
             textAlign: TextAlign.center,
-            style: TextStyle(color: AppColors.grey, fontSize: 14, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: AppColors.grey,
+                fontSize: 14,
+                fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 10),
           Text(
@@ -31,10 +36,11 @@ class OnboardingContent extends StatelessWidget {
           ),
           SizedBox(height: 30),
           ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-
-            child: Image.asset(image, width: 261.w,
-              ),
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              image,
+              width: 261.w,
+            ),
           ),
         ],
       ),

@@ -31,6 +31,7 @@ class HomeImage2 extends StatelessWidget {
                   SizedBox(
                     height: 20.h,
                   ),
+                  // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
                   Text(
                     text1,
                     textScaler: TextScaler.noScaling,
