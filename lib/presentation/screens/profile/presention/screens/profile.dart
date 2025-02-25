@@ -3,19 +3,6 @@ import 'profile_setting.dart';
 
 import 'my_wishlist_board.dart';
 
-class MyApp extends StatelessWidget {
-  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
-  //TODO: Remove MaterialApp
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
-    );
-  }
-}
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
