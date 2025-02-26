@@ -27,7 +27,7 @@ class SearchCategoryModel {
         bigCircleColor: Color(0xFFA4AC8A),
       ),
       SearchCategoryModel(
-        text1: 'ACCESSORIES',
+        text1: 'ACCESSORIE',
         image: AppAssets.thirdHomeImage,
         backgroundColor: Color(0xFFA79F9D),
         smallCircleColor: Color(0xFF8D8785),

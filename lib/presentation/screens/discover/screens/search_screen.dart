@@ -5,7 +5,7 @@ import 'package:monitor_ship_project/presentation/screens/discover/widgets/recen
 import '../../../../../core/utils/constants/colors.dart';
 import '../widgets/custom_search_bar.dart';
 import '../widgets/recent_widget.dart';
-import '../widgets/sidebar_widget.dart';
+import '../widgets/sidebar_filter_widgets/sidebar_widget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});

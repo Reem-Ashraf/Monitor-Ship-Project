@@ -6,7 +6,7 @@ import 'package:monitor_ship_project/presentation/screens/discover/widgets/list_
 import '../../../../core/utils/constants/app_assets.dart';
 import '../../../../core/utils/constants/colors.dart';
 import '../widgets/custom_search_bar.dart';
-import '../widgets/sidebar_widget.dart';
+import '../widgets/sidebar_filter_widgets/sidebar_widget.dart';
 
 class DiscoverFullScreen extends StatelessWidget {
   const DiscoverFullScreen({super.key});

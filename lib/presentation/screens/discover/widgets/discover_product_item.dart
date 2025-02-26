@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'price_widget.dart';
+import 'sidebar_filter_widgets/price_rang_widgets/price_widget.dart';
 import 'product_image.dart';
-import 'star_widget.dart';
+import 'sidebar_filter_widgets/star_rating_widgets/star_widget.dart';
 
 import '../../../../../core/utils/constants/text_style.dart';
 
