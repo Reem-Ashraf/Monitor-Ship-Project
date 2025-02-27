@@ -3,7 +3,7 @@ import 'package:monitor_ship_project/core/utils/app_routes/routes_exports.dart';
 import 'routes_name.dart';
 
 class GroupRoutes {
-  final GoRouter router = GoRouter(
+  static final  GoRouter router = GoRouter(
     routes: [
       GoRoute(
         name: RoutesName.welcomeScreen,
