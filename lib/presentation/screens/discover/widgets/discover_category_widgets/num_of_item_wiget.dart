@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/utils/constants/colors.dart';
-import '../../../../core/utils/constants/text_style.dart';
+import '../../../../../core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/text_style.dart';
 
 class NumberOfItemWidget extends StatelessWidget {
   const NumberOfItemWidget({

@@ -6,8 +6,8 @@ import 'sidebar_filter_widgets/star_rating_widgets/star_widget.dart';
 
 import '../../../../../core/utils/constants/text_style.dart';
 
-class DiscoverProductItem extends StatelessWidget {
-  const DiscoverProductItem({
+class SearchResultProductItem extends StatelessWidget {
+  const SearchResultProductItem({
     super.key,
   });
 

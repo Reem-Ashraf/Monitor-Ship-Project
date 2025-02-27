@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:monitor_ship_project/presentation/screens/discover/widgets/list_view_search_category.dart';
+import 'package:monitor_ship_project/presentation/screens/discover/widgets/discover_category_widgets/list_view_discover_category.dart';
 import '../../../../core/utils/constants/app_assets.dart';
 import '../../../../core/utils/constants/colors.dart';
 import '../widgets/custom_search_bar.dart';
@@ -36,7 +36,7 @@ class DiscoverFullScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomSearchBar(),
-            ListViewSearchCategory(),
+            ListViewDiscoverCategory(),
           ],
         ),
       ),

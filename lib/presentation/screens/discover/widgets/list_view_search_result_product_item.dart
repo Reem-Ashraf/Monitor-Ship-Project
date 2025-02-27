@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:monitor_ship_project/presentation/screens/discover/widgets/search_result_product_item.dart';
 
-import 'discover_product_item.dart';
 
-class ListViewDiscoverProductItem extends StatelessWidget {
-  const ListViewDiscoverProductItem({
+class ListViewSearchResultProductItem extends StatelessWidget {
+  const ListViewSearchResultProductItem({
     super.key,
   });
 
@@ -14,7 +14,7 @@ class ListViewDiscoverProductItem extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               childAspectRatio: 3 / 5.5, crossAxisCount: 2),
           itemBuilder: (context, indx) {
-            return const DiscoverProductItem();
+            return const SearchResultProductItem();
           }),
     );
   }

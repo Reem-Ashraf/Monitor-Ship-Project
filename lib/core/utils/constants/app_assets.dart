@@ -25,7 +25,10 @@ class AppAssets {
   static const bannr3HomeImage = "${homePath}banner 3.png";
   static const bannr4HomeImage = "${homePath}banner 4.png";
   static const productTest = "${homePath}product test.png";
-
+  static const shoesImage = "${homePath}shoes2.png";
+  static const acessoryImage = "${homePath}acessory_image.png";
+  static const collectionImage = "${homePath}collectionImage.png";
+//assets\home_images\collectionImage.png
   static const String authPath = "${path}auth_images/";
   static const String authIcons = "${authPath}auth_icons/";
   static const String iconsPath = "${path}app_icons/";

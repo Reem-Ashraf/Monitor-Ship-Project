@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/constants/text_style.dart';
 
 import '../widgets/custom_search_bar.dart';
-import '../widgets/list_view_Discover_product_item.dart';
+import '../widgets/list_view_search_result_product_item.dart';
 
 class FoundResultScreen extends StatelessWidget {
   const FoundResultScreen({super.key});
@@ -17,7 +17,6 @@ class FoundResultScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-      
             SizedBox(
               height: 20.h,
             ),
@@ -26,19 +25,14 @@ class FoundResultScreen extends StatelessWidget {
               height: 20.h,
             ),
             Text(
-              'Found',
-              textScaler: TextScaler.noScaling,
-              style: TextStyles.textw700,
-            ),
-            Text(
-              '152 Results',
+              'Found\n152 Results',
               textScaler: TextScaler.noScaling,
               style: TextStyles.textw700,
             ),
             SizedBox(
               height: 20.h,
             ),
-            ListViewDiscoverProductItem()
+            ListViewSearchResultProductItem()
           ],
         ),
       ),
