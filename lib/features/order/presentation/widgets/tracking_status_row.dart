@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/constants/colors.dart';
-import '../../../../../core/utils/constants/text_style.dart';
+import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../data/models/track_status_model.dart';
-import 'status_indicator_circle.dart';
 
 class TrackingStatusRow extends StatelessWidget {
   const TrackingStatusRow({
     super.key,
-    required this.trackStatusModel,
+    required this.isCompleted,
+    required this.isLast,
+    required this.statusText,
+    required this.dateText,
   });
 
-  final TrackStatusModel trackStatusModel;
+  final bool isCompleted;
+  final bool isLast;
+  final String statusText;
+  final String dateText;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -21,8 +26,25 @@ class TrackingStatusRow extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            StatusIndicatorCircle(isCompleted: trackStatusModel.isCompleted),
-            if (trackStatusModel.isLast)
+            CircleAvatar(
+              backgroundColor: AppColors.white,
+              radius: 10.r,
+              child: Container(
+                decoration: ShapeDecoration(
+                  shape: OvalBorder(
+                    side: BorderSide(width: 1.w, color: AppColors.tabBarColor),
+                  ),
+                ),
+                child: Center(
+                  child: Icon(
+                    isCompleted ? Icons.check_circle_rounded : Icons.circle,
+                    color: AppColors.black,
+                    size: 14.sp,
+                  ),
+                ),
+              ),
+            ),
+            if (!isLast)
               ...List.generate(
                 3,
                 (index) => Container(
@@ -40,12 +62,12 @@ class TrackingStatusRow extends StatelessWidget {
         SizedBox(width: 12.w),
         Expanded(
           child: Text(
-            trackStatusModel.statusText,
+            statusText,
             style: TextStyles.product11W400,
           ),
         ),
         Text(
-          trackStatusModel.dateText,
+          dateText,
           style: TextStyles.product12W400.copyWith(color: AppColors.coolGray),
         ),
       ],

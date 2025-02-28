@@ -1,3 +1,5 @@
+import 'regex_constants.dart';
+
 class Constants {
   static const String productSansFont = 'ProductSans';
   static const String nunitoFont = 'Nunito';
@@ -6,8 +8,7 @@ class Constants {
     if (!isArabic) return number;
     const arabicNumbers = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
     return number
-    // TODO: Extract regex into its own file.
-        .replaceAllMapped(RegExp(r'[0-9]'),
+        .replaceAllMapped(RegexConstants.numericDigits,
             (match) => arabicNumbers[int.parse(match.group(0)!)])
         .toString();
   }

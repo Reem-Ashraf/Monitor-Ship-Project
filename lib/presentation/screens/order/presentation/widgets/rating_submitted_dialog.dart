@@ -62,3 +62,4 @@ class RatingSubmittedDialog extends StatelessWidget {
     );
   }
 }
+
