@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_exports.dart';
+import 'package:monitor_ship_project/presentation/screens/discover/screens/found_result_search_screen.dart';
 import 'routes_name.dart';
 
 class GroupRoutes {
@@ -56,7 +57,7 @@ class GroupRoutes {
         builder: (context, state) => TrackOrder(),
       ),
       GoRoute(
-          name:RoutesName.bottomNavigationBarScreen ,
+          name: RoutesName.bottomNavigationBarScreen,
           path: "/",
           builder: (context, state) {
             return BottomNavigationBarScreen();
@@ -65,6 +66,12 @@ class GroupRoutes {
           path: RoutesName.homeScreen,
           builder: (context, state) {
             return Homescreen();
+          }),
+      GoRoute(
+          name: RoutesName.foundResultScreen,
+          path: RoutesName.foundResultScreen,
+          builder: (context, state) {
+            return FoundResultScreen();
           }),
       GoRoute(
           path: RoutesName.discverScreen,

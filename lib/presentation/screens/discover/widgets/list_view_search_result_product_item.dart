@@ -11,6 +11,7 @@ class ListViewSearchResultProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView.builder(
+        itemCount: 8,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               childAspectRatio: 3 / 5.5, crossAxisCount: 2),
           itemBuilder: (context, indx) {

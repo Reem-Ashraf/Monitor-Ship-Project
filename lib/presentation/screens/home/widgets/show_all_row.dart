@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/utils/constants/text_style.dart';
 
@@ -18,7 +19,7 @@ class ShowAllRow extends StatelessWidget {
         ),
         const Spacer(),
         TextButton(
-          child: Text('show all',
+          child: Text(context.tr('show all'),
               textScaler: TextScaler.noScaling, style: TextStyles.text13),
           onPressed: () {},
         )

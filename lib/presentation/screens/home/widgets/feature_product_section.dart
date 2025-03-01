@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/presentation/screens/home/widgets/list_feature_product_item.dart';
@@ -13,7 +14,7 @@ class FeatureProductSection extends StatelessWidget {
     return Column(
       spacing: 15.h,
       children: [
-        const ShowAllRow(text: 'Feature Products'),
+        ShowAllRow(text: context.tr('Feature Products')),
         const FeatureProductItemListView(),
       ],
     );

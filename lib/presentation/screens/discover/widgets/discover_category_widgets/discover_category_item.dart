@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/presentation/screens/discover/data/models/discover_category_model.dart';
@@ -36,13 +37,13 @@ class _DiscoverCategoryItemState extends State<DiscoverCategoryItem> {
           child: Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 20.0.w),
+                padding: EdgeInsets.all( 15.0.w),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      widget.discoverCategoryModel.text1,
+                    context.tr(widget.discoverCategoryModel.text1),
                       textScaler: TextScaler.noScaling,
                       style: TextStyles.text22,
                     ),],

@@ -11,3 +11,5 @@ export '../../../presentation/screens/my_orders/my_orders.dart';
 export '../../../presentation/screens/order/presentation/screens/rate_product.dart';
 export '../../../presentation/screens/order/presentation/screens/track_order.dart';
 export '../../../presentation/screens/welcome_screen/welcome_screen.dart';
+export '../../../presentation/screens/discover/screens/found_result_search_screen.dart';
+
