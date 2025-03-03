@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:gen_store/Features/Search/presentation/view/widget/product_details.dart';
-import 'package:gen_store/constant/app_assets.dart';
+import 'build_rating.dart';
+import 'build_stack.dart';
 
 class BuildSearchResult extends StatelessWidget {
   const BuildSearchResult({super.key});
@@ -31,31 +31,11 @@ class BuildSearchResult extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child:  const AspectRatio(
-                        aspectRatio: 1.6/2,
-                        child:Image(image: AssetImage(AppAssets.productImage),
-                        fit: BoxFit.fill,)
-                    ),
-                  ),
-                  Positioned(
-                    top: 2,right: 2,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.favorite_border,color: Colors.grey,size: 30,),
-                    ),
-                  ),
-                ],
-              ),
+              const BuildStack(),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
               const Text("Filted Waist Dress",
                 style: TextStyle(color:Colors.black,fontWeight: FontWeight.w600,),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
+                maxLines: 2, overflow: TextOverflow.ellipsis,),
               SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
               const Row(
                 children: [
@@ -66,22 +46,7 @@ class BuildSearchResult extends StatelessWidget {
                 ],
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
-              RatingBar.builder(
-                initialRating: 4,
-                minRating: 1,
-                itemSize: 12,
-                direction: Axis.horizontal,
-                allowHalfRating: true,
-                itemCount: 5,
-                itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-                itemBuilder: (context, _) => const Icon(
-                  Icons.star,
-                  color: Colors.indigoAccent,
-                ),
-                onRatingUpdate: (rating) {
-                  // print(rating);
-                },
-              ),
+              const BuildRating(),
             ],
           ),
         ),
@@ -89,4 +54,6 @@ class BuildSearchResult extends StatelessWidget {
     );
   }
 }
+
+
 
