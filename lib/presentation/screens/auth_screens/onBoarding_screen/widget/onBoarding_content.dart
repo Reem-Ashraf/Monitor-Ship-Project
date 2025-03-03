@@ -1,40 +1,40 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import '../../../../../core/utils/constants/text_style.dart';
+import '../../../../../core/utils/helpers/spacing.dart';
+import 'on_boarding_model.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class OnboardingContent extends StatelessWidget {
-  final String title, subtitle, image;
+  final OnboardingModel onboardingItem;
 
-  const OnboardingContent({super.key, 
-    required this.title,
-    required this.subtitle,
-    required this.image,
-  });
+  const OnboardingContent({super.key, required this.onboardingItem});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            title,
+            context.tr(onboardingItem.title), // Localized title
             textAlign: TextAlign.center,
-            style: TextStyle(color: AppColors.grey, fontSize: 14, fontWeight: FontWeight.bold),
+            style: TextStyles.onBoardingTitleStyle,
           ),
-          SizedBox(height: 10),
+          verticalSpace(10.h),
           Text(
-            subtitle,
+            context.tr(onboardingItem.subtitle), // Localized subtitle
             textAlign: TextAlign.center,
-            style: TextStyle(color: AppColors.grey, fontSize: 10),
+            style: TextStyles.onBoardingSupTitleStyle,
           ),
-          SizedBox(height: 30),
+          verticalSpace(30.h),
           ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-
-            child: Image.asset(image, width: 261.w,
-              ),
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              onboardingItem.image,
+              width: 261.w,
+            ),
           ),
         ],
       ),

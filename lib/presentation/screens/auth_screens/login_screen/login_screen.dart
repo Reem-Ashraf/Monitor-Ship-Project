@@ -1,10 +1,15 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_by_social_media_widget.dart';
-
+import 'package:monitor_ship_project/core/utils/helpers/regx.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/forget_password_widget.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_by_social_media_implement.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_text_widget.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/or_login_with_widget.dart';
+import '../../../../core/language/app_translation_key.dart';
 import '../../../widget/app_button.dart';
 import '../../../widget/app_text_field.dart';
+import '../../../../core/utils/helpers/spacing.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -25,20 +30,18 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Log into your account",
-                style: TextStyle(color: AppColors.black, fontSize: 24.sp),
-                textAlign: TextAlign.start,
-              ),
-              SizedBox(
-                height: 24.h,
+              LoginTextWidget(),
+              verticalSpace(
+                24.h,
               ),
               AppTextFormField(
-                hintText: 'Email Address',
-                validator: (String) {},
+                hintText: context.tr(AppTranslationKeys.emailAddress),
+                validator: (email) {
+                  AppRegex.isEmailValid(email!);
+                },
               ),
-              SizedBox(
-                height: 24.h,
+              verticalSpace(
+                24.h,
               ),
               AppTextFormField(
                 suffixIcon: InkWell(
@@ -52,49 +55,36 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 isObscureText: isObscureText,
-                hintText: 'Password',
-                validator: (String) {},
+                hintText: context.tr(AppTranslationKeys.password),
+                validator: (password) {
+                  AppRegex.isPasswordValid(password!);
+                },
               ),
-              SizedBox(
-                height: 12.h,
+              verticalSpace(
+                12.h,
               ),
-              Align(
-                alignment: AlignmentDirectional.centerEnd,
-                child: Text(
-                  'Forgot Password?',
-                  // style: TextStyles.font13BlueRegular,
-                ),
+              ForgetPasswordWidget(
+                onTap: () {},
               ),
-              SizedBox(
-                height: 30.h,
+              verticalSpace(
+                30.h,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Center(
                     child: AppButton(
                   onTap: () {},
-                  text: 'Log In',
+                  text: context.tr(AppTranslationKeys.login),
                 )),
               ),
-              SizedBox(
-                height: 12.h,
+              verticalSpace(
+                12.h,
               ),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Or Login with ",
-                  style: TextStyle(fontSize: 12.sp),
-                  textAlign: TextAlign.center,
-                ),
+              OrLoginWithWidget(),
+              verticalSpace(
+                20.h,
               ),
-              SizedBox(
-                height: 20.h,
-              ),
-              LoginBySocialMediaWidget(
-                appleIconTap: () {},
-                faceBookIconTap: () {},
-                googleIconTap: () {},
-              )
+              LoginBySocialMediaImplement()
             ],
           ),
         ),

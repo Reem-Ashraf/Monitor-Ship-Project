@@ -1,13 +1,19 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/DeliveryOptionModel.dart';
+import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/check_out_screen_text_fields.dart';
+import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/delivery_option_tile_widget.dart';
 import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/drop_down_menue.dart';
 import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/location_complete_mark_widget.dart';
 import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/selected_radio_button.dart';
 
+import '../../../core/language/app_translation_key.dart';
 import '../../widget/app_button.dart';
 import '../../widget/app_text_field.dart';
 
@@ -19,7 +25,6 @@ class CheckoutScreen1 extends StatefulWidget {
 }
 
 class _CheckoutScreen1State extends State<CheckoutScreen1> {
-  int selectedOption = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,89 +53,28 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
                 height: 18.h,
               ),
               Text(
-                "STEP1",
-                style: TextStyle( fontSize: 8,fontWeight: FontWeight.w400),
+                "${context.tr(AppTranslationKeys.step1)}",
+                style: TextStyle( fontSize: 8.sp,fontWeight: FontWeight.w400),
                 textAlign: TextAlign.start,
               ),
               Text(
-                "Shipping",
-                style: TextStyle(color: AppColors.black, fontSize: 24),
+                "${context.tr(AppTranslationKeys.shipping)}",
+                style:  TextStyles.blackFont24,
                 textAlign: TextAlign.start,
               ),
               SizedBox(
                 height: 24.h,
               ),
-              AppTextFormField(
-                hintText: 'First name *',
-                validator: (String) {},
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-              AppTextFormField(
-                hintText: 'Last name *',
-                validator: (String) {},
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-              DropDownMenu(),
-              SizedBox(
-                height: 24.h,
-              ),
-              AppTextFormField(
-                hintText: 'Street name *',
-                validator: (String) {},
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-              AppTextFormField(
-                hintText: 'City *',
-                validator: (String) {},
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-              AppTextFormField(
-                hintText: 'State / Province',
-                validator: (String) {},
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-              AppTextFormField(
-                hintText: 'Zip-code *',
-                validator: (String) {},
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
-              AppTextFormField(
-                hintText: 'Phone number *',
-                validator: (String) {},
-              ),
-              SizedBox(
-                height: 24.h,
-              ),
+              CheckOutScreenTextFields(),
               Text(
-                "Shipping method",
-                style: TextStyle(color: AppColors.black, fontSize: 14),
+                "${context.tr(AppTranslationKeys.shippingMethod)}",
+                style: TextStyles.blackFont14,
                 textAlign: TextAlign.start,
               ),
               SizedBox(
                 height: 24.h,
               ),
-              DeliveryOptionTile(
-                isSelected: selectedOption == 1,
-                title: "\$5.99",
-                subtitle: "Express delivery within 1-2 business days",
-                onTap: () {
-                  setState(() {
-                    selectedOption = 1;
-                  });
-                },
-              ),
+              DeliveryOptionTileWidget(),
               SizedBox(
                 height: 24.h,
               ),
@@ -139,13 +83,10 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
                     onTap: () {
                       context.pushNamed(RoutesName.checkOutScreen2);
                     },
-                    text: 'Continue To Payment',
+                    text: '${context.tr(AppTranslationKeys.continueToPayment)}',
                   )),
               SizedBox(
                 height: 12.h,
-              ),
-              SizedBox(
-                height: 20.h,
               ),
 
             ],

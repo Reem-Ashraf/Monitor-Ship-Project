@@ -1,49 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../../core/utils/constants/app_assets.dart';
+import 'login_by_social_media_model.dart';
 
 class LoginBySocialMediaWidget extends StatelessWidget {
-  LoginBySocialMediaWidget(
-      {super.key,
-      required this.appleIconTap,
-      required this.faceBookIconTap,
-      required this.googleIconTap});
-  VoidCallback appleIconTap;
-  VoidCallback googleIconTap;
-  VoidCallback faceBookIconTap;
+  const LoginBySocialMediaWidget(
+      {super.key, required this.socialMediaButtons,});
+  final List<SocialMediaModel> socialMediaButtons;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        InkWell(
-            onTap: appleIconTap,
-            child: Image.asset(
-              AppAssets.appleIcon,
-              width: 40.w,
-            )),
-        SizedBox(
-          width: 10.w,
-        ),
-        InkWell(
-          onTap: googleIconTap,
+      children:  socialMediaButtons
+          .map((socialMedia) => Padding(
+        padding: EdgeInsets.symmetric(horizontal: 5.w),
+        child: InkWell(
+          onTap: socialMedia.onTap,
           child: Image.asset(
-            AppAssets.googleIcon,
+            socialMedia.iconPath,
             width: 40.w,
           ),
         ),
-        SizedBox(
-          width: 10.w,
-        ),
-        InkWell(
-          onTap: faceBookIconTap,
-          child: Image.asset(
-            AppAssets.faceBookIcon,
-            width: 40.w,
-          ),
-        ),
-      ],
+      ))
+          .toList()
     );
   }
 }

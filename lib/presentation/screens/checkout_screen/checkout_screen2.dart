@@ -1,9 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/location_complete_mark_widget.dart';
 
-
+import '../../../core/language/app_translation_key.dart';
 import '../../../core/utils/constants/app_assets.dart';
 import '../../../core/utils/constants/colors.dart';
 import '../../widget/app_button.dart';
@@ -26,7 +28,7 @@ class CheckOutScreen2 extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          "Check out",
+          "${context.tr(AppTranslationKeys.checkout)}",
           style: TextStyle(fontSize: 24.sp),
         ),
       ),
@@ -36,25 +38,32 @@ class CheckOutScreen2 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LocationCompleteMarkWidget(isCheckout1Screen: false,),
+              LocationCompleteMarkWidget(
+                isCheckout1Screen: false,
+              ),
               SizedBox(
                 height: 18.h,
               ),
               Text(
-                "Order Completed",
-                style: TextStyle(color: AppColors.black, fontSize: 24.sp),
+                "${context.tr(AppTranslationKeys.orderCompleted)}",
+                style: TextStyles.blackFont24,
                 textAlign: TextAlign.start,
               ),
               SizedBox(
                 height: 40.h,
               ),
-              Center(child: Image.asset(AppAssets.completedOrder,height: 110.h,width: 110.w,)),
+              Center(
+                  child: Image.asset(
+                AppAssets.completedOrder,
+                height: 110.h,
+                width: 110.w,
+              )),
               SizedBox(
                 height: 40.h,
               ),
               Text(
-                "Thank you for your purchase.You can view your order in ‘My Orders’ section.",
-                style: TextStyle(color: AppColors.grey, fontSize: 14.sp),
+                "${context.tr(AppTranslationKeys.thankYouForPurchaseViewOrderInMyOrders)}",
+                style: TextStyles.greyFontSize14,
                 textAlign: TextAlign.center,
               ),
               SizedBox(
@@ -62,11 +71,9 @@ class CheckOutScreen2 extends StatelessWidget {
               ),
               Center(
                   child: AppButton(
-                    onTap: () {
-
-                    },
-                    text: 'Continue To Payment',
-                  )),
+                onTap: () {},
+                text: '${context.tr(AppTranslationKeys.continueToPayment)}',
+              )),
             ],
           ),
         ),

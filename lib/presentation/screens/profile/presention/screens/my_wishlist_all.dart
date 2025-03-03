@@ -11,7 +11,7 @@ class WishlistItem extends StatelessWidget {
     Product('images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
   ];
 
-  const WishlistItem({super.key});
+   WishlistItem({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/constants/app_assets.dart';
 
@@ -14,7 +15,7 @@ class LocationCompleteMarkWidget extends StatelessWidget {
         children: [
           Image.asset(
             AppAssets.location,
-            height: 22,
+            height: 22.h,
           ),
           SizedBox(
             width: 5,
@@ -26,14 +27,14 @@ class LocationCompleteMarkWidget extends StatelessWidget {
           Spacer(),
           Image.asset(
             AppAssets.line,
-            width: 61,
+            width: 61.w,
           ),
           SizedBox(
-            width: 5,
+            width: 5.w,
           ),
           Image.asset(
             isCheckout1Screen?AppAssets.completeMark1:AppAssets.completeMark2,
-            height: 22,
+            height: 22.h,
           ),
 
         ],

@@ -1,12 +1,15 @@
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/build_dots.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/onBoarding_content.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/page_view_content.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/onBoarding_screen/widget/rectangle_assets.dart';
 import 'package:monitor_ship_project/presentation/widget/blur_button.dart';
 
+import '../../../../core/language/app_translation_key.dart';
 import '../../../../core/utils/app_routes/routes_name.dart';
+import '../../../../core/utils/helpers/spacing.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -16,55 +19,27 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  final PageController _pageController = PageController(viewportFraction: 0.75); // Slightly wider view
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Image.asset(AppAssets.rectangle),
-          ),
+          RectangleAssets(),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Expanded(
-                child: PageView.builder(
-                  controller: _pageController,
-                  itemCount: onboardingData.length,
-                  onPageChanged: (index) {
-                    setState(() {
-                      currentPage = index;
-                    });
-                  },
-                  itemBuilder: (context, index) {
-                    return OnboardingContent(
-                      title: onboardingData[index]["title"]!,
-                      subtitle: onboardingData[index]["subtitle"]!,
-                      image: onboardingData[index]["image"]!,
-                    );
-                  },
-                ),
-              ),
-
-              /// 🔽 Reduce space between dots & PageView
-              SizedBox(height: 5),
-
-              /// Dots Indicator
+              PageViewContent(),
+              verticalSpace(5.h),
               BuildDots(),
-
-              /// 🔽 Reduce space between dots & button
-              SizedBox(height: 15),
-
-              /// Button with less bottom padding
+              verticalSpace(15.h),
               Padding(
-                padding: const EdgeInsets.only(bottom: 80,right: 50,left: 50), // Reduced from 80
-                child: BlurButton(text: "Shopping now", onTap: () {
-
-                  context.goNamed(RoutesName.loginScreen);
-                }),
+                padding: const EdgeInsets.only(
+                    bottom: 80, right: 50, left: 50), // Reduced from 80
+                child: BlurButton(
+                    text: context.tr(AppTranslationKeys.shoppingNow),
+                    onTap: () {
+                      context.goNamed(RoutesName.loginScreen);
+                    }),
               ),
             ],
           ),
@@ -73,6 +48,3 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 }
-
-
-

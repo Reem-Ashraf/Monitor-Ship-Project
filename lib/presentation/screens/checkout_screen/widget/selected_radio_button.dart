@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
+import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
+
+import 'DeliveryOptionModel.dart';
 
 class DeliveryOptionTile extends StatelessWidget {
-  final bool isSelected;
-  final String title;
-  final String subtitle;
+  final DeliveryOptionModel option;
   final VoidCallback onTap;
 
   const DeliveryOptionTile({
     super.key,
-    required this.isSelected,
-    required this.title,
-    required this.subtitle,
+    required this.option,
     required this.onTap,
   });
 
@@ -22,7 +21,7 @@ class DeliveryOptionTile extends StatelessWidget {
       onTap: onTap,
       child: Column(
         children: [
-          Divider(height: 2,color: AppColors.greyShade2,),
+          Divider(height: 2, color: AppColors.greyShade2),
           Container(
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
@@ -34,16 +33,16 @@ class DeliveryOptionTile extends StatelessWidget {
               children: [
                 // Custom Radio Button
                 Container(
-                  width: 18,
-                  height: 18,
+                  width: 18.w,
+                  height: 18.h,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: Colors.green,
+                      color: option.isSelected ? AppColors.green : AppColors.greyShade2,
                       width: 6.w,
                     ),
                   ),
-                  child: isSelected
+                  child: option.isSelected
                       ? Center(
                     child: Container(
                       width: 12.w,
@@ -63,41 +62,20 @@ class DeliveryOptionTile extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              title,
-                              style: TextStyle(
-                                fontSize: 14.sp,
-
-                                color: Colors.black,
-                              ),
-                              overflow: TextOverflow.ellipsis, // Prevent overflow
-                            ),
-                          ),
-                          SizedBox(width: 2.w),
-                          Expanded(
-                            child: Text(
-                              "Delivery to home",
-                              style: TextStyle(
-                                fontSize: 12.sp,
-                                color: Colors.black,
-                              ),
-                              overflow: TextOverflow.ellipsis, // Prevent overflow
-                            ),
-                          ),
-                        ],
+                      Text(
+                        option.title,
+                        style: TextStyles.blackFont14,
+                        overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(height: 4.h),
                       Text(
-                        subtitle,
+                        option.subtitle,
                         style: TextStyle(
                           fontSize: 10,
                           color: AppColors.greyShade3,
                         ),
-                        overflow: TextOverflow.ellipsis, // Prevent overflow
-                        maxLines: 2, // Limit number of lines
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
                       ),
                     ],
                   ),
@@ -105,7 +83,7 @@ class DeliveryOptionTile extends StatelessWidget {
               ],
             ),
           ),
-          Divider(height: 2,color: AppColors.greyShade2,),
+          Divider(height: 2, color: AppColors.greyShade2),
         ],
       ),
     );
