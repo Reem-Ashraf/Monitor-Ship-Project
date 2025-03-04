@@ -7,7 +7,7 @@ class GroupRoutes {
     routes: [
       GoRoute(
         name: RoutesName.welcomeScreen,
-        path: "/",
+        path: "/welcomeScreen",
         builder: (context, state) => const WelcomeScreen(),
       ),
       GoRoute(
@@ -42,7 +42,7 @@ class GroupRoutes {
       ),
       GoRoute(
         name: RoutesName.orderScreen,
-        path: "/orderScreen",
+        path: "/",
         builder: (context, state) => OrdersScreen(),
       ),
       // GoRoute(

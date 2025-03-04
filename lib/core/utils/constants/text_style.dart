@@ -18,11 +18,42 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     letterSpacing: -0.06,
   );
+  static TextStyle loginIntoStyle =
+      TextStyle(color: AppColors.black, fontSize: 24.sp);
+
+  static TextStyle greyShade3FontSize16 =
+      TextStyle(color: AppColors.greyShade3, fontSize: 16.sp);
+
+  static TextStyle greyShade3FontSizeBold16 =
+  TextStyle(color: AppColors.greyShade3, fontSize: 16.sp,fontWeight: FontWeight.bold);
+  static TextStyle greyShade3FontSize18 =
+      TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp);
+  static TextStyle greyShade3FontSize14 =
+      TextStyle(color: AppColors.greyShade3, fontSize: 14.sp);
+  static TextStyle greyFontSize14 =
+  TextStyle(color: AppColors.grey, fontSize: 14.sp);
+  static TextStyle fontSize16 =
+  TextStyle(fontSize: 16.sp);
+
+  static TextStyle fontSize15 =
+  TextStyle(fontSize: 15.sp);
+  static TextStyle blackFont16 =
+  TextStyle(color: AppColors.black, fontSize: 16.sp);
+  static TextStyle blackFont14 =
+  TextStyle(color: AppColors.black, fontSize: 14.sp);
+  static TextStyle blackFont24 =
+  TextStyle(color: AppColors.black, fontSize: 24.sp);
+  static TextStyle blackFont14W400 =
+  TextStyle(color: Colors.black, fontSize: 14,fontWeight: FontWeight.w400);
   static TextStyle titleStyle = TextStyle(
     color: AppColors.darkGray,
     fontSize: 25.sp,
     fontFamily: Constants.productSansFont,
   );
+  static TextStyle onBoardingTitleStyle = TextStyle(
+      color: AppColors.grey, fontSize: 14.sp, fontWeight: FontWeight.bold);
+  static TextStyle onBoardingSupTitleStyle =
+      TextStyle(color: AppColors.grey, fontSize: 10.sp);
   static TextStyle categoryTextStyle = TextStyle(
     color: AppColors.brown,
     fontSize: 12.sp,

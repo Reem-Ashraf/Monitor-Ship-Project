@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+import '../presention/screens/profile_setting.dart';
+
+Widget profileHeader(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(30),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              const CircleAvatar(
+                  radius: 40,
+                  backgroundImage: AssetImage('images/profile.jpg')),
+              const SizedBox(width: 10),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('Sunie Pham',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  Text('sunieux@gmail.com',
+                      style: TextStyle(fontSize: 14, color: Colors.grey)),
+                ],
+              ),
+            ],
+          ),
+          IconButton(
+            onPressed: () => Navigator.push(
+                context, MaterialPageRoute(builder: (context) => ProfileApp())),
+            icon: const Icon(Icons.settings, size: 24),
+          )
+        ],
+      ),
+    );
+  }

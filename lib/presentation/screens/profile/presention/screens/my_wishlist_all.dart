@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
 class WishlistItem extends StatelessWidget {
-  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
-  // TODO: Focus On Responsive Design, check the following links:
-  //! https://docs.flutter.dev/ui/layout
-  //! https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e
-  //! https://docs.flutter.dev/ui/layout/constraints
-  //! https://pub.dev/packages/flutter_screenutil
   final List<Product> products = [
     Product('images/profile.jpg', "Front Tie Mini Dress", "\$59.00", 4.5, 38),
     Product('images/profile.jpg', "Linen Dress", "\$52.00", 4.0, 64,
@@ -17,7 +11,7 @@ class WishlistItem extends StatelessWidget {
     Product('images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
   ];
 
-  WishlistItem({super.key});
+   WishlistItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -183,7 +177,6 @@ class ProductItem extends StatelessWidget {
     );
   }
 }
-// TODO: why product model is not inthe models folder.
 
 class Product {
   final String image;

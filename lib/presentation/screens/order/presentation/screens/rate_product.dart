@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/widgets/button_app.dart';
-import '../../../../../core/utils/widgets/rate_star.dart';
 
+import '../../../../../core/utils/widgets/rate/star_score.dart';
 import '../widgets/order_status_app_bar.dart';
 import '../widgets/rating_submitted_dialog.dart';
 import '../widgets/text_from_field_rate.dart';

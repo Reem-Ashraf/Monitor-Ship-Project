@@ -1,10 +1,15 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/utils/constants/colors.dart';
-import 'widget/login_by_social_media_widget.dart';
-
+import 'package:monitor_ship_project/core/utils/helpers/regx.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/forget_password_widget.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_by_social_media_implement.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_text_widget.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/or_login_with_widget.dart';
+import '../../../../core/language/app_translation_key.dart';
 import '../../../widget/app_button.dart';
 import '../../../widget/app_text_field.dart';
+import '../../../../core/utils/helpers/spacing.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,92 +17,74 @@ class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
-// TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
+bool isObscureText = true;
 
 class _LoginScreenState extends State<LoginScreen> {
-  bool _isObscureText = true;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 50.h),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 50),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Log into your account",
-                // TODO: Use TextStyles class
-                style: TextStyle(color: AppColors.black, fontSize: 24.sp),
-                textAlign: TextAlign.start,
-              ),
-              SizedBox(
-                height: 24.h,
+              LoginTextWidget(),
+              verticalSpace(
+                24.h,
               ),
               AppTextFormField(
-                hintText: 'Email Address',
-                // TODO: Later, extract validation functions and call them here to improve code clarity and maintainability.
-                validator: (String) {},
+                hintText: context.tr(AppTranslationKeys.emailAddress),
+                validator: (email) {
+                  AppRegex.isEmailValid(email!);
+                },
               ),
-              SizedBox(
-                height: 24.h,
+              verticalSpace(
+                24.h,
               ),
               AppTextFormField(
                 suffixIcon: InkWell(
                   onTap: () {
                     setState(() {
-                      _isObscureText = !_isObscureText;
+                      isObscureText = !isObscureText;
                     });
                   },
                   child: Icon(
-                    _isObscureText ? Icons.visibility_off : Icons.visibility,
+                    isObscureText ? Icons.visibility_off : Icons.visibility,
                   ),
                 ),
-                isObscureText: _isObscureText,
-                hintText: 'Password',
-                validator: (String) {},
+                isObscureText: isObscureText,
+                hintText: context.tr(AppTranslationKeys.password),
+                validator: (password) {
+                  AppRegex.isPasswordValid(password!);
+                },
               ),
-              SizedBox(
-                height: 12.h,
+              verticalSpace(
+                12.h,
               ),
-              Align(
-                alignment: AlignmentDirectional.centerEnd,
-                child: Text(
-                  'Forgot Password?',
-                  // style: TextStyles.font13BlueRegular,
-                ),
+              ForgetPasswordWidget(
+                onTap: () {},
               ),
-              SizedBox(
-                height: 30.h,
+              verticalSpace(
+                30.h,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Center(
                     child: AppButton(
                   onTap: () {},
-                  text: 'Log In',
+                  text: context.tr(AppTranslationKeys.login),
                 )),
               ),
-              SizedBox(
-                height: 12.h,
+              verticalSpace(
+                12.h,
               ),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Or Login with ",
-                  style: TextStyle(fontSize: 12.sp),
-                  textAlign: TextAlign.center,
-                ),
+              OrLoginWithWidget(),
+              verticalSpace(
+                20.h,
               ),
-              SizedBox(
-                height: 20.h,
-              ),
-              LoginBySocialMediaWidget(
-                appleIconTap: () {},
-                faceBookIconTap: () {},
-                googleIconTap: () {},
-              )
+              LoginBySocialMediaImplement()
             ],
           ),
         ),

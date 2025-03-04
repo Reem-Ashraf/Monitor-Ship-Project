@@ -34,7 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  easy_localization: ^3.0.7+1
+  easy_localization:
   bloc: ^9.0.0
   flutter_bloc: ^9.0.0
   dio: ^5.5.0+1
@@ -50,7 +50,6 @@ dependencies:
   flutter_svg: ^2.0.17
   intl: ^0.19.0
   flutter_screenutil: ^5.9.3
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,10 +60,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-flutter_assets:
-  assets_path: assets/image/
-  output_path: lib/core/utils/constants
-  filename: app_assets.dart
+#flutter_assets:
+#  assets_path: assets/image/
+#  output_path: lib/core/utils/constants
+#  filename: app_assets.dart
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -74,21 +73,17 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
-  - assets/
-  - assets/images/profile.jpg
-  - assets/app_images/
-  - assets/app_icons/
-  - assets/home_images/
-  - assets/home_images/home_icons/
-  - assets/translations/
-  - assets/auth_images/
-  - assets/auth_images/auth_icons/
-  - assets/app_icons/
-  - assets/app_images/
-  - assets/image/
-  - assets/translations/en.json
-  - assets/translations/ar.json
+  assets:
+    - assets/images/profile.jpg
+    - assets/app_images/
+    - assets/app_icons/
+    - assets/home_images/
+    - assets/home_images/home_icons/
+    - assets/translations/
+    - assets/auth_images/
+    - assets/auth_images/auth_icons/
+    - assets/image/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

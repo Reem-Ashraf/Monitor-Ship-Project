@@ -1,0 +1,41 @@
+class AppTranslationKeys {
+  static const login = "login";
+  static const forgotPassword = "forgot_password";
+  static const emailAddress = "email_address";
+  static const password = "password";
+  static const loginWith = "login_with";
+  static const logIntoAccount = "log_into_account";
+  static const onboarding1Title = "onboarding_1_title";
+  static const onboarding1Subtitle = "onboarding_1_subtitle";
+  static const onboarding2Title = "onboarding_2_title";
+  static const onboarding2Subtitle = "onboarding_2_subtitle";
+  static const onboarding3Title = "onboarding_3_title";
+  static const onboarding3Subtitle = "onboarding_3_subtitle";
+  static const shoppingNow = "shopping_now";
+  static const seamlessShopping = "enjoy_a_seamless_shopping_experience";
+  static const subtotal = "subtotal";
+  static const trackingNumber = "tracking_number";
+  static const order = "order";
+  static const quantity = "quantity";
+  static const details = "details";
+  static const cancelled = "cancelled";
+  static const delivered = "delivered";
+  static const pending = "pending";
+  static const myOrders = "my_orders";
+  static const phoneNumber = "phone_number";
+  static const zipCode = "zip_code";
+  static const stateProvince = "state_province";
+  static const city = "city";
+  static const streetName = "street_name";
+  static const country = "country";
+  static const continueToPayment = "continue_to_payment";
+  static const shippingMethod = "shipping_method";
+  static const shipping = "shipping";
+  static const checkout = "checkout";
+  static const orderCompleted = "order_completed";
+  static const firstName = "first_name";
+  static const lastName = "last_name";
+  static const step1 = "step1";
+  static const thankYouForPurchaseViewOrderInMyOrders = "thank_you_for_purchase";
+
+}

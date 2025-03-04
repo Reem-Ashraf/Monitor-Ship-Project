@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../data/models/drawer.dart';
+import '../../components/drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   final VoidCallback toggleTheme;
