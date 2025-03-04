@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/components/divider.dart';
+import 'package:hello_world/components/drawer.dart';
+import 'package:hello_world/components/settingItem.dart';
 
 class SettingsScreen extends StatefulWidget {
   @override
@@ -27,30 +30,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
           SizedBox(
             height: 40,
           ),
-          _settingsItem(Icons.language, "Language"),
-          _divider(),
-          _settingsItem(Icons.description, "Terms of Use"),
-          _divider(),
-          _settingsItem(Icons.privacy_tip, "Privacy Policy"),
-          _divider(),
+          settingsItem(Icons.language, "Language"),
+          divider(),
+          settingsItem(Icons.description, "Terms of Use"),
+          divider(),
+          settingsItem(Icons.privacy_tip, "Privacy Policy"),
+          divider(),
         ],
       ),
-    );
-  }
-
-  Widget _settingsItem(IconData icon, String title) {
-    return ListTile(
-      leading: Icon(icon),
-      title: Text(title),
-      trailing: Icon(Icons.arrow_forward_ios),
-      onTap: () {},
-    );
-  }
-
-  Widget _divider() {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
-      child: Divider(thickness: 1),
     );
   }
 }

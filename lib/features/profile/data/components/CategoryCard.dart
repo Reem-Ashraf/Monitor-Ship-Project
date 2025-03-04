@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:hello_world/models/category.dart';
+import 'package:hello_world/screens/my_wishlist_board.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;
@@ -51,12 +52,4 @@ class CategoryCard extends StatelessWidget {
       ),
     );
   }
-}
-
-class Category {
-  final List<String> images;
-  final String name;
-  final int itemCount;
-
-  Category(this.images, this.name, this.itemCount);
 }
