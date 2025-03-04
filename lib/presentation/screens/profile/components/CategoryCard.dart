@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../data/models/category.dart';
+
 class CategoryCard extends StatelessWidget {
   final Category category;
 
@@ -52,12 +54,3 @@ class CategoryCard extends StatelessWidget {
   }
 }
 
-// TODO: Create a model file for this class and move it there.
-// TODO: why category card and drawer are in the models folder.
-class Category {
-  final List<String> images;
-  final String name;
-  final int itemCount;
-
-  Category(this.images, this.name, this.itemCount);
-}
