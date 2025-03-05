@@ -8,22 +8,6 @@ import 'package:monitor_ship_project/core/bloc_observer.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_page.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await EasyLocalization.ensureInitialized();
-  Bloc.observer = MyBlocObserver();
-
-  runApp(EasyLocalization(
-      supportedLocales: [
-        Locale('ar'),
-        Locale('en'),
-      ],
-      path: 'assets/translations',
-      startLocale: const Locale(
-          'ar'), // to test the app in English, change this to Locale('en')
-      child: const MyApp()));
-}
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
