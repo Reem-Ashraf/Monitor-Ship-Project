@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../../core/utils/constants/app_assets.dart';
 
@@ -21,7 +22,7 @@ class BuildStackProductDetails extends StatelessWidget {
             left: 10,
             child: IconButton(onPressed: ()
             {
-              Navigator.pop(context);
+                  context.pop();
             }, icon: const Icon(Icons.arrow_back_ios))
         ),
         const Positioned(

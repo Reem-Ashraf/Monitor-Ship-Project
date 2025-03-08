@@ -6,6 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../core/utils/constants/app_assets.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../discover/screens/discover_full.dart';
+import '../../my_orders/my_orders.dart';
+import '../../profile/presention/screens/profile.dart';
 import '../screens/home_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
@@ -22,8 +24,8 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   static final List<Widget> _pages = <Widget>[
     const Homescreen(),
     const DiscoverFullScreen(),
-    Center(child: Text('cart Page', style: TextStyle(fontSize: 24.sp))),
-    Center(child: Text('Profile Page', style: TextStyle(fontSize: 24.sp))),
+    OrdersScreen(),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

@@ -14,25 +14,25 @@ class TrackStatusProvider {
           statusText: context.tr('Parcel is out for delivery'),
           dateText: '12 May  5:35',
           isCompleted: true,
-          isLast: false,
+          isLast: true,
         ),
         TrackStatusModel(
           statusText: context.tr('Parcel is received at delivery Branch'),
           dateText: '12 May  5:35',
           isCompleted: true,
-          isLast: false,
+          isLast: true,
         ),
         TrackStatusModel(
           statusText: context.tr('Parcel is in transit'),
           dateText: '12 May  5:35',
           isCompleted: true,
-          isLast: false,
+          isLast: true,
         ),
         TrackStatusModel(
           statusText: context.tr('Sender has shipped your parcel'),
           dateText: '12 May  5:35',
           isCompleted: true,
-          isLast: false,
+          isLast: true,
         ),
         TrackStatusModel(
           statusText: context.tr('Sender is preparing to ship your order'),
@@ -41,5 +41,4 @@ class TrackStatusProvider {
           isLast: false,
         ),
       ];
-
 }

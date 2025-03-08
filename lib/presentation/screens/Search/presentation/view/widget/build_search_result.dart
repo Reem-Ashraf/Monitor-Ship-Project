@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/presentation/screens/Search/presentation/view/widget/product_details.dart';
+import '../../../../../../core/utils/app_routes/routes_name.dart';
 import 'build_rating.dart';
 import 'build_stack.dart';
 
 class BuildSearchResult extends StatelessWidget {
   const BuildSearchResult({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetails()));
+      onTap: () {
+        context.push(RoutesName.productDetails);
       },
       child: Container(
         decoration: BoxDecoration(
@@ -32,20 +33,48 @@ class BuildSearchResult extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const BuildStack(),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
-              const Text("Filted Waist Dress",
-                style: TextStyle(color:Colors.black,fontWeight: FontWeight.w600,),
-                maxLines: 2, overflow: TextOverflow.ellipsis,),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.01,
+              ),
+              const Text(
+                "Filted Waist Dress",
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.005,
+              ),
               const Row(
                 children: [
-                  Text("\$ 200", style: TextStyle(color:Colors.black,fontSize: 18,fontWeight: FontWeight.w600,),),
-                  SizedBox(width: 8,),
-                  Text("\$ 200", style: TextStyle(
-                    decoration: TextDecoration.lineThrough, color:Colors.black,fontSize: 18,fontWeight: FontWeight.w600,),),
+                  Text(
+                    "\$ 200",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    "\$ 200",
+                    style: TextStyle(
+                      decoration: TextDecoration.lineThrough,
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ],
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.005,),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.005,
+              ),
               const BuildRating(),
             ],
           ),
@@ -54,6 +83,3 @@ class BuildSearchResult extends StatelessWidget {
     );
   }
 }
-
-
-

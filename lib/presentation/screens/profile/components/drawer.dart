@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-
+import '../../../../core/utils/app_routes/routes_name.dart';
 import '../data/models/buildListTile.dart';
-import '../presention/screens/setting.dart';
 import 'buildHeader.dart';
 import 'buildSectionTitle.dart';
 import 'buildThemeOption.dart';
@@ -27,8 +27,7 @@ class CustomDrawer extends StatelessWidget {
           Spacer(),
           buildSectionTitle("Other"),
           buildListTile(Icons.settings, "Setting", () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SettingsScreen()));
+            context.push(RoutesName.settingsScreen);
           }),
           buildListTile(Icons.support, "Support", () {}),
           buildListTile(Icons.info, "About us", () {}),

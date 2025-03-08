@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/utils/constants/colors.dart';
 
 class RestOrApply extends StatelessWidget {
@@ -21,7 +22,7 @@ class RestOrApply extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.pop(context); // Apply filter & close modal
+            context.pop(); // Apply filter & close modal
           },
           style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
           child: Text("Apply",

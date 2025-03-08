@@ -44,7 +44,6 @@ class Homescreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 10,
             children: [
-              //  const CustomAppBar(text: 'Gemstore',),
               // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
               const CategoryItemListView(),
               const HomeImage(),

@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/helpers/regx.dart';
 import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/forget_password_widget.dart';
 import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_by_social_media_implement.dart';
@@ -64,7 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 12.h,
               ),
               ForgetPasswordWidget(
-                onTap: () {},
+                onTap: () {
+                  // context.push(RoutesName.) //TODO: add forget password screen
+                },
               ),
               verticalSpace(
                 30.h,
@@ -73,7 +77,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Center(
                     child: AppButton(
-                  onTap: () {},
+                  onTap: () {
+                    context.go(RoutesName.bottomNavigationBarScreen);
+                  },
                   text: context.tr(AppTranslationKeys.login),
                 )),
               ),

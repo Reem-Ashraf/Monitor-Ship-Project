@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 
+import '../../../../../core/utils/app_routes/routes_name.dart';
 import '../../components/CategoryCard.dart';
 import '../../components/buildBottomNavigationBar.dart';
 import '../../components/bulidAppPar.dart';
@@ -42,7 +44,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
       "images/profile.jpg",
       "images/profile.jpg",
       "images/profile.jpg",
-      "images/profile.jpg",
+      "images/profile.jpg", //todo: path to image not found
       "images/profile.jpg",
     ], "Office Fashion", 20),
   ];
@@ -67,10 +69,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WishlistItem()),
-                    ),
+                    onTap: () => context.push(RoutesName.wishlistItem),
                     child: CategoryCard(category: categories[index]),
                   );
                 },

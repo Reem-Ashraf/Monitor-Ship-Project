@@ -11,12 +11,13 @@ class BuildOrderInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TextRichTrack(
           text1: 'Delivered on',
           text2: '15.02.25',
         ),
-        SizedBox(height: 16.h),
+        SizedBox(height: 12.h),
         TextRichTrack(
           text1: 'Tracking Number :',
           text2: 'IK287368838',

@@ -1,58 +1,57 @@
-import 'package:go_router/go_router.dart';
-import 'package:monitor_ship_project/core/utils/app_routes/routes_exports.dart';
+import 'routes_exports.dart';
 import 'routes_name.dart';
 
 class GroupRoutes {
-  static final  GoRouter router = GoRouter(
+  static final GoRouter router = GoRouter(
     routes: [
       GoRoute(
         name: RoutesName.welcomeScreen,
-        path: "/welcomeScreen",
+        path: RoutesName.welcomeScreen,
         builder: (context, state) => const WelcomeScreen(),
       ),
       GoRoute(
         name: RoutesName.onBoardingScreen1,
-        path: "/onboardingScreen",
+        path: RoutesName.onBoardingScreen1,
         builder: (context, state) => OnboardingScreen(),
       ),
       GoRoute(
         name: RoutesName.loginScreen,
-        path: "/loginScreen",
+        path: RoutesName.loginScreen,
         builder: (context, state) => LoginScreen(),
       ),
       GoRoute(
         name: RoutesName.checkOutScreen1,
-        path: "/checkOutScreen1",
+        path: RoutesName.checkOutScreen1,
         builder: (context, state) => CheckoutScreen1(),
       ),
-      // GoRoute(
-      //   name: RoutesName.orderDetails,
-      //   path: "/orderDetails",
-      //   builder: (context, state) => OrderDetails(order: 'Order'),
-      // ),
+      GoRoute(
+        name: RoutesName.orderDetails,
+        path: RoutesName.orderDetails,
+        builder: (context, state) => OrderDetails(order: 'Order'),
+      ),
       GoRoute(
         name: RoutesName.checkOutScreen2,
-        path: "/checkOutScreen2",
+        path: RoutesName.checkOutScreen2,
         builder: (context, state) => CheckOutScreen2(),
       ),
       GoRoute(
         name: RoutesName.rateProduct,
-        path: "/rateProduct",
+        path: RoutesName.rateProduct,
         builder: (context, state) => RateProduct(),
       ),
       GoRoute(
         name: RoutesName.orderScreen,
-        path: "/",
+        path: RoutesName.orderScreen,
         builder: (context, state) => OrdersScreen(),
       ),
-      // GoRoute(
-      //   name: RoutesName.searchScreen,
-      //   path: "/searchScreen",
-      //   builder: (context, state) => SearchScreen(),
-      // ),
+      GoRoute(
+        name: RoutesName.searchScreen,
+        path: RoutesName.searchScreen,
+        builder: (context, state) => SearchScreen(),
+      ),
       GoRoute(
         name: RoutesName.trackOrder,
-        path: "/trackOrder",
+        path: RoutesName.trackOrder,
         builder: (context, state) => TrackOrder(),
       ),
       GoRoute(
@@ -68,6 +67,14 @@ class GroupRoutes {
       GoRoute(
           path: RoutesName.discverScreen,
           builder: (context, state) => DiscoverFullScreen()),
+      GoRoute(
+        path: RoutesName.profileSetting,
+        builder: (context, state) => ProfileApp(),),
+        GoRoute(path: RoutesName.myWishlist, builder: (context, state) => WishlistScreen()),
+        GoRoute(path: RoutesName.wishlistItem, builder: (context, state) => WishlistItem()),
+        GoRoute(path: RoutesName.settingsScreen, builder: (context, state) => SettingsScreen()),
+        GoRoute(path: RoutesName.profileScreen, builder: (context, state) => ProfileScreen()),
+        GoRoute(path: RoutesName.productDetails, builder: (context, state) => ProductDetails()),
     ],
   );
 }

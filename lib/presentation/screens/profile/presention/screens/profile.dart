@@ -5,6 +5,8 @@ import '../../components/profileHeader.dart';
 import '../../components/profileOptions.dart';
 
 class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -26,7 +28,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNav(selectedIndex: 3),
+      bottomNavigationBar: CustomBottomNav(selectedIndex: 3), //Todo: Remove this line 
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'build_search_result.dart';
 
@@ -20,7 +21,7 @@ class SearchScreen extends SearchDelegate {
   Widget? buildLeading(BuildContext context) {
     return IconButton(
         onPressed: () {
-          Navigator.pop(context);
+          context.pop();
         },
         icon: const Icon(Icons.close));
   }

@@ -31,8 +31,7 @@ class OrderActionButtons extends StatelessWidget {
                       BorderSide(color: AppColors.lightGray)),
                 ),
                 onPressed: () {
-                  context.push(RoutesName.orderDetails,
-                      extra: '${context.tr('Order')} #$order');
+                  context.pop();
                 },
                 child: Text(
                   'Return home'.tr(),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../../../../core/utils/constants/text_style.dart';
 
@@ -42,7 +43,7 @@ class AppBarBackButton extends StatelessWidget {
         child: InkWell(
           customBorder: CircleBorder(),
           onTap: () {
-            Navigator.pop(context);
+            context.pop();
           },
           child: Card(
             elevation: 1,

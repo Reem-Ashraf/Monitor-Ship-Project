@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/presentation/screens/my_orders/widget/quantity_and_subtotal_widget.dart';
 import 'package:monitor_ship_project/presentation/screens/my_orders/widget/status_and_details_button_widget.dart';
@@ -53,7 +55,9 @@ class OrderCard extends StatelessWidget {
             SizedBox(height: 8.h),
             StatusAndDetailsButton(
               order: order,
-              onTap: () {},
+              onTap: () {
+                context.push(RoutesName.orderDetails);
+              },
             )
           ],
         ),
