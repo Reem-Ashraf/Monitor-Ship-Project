@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../../../../core/utils/constants/constants.dart';
 import '../../../../../core/utils/constants/text_style.dart';
+import '../../core/language/app_translation_key.dart';
 
 class AppTextFormField extends StatelessWidget {
   final TextEditingController? controller;
@@ -128,7 +129,7 @@ class AppTextFormField extends StatelessWidget {
                 child: Text(
                   counterText ??
                       Constants.convertNumToArabic(
-                          context.tr('$maxLength characters'), false),
+                          context.tr('$maxLength ${AppTranslationKeys.charactersLimit}'), false),
                   style: counterStyle ?? TextStyles.product12W400,
                 ),
               )

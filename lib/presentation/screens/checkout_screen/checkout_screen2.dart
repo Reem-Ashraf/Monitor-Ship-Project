@@ -7,7 +7,6 @@ import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget
 
 import '../../../core/language/app_translation_key.dart';
 import '../../../core/utils/constants/app_assets.dart';
-import '../../../core/utils/constants/colors.dart';
 import '../../widget/app_button.dart';
 
 class CheckOutScreen2 extends StatelessWidget {
@@ -28,7 +27,7 @@ class CheckOutScreen2 extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          "${context.tr(AppTranslationKeys.checkout)}",
+          context.tr(AppTranslationKeys.checkout),
           style: TextStyle(fontSize: 24.sp),
         ),
       ),
@@ -45,7 +44,7 @@ class CheckOutScreen2 extends StatelessWidget {
                 height: 18.h,
               ),
               Text(
-                "${context.tr(AppTranslationKeys.orderCompleted)}",
+                context.tr(AppTranslationKeys.orderCompleted),
                 style: TextStyles.blackFont24,
                 textAlign: TextAlign.start,
               ),
@@ -62,7 +61,7 @@ class CheckOutScreen2 extends StatelessWidget {
                 height: 40.h,
               ),
               Text(
-                "${context.tr(AppTranslationKeys.thankYouForPurchaseViewOrderInMyOrders)}",
+                context.tr(AppTranslationKeys.thankYouForPurchaseViewOrderInMyOrders),
                 style: TextStyles.greyFontSize14,
                 textAlign: TextAlign.center,
               ),
@@ -72,7 +71,7 @@ class CheckOutScreen2 extends StatelessWidget {
               Center(
                   child: AppButton(
                 onTap: () {},
-                text: '${context.tr(AppTranslationKeys.continueToPayment)}',
+                text: context.tr(AppTranslationKeys.continueToPayment),
               )),
             ],
           ),

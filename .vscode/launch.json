@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Production",
+      "program": "lib/main_production.dart",  // ← Flavor-specific entry point
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "production"]
+    },
+    {
+      "name": "Development",
+      "program": "lib/main_development.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "development"]
+    },
+    {
+      "name": "Staging",
+      "program": "lib/main_staging.dart",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--flavor", "staging"]
+    }
+  ]
+}

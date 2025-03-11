@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/language/app_translation_key.dart';
 import '../../../../../core/utils/app_routes/routes_name.dart';
 import '../../../../../core/utils/constants/app_assets.dart';
 import '../../../../../core/utils/constants/colors.dart';
@@ -35,11 +36,12 @@ class DeliveryStatusBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  context.tr('Your order is delivered'),
+                  context.tr(AppTranslationKeys.yourOrderIsDelivered),
                   style: TextStyles.nunitoBold16,
                 ),
                 Text(
-                  context.tr('Rate product to get 5 points for collect.'),
+                  context
+                      .tr(AppTranslationKeys.rateProductToGet5PointsForCollect),
                   style: TextStyles.nunitoSemiBoldText10,
                 )
               ],

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/presentation/screens/my_orders/widget/order_list_model.dart';
 
 import 'order_card.dart';
-import 'order_status.dart';
 
 class OrdersList extends StatelessWidget {
   final List<OrderModel> orders;

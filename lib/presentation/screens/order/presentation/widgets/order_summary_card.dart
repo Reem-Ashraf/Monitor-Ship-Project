@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../core/language/app_translation_key.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../../../../core/utils/constants/constants.dart';
 import '../../../../../core/utils/constants/text_style.dart';
@@ -54,13 +55,13 @@ class OrderSummaryCard extends StatelessWidget {
             height: 32.h,
           ),
           OrderDetailsRow(
-            text1: context.tr('Subtotal'),
+            text1: context.tr(AppTranslationKeys.subtotal),
             text2: '120.00',
             style1: TextStyles.product14LightW400,
             style2: TextStyles.productBold16,
           ),
           OrderDetailsRow(
-            text1: context.tr('Shipping'),
+            text1: context.tr(AppTranslationKeys.shipping),
             text2: '0.00',
             style1: TextStyles.product14LightW400,
             style2: TextStyles.productBold16,
@@ -71,7 +72,7 @@ class OrderSummaryCard extends StatelessWidget {
           ),
           MyDivider(),
           OrderDetailsRow(
-            text1: context.tr('Total'),
+            text1: context.tr(AppTranslationKeys.total),
             text2: Constants.convertNumToArabic('120.00', false),
             style1: TextStyles.product14LightW400,
             style2: TextStyles.productBold16,

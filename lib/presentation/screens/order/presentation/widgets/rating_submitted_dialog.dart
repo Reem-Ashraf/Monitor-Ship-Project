@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/language/app_translation_key.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../../../../core/utils/constants/text_style.dart';
 import '../../../../../core/utils/widgets/button_app.dart';
@@ -39,13 +40,13 @@ class RatingSubmittedDialog extends StatelessWidget {
                 ),
               ),
             ),
-            Text(context.tr('Thank you for your feedback!'),
+            Text(context.tr(AppTranslationKeys.thankYouForYourFeedback),
                 textAlign: TextAlign.center,
                 style: TextStyles.buttonStyle.copyWith(
                   color: AppColors.darkGray,
                 )),
             Text(
-                '${context.tr('We appreciated your feedback.')} \n ${context.tr('We’ll use your feedback to improve your experience.')}',
+                '${context.tr(AppTranslationKeys.weAppreciatedYourFeedback)} \n ${context.tr(AppTranslationKeys.wellUseYourFeedbackToImproveYourExperience)}',
                 textAlign: TextAlign.center,
                 style: TextStyles.inputStyle),
             Padding(
@@ -54,7 +55,7 @@ class RatingSubmittedDialog extends StatelessWidget {
                 onPressed: () {
                   context.pop();
                 },
-                text: context.tr('Done'),
+                text: context.tr(AppTranslationKeys.done),
               ),
             ),
           ],

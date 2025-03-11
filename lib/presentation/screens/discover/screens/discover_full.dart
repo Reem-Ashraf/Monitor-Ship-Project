@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import '../../../../core/language/app_translation_key.dart';
 import '../../../../core/utils/constants/app_assets.dart';
 import '../../../../core/utils/constants/colors.dart';
 
@@ -28,7 +29,7 @@ class DiscoverFullScreen extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: AppColors.white,
-        title: Text(context.tr('Discover')),
+        title: Text(context.tr(AppTranslationKeys.discover)),
         actions: [Container()],
       ),
       body: Padding(

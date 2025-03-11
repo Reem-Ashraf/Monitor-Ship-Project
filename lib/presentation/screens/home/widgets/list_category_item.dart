@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/constants/app_assets.dart';
+import '../../../../core/language/app_translation_key.dart';
 import 'category_item.dart';
 
 class CategoryItemListView extends StatelessWidget {
@@ -14,19 +15,19 @@ class CategoryItemListView extends StatelessWidget {
 
     List<Map<String, dynamic>> categoryList = [
       {
-        'categoryname': context.tr('woman'),
+        'categoryname': context.tr(AppTranslationKeys.woman),
         'image': AppAssets.femaleIcon,
       },
       {
-        'categoryname': context.tr('man'),
+        'categoryname': context.tr(AppTranslationKeys.man),
         'image': AppAssets.maleIcon,
       },
       {
-        'categoryname': context.tr('Accesory'),
+        'categoryname': context.tr(AppTranslationKeys.accesory),
         'image': AppAssets.acessoryIcon,
       },
       {
-        'categoryname': context.tr('beauty'),
+        'categoryname': context.tr(AppTranslationKeys.beauty),
         'image': AppAssets.beautyIcon,
       },
     ];

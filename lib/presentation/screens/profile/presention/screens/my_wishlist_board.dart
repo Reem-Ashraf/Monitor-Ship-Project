@@ -8,7 +8,6 @@ import '../../components/buildBottomNavigationBar.dart';
 import '../../components/bulidAppPar.dart';
 import '../../components/drawer.dart';
 import '../../data/models/category.dart';
-import 'my_wishlist_all.dart';
 
 class WishlistScreen extends StatefulWidget {
   const WishlistScreen({super.key});

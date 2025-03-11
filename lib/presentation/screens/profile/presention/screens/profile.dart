@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../components/buildBottomNavigationBar.dart';
 import '../../components/profileHeader.dart';
 import '../../components/profileOptions.dart';
 
@@ -28,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNav(selectedIndex: 3), //Todo: Remove this line 
+      // bottomNavigationBar: CustomBottomNav(selectedIndex: 3), //Todo: Remove this line 
     );
   }
 }

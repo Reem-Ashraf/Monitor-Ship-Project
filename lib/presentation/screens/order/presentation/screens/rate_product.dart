@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../core/language/app_translation_key.dart';
 import '../../../../../core/utils/widgets/button_app.dart';
 
 import '../../../../../core/utils/widgets/rate/star_score.dart';
@@ -15,7 +16,7 @@ class RateProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OrderStatusAppBar(
-        title: context.tr('Rate Product'),
+        title: context.tr(AppTranslationKeys.rateProduct),
       ),
       body: Padding(
         padding: EdgeInsetsDirectional.symmetric(
@@ -35,13 +36,14 @@ class RateProduct extends StatelessWidget {
                 height: 125.h,
               ),
               ButtonApp(
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (context) => RatingSubmittedDialog(),
-                    );
-                  },
-                  text: context.tr('Submit Review')),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => RatingSubmittedDialog(),
+                  );
+                },
+                text: context.tr(AppTranslationKeys.submitReview),
+              ),
             ],
           ),
         ),

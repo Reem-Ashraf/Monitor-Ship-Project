@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../../core/language/app_translation_key.dart';
 import '../../../../../core/utils/app_routes/routes_name.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../../../../core/utils/constants/text_style.dart';
@@ -47,7 +48,7 @@ class OrderActionButtons extends StatelessWidget {
               onPressed: () {
                 context.push(RoutesName.rateProduct);
               },
-              text: context.tr('Rate'),
+              text: context.tr(AppTranslationKeys.rate),
             ),
           ),
         ],

@@ -4,18 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
-import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
-import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/DeliveryOptionModel.dart';
 import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/check_out_screen_text_fields.dart';
 import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/delivery_option_tile_widget.dart';
-import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/drop_down_menue.dart';
 import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/location_complete_mark_widget.dart';
-import 'package:monitor_ship_project/presentation/screens/checkout_screen/widget/selected_radio_button.dart';
 
 import '../../../core/language/app_translation_key.dart';
 import '../../widget/app_button.dart';
-import '../../widget/app_text_field.dart';
 
 class CheckoutScreen1 extends StatefulWidget {
    CheckoutScreen1({super.key});
@@ -53,12 +48,12 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
                 height: 18.h,
               ),
               Text(
-                "${context.tr(AppTranslationKeys.step1)}",
+                context.tr(AppTranslationKeys.step1),
                 style: TextStyle( fontSize: 8.sp,fontWeight: FontWeight.w400),
                 textAlign: TextAlign.start,
               ),
               Text(
-                "${context.tr(AppTranslationKeys.shipping)}",
+                context.tr(AppTranslationKeys.shipping),
                 style:  TextStyles.blackFont24,
                 textAlign: TextAlign.start,
               ),
@@ -67,7 +62,7 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
               ),
               CheckOutScreenTextFields(),
               Text(
-                "${context.tr(AppTranslationKeys.shippingMethod)}",
+                context.tr(AppTranslationKeys.shippingMethod),
                 style: TextStyles.blackFont14,
                 textAlign: TextAlign.start,
               ),
@@ -83,7 +78,7 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
                     onTap: () {
                       context.pushNamed(RoutesName.checkOutScreen2);
                     },
-                    text: '${context.tr(AppTranslationKeys.continueToPayment)}',
+                    text: context.tr(AppTranslationKeys.continueToPayment),
                   )),
               SizedBox(
                 height: 12.h,
