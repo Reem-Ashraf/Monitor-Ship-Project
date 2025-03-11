@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/screens/profile.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../core/utils/app_routes/routes_name.dart';
 
 Widget buildHeader(BuildContext context) {
   return GestureDetector(
     onTap: () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+      context.push(RoutesName.profileSetting);
     },
     child: DrawerHeader(
       child: Row(

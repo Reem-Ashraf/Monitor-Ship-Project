@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/models/category.dart';
-import 'package:hello_world/screens/my_wishlist_board.dart';
+
+import '../data/models/category.dart';
 
 class CategoryCard extends StatelessWidget {
   final Category category;
 
-  CategoryCard({required this.category});
+  const CategoryCard({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class CategoryCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
             height: 160,
             child: ListView(
               scrollDirection: Axis.horizontal,
@@ -53,3 +53,4 @@ class CategoryCard extends StatelessWidget {
     );
   }
 }
+

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/components/CategoryCard.dart';
-import 'package:hello_world/components/buildBottomNavigationBar.dart';
-import 'package:hello_world/components/bulidAppPar.dart';
-import 'package:hello_world/components/drawer.dart';
-import 'package:hello_world/models/category.dart';
-import 'package:hello_world/screens/my_wishlist_all.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../../../../core/utils/app_routes/routes_name.dart';
+import '../../components/CategoryCard.dart';
+import '../../components/buildBottomNavigationBar.dart';
+import '../../components/bulidAppPar.dart';
+import '../../components/drawer.dart';
+import '../../data/models/category.dart';
+
 
 class WishlistScreen extends StatefulWidget {
   const WishlistScreen({super.key});
@@ -14,8 +17,7 @@ class WishlistScreen extends StatefulWidget {
 }
 
 class _WishlistScreenState extends State<WishlistScreen> {
-  
-     int _selectedIndex = 3;
+  int _selectedIndex = 3;
 
   void _onItemTapped(int index) {
     setState(() => _selectedIndex = index);
@@ -40,7 +42,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
       "images/profile.jpg",
       "images/profile.jpg",
       "images/profile.jpg",
-      "images/profile.jpg",
+      "images/profile.jpg", //todo: path to image not found
       "images/profile.jpg",
     ], "Office Fashion", 20),
   ];
@@ -65,10 +67,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WishlistItem()),
-                    ),
+                    onTap: () => context.push(RoutesName.wishlistItem),
                     child: CategoryCard(category: categories[index]),
                   );
                 },

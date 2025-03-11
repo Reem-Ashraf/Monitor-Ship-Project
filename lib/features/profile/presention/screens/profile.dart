@@ -1,18 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/components/buildBottomNavigationBar.dart';
-import 'package:hello_world/components/profileHeader.dart';
-import 'package:hello_world/components/profileOptions.dart';
-import 'package:hello_world/screens/my_wishlist_board.dart';
-import 'package:hello_world/screens/profile_setting.dart';
+import '../../components/profile_header.dart';
+import '../../components/profile_options.dart';
 
-class ProfileScreen extends StatefulWidget {
-  @override
-  _ProfileScreenState createState() => _ProfileScreenState();
-}
-
-class _ProfileScreenState extends State<ProfileScreen> {
-  int _selectedIndex = 3;
-  void _onItemTapped(int index) => setState(() => _selectedIndex = index);
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +14,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             profileHeader(context),
             const SizedBox(height: 20),
-            profileOptions(context),
+            const ProfileOptions(), // استدعاء الـ Widget بدل الفانكشن
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNav(selectedIndex: 3),
     );
   }
 }

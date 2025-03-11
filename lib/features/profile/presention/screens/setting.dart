@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/components/divider.dart';
-import 'package:hello_world/components/drawer.dart';
-import 'package:hello_world/components/settingItem.dart';
+
+import '../../components/divider.dart';
+import '../../components/drawer.dart';
+import '../../components/settingItem.dart';
 
 class SettingsScreen extends StatefulWidget {
+  // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
+
+  const SettingsScreen({super.key});
+
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
 }

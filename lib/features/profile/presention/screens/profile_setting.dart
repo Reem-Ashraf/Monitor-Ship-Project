@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/models/textfield.dart';
+
+import '../../data/models/textfield.dart';
 
 class ProfileApp extends StatefulWidget {
   const ProfileApp({super.key});
