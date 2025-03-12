@@ -61,7 +61,8 @@ class CheckOutScreen2 extends StatelessWidget {
                 height: 40.h,
               ),
               Text(
-                context.tr(AppTranslationKeys.thankYouForPurchaseViewOrderInMyOrders),
+                context.tr(
+                    AppTranslationKeys.thankYouForPurchaseViewOrderInMyOrders),
                 style: TextStyles.greyFontSize14,
                 textAlign: TextAlign.center,
               ),

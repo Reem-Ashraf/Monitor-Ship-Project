@@ -12,7 +12,8 @@ class TrackOrder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: OrderStatusAppBar(title: context.tr(AppTranslationKeys.trackOrder)),
+      appBar:
+          OrderStatusAppBar(title: context.tr(AppTranslationKeys.trackOrder)),
       body: Padding(
         padding: EdgeInsetsDirectional.all(30.r),
         child: Column(

@@ -6,14 +6,11 @@ import '../../../../core/utils/constants/text_style.dart';
 class HomeImage2 extends StatelessWidget {
   const HomeImage2({
     super.key,
-    required this.text1,
-    required this.text2,
     required this.image,
-    required this.text3,
+    required this.textList,
   });
-  final String text1;
-  final String text2;
-  final String text3;
+
+  final List<String> textList;
   final String image;
   @override
   Widget build(BuildContext context) {
@@ -31,25 +28,17 @@ class HomeImage2 extends StatelessWidget {
                   SizedBox(
                     height: 20.h,
                   ),
-                  // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
-                  Text(
-                    text1,
-                    textScaler: TextScaler.noScaling,
-                    style: TextStyles.text13,
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  Text(
-                    text2,
-                    textScaler: TextScaler.noScaling,
-                    style: TextStyles.text20,
-                  ),
-                  Text(
-                    text3,
-                    textScaler: TextScaler.noScaling,
-                    style: TextStyles.text20,
-                  ),
+                  for (int i = 0; i < textList.length; i++) ...[
+                    Text(
+                      textList[i],
+                      textScaler: TextScaler.noScaling,
+                      style: i == 0 ? TextStyles.text13 : TextStyles.text20,
+                    ),
+                    if (i == 0)
+                      SizedBox(
+                        height: 20.h,
+                      ),
+                  ]
                 ],
               ),
             ),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/colors.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_page.dart';
+import 'package:device_preview/device_preview.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         locale: context.locale,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
+        builder: DevicePreview.appBuilder,
         theme: ThemeData(
           scaffoldBackgroundColor: AppColors.white,
           appBarTheme: AppBarTheme(

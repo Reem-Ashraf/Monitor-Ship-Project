@@ -13,14 +13,14 @@ import '../../../core/language/app_translation_key.dart';
 import '../../widget/app_button.dart';
 
 class CheckoutScreen1 extends StatefulWidget {
-   CheckoutScreen1({super.key});
-   bool isSelected = false;
+  CheckoutScreen1({super.key});
+  bool isSelected = false;
+
   @override
   State<CheckoutScreen1> createState() => _CheckoutScreen1State();
 }
 
 class _CheckoutScreen1State extends State<CheckoutScreen1> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,18 +43,20 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LocationCompleteMarkWidget(isCheckout1Screen: true,),
+              LocationCompleteMarkWidget(
+                isCheckout1Screen: true,
+              ),
               SizedBox(
                 height: 18.h,
               ),
               Text(
                 context.tr(AppTranslationKeys.step1),
-                style: TextStyle( fontSize: 8.sp,fontWeight: FontWeight.w400),
+                style: TextStyle(fontSize: 8.sp, fontWeight: FontWeight.w400),
                 textAlign: TextAlign.start,
               ),
               Text(
                 context.tr(AppTranslationKeys.shipping),
-                style:  TextStyles.blackFont24,
+                style: TextStyles.blackFont24,
                 textAlign: TextAlign.start,
               ),
               SizedBox(
@@ -75,15 +77,14 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
               ),
               Center(
                   child: AppButton(
-                    onTap: () {
-                      context.pushNamed(RoutesName.checkOutScreen2);
-                    },
-                    text: context.tr(AppTranslationKeys.continueToPayment),
-                  )),
+                onTap: () {
+                  context.pushNamed(RoutesName.checkOutScreen2);
+                },
+                text: context.tr(AppTranslationKeys.continueToPayment),
+              )),
               SizedBox(
                 height: 12.h,
               ),
-
             ],
           ),
         ),

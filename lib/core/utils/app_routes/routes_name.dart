@@ -8,6 +8,7 @@ class RoutesName {
   static const String checkOutScreen2 = "/checkOutScreen2";
   static const String orderScreen = "/orderScreen";
   static const String orderDetails = "/orderDetails";
+
   static const String searchScreen = "/searchScreen";
   static const String accountScreen = "/accountScreen";
   static const String carRescue = "/carRescue";
@@ -25,5 +26,5 @@ class RoutesName {
   static final String settingsScreen = '/settingsScreen';
   static final String profileScreen = '/profileScreen';
   static final String productDetails = '/productDetails';
-  //static final String searchScreen = '/searchScreen';
+  static final String foundResultScreen = '/foundResultScreen';
 }

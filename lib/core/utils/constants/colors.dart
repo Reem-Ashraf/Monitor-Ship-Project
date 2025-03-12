@@ -48,4 +48,25 @@ class AppColors {
   static final Color cancelledColor = Color(0xFFC40000);
   static final Color buttonBackgroundColor = Color(0xFF343434);
   static final Color orderCardColor = Color(0xFF131416);
+
+  //category colors
+  
+  //clothing colors
+  static final Color colothingbackground = Color(0xFF999E87);
+  static final Color colothingsmallcircle = Color(0xFF8A8F7A);
+  static final Color colothingbigcircle = Color(0xFFA4AC8A);
+    // acessory colors
+  static const Color accessoryBackground = Color(0xFFA79F9D);
+  static const Color accessorySmallCircle = Color(0xFF8D8785);
+  static const Color accessoryBigCircle = Color(0xFFA79F9D);
+
+  // shose colors
+  static const Color shoesBackground = Color(0xFF44565C);
+  static const Color shoesSmallCircle = Color(0xFF4E6269);
+  static const Color shoesBigCircle = Color(0xFF637E86);
+
+  // collection
+  static const Color collectionBackground = Color(0xFFB9AEB2);
+  static const Color collectionSmallCircle = Color(0xFFE7D7DD);
+  static const Color collectionBigCircle = Color(0xFFFDEBF2);
 }

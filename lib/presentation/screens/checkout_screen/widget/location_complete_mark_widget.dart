@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/utils/constants/app_assets.dart';
 
 class LocationCompleteMarkWidget extends StatelessWidget {
-   LocationCompleteMarkWidget({super.key,required this.isCheckout1Screen});
+  LocationCompleteMarkWidget({super.key, required this.isCheckout1Screen});
   bool isCheckout1Screen;
 
   @override
@@ -33,10 +33,11 @@ class LocationCompleteMarkWidget extends StatelessWidget {
             width: 5.w,
           ),
           Image.asset(
-            isCheckout1Screen?AppAssets.completeMark1:AppAssets.completeMark2,
+            isCheckout1Screen
+                ? AppAssets.completeMark1
+                : AppAssets.completeMark2,
             height: 22.h,
           ),
-
         ],
       ),
     );

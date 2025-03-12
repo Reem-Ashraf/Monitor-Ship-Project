@@ -21,5 +21,5 @@ export '../../../presentation/screens/profile/presention/screens/my_wishlist_all
 export '../../../presentation/screens/profile/presention/screens/setting.dart';
 export '../../../presentation/screens/profile/presention/screens/profile.dart';
 export '../../../presentation/screens/Search/presentation/view/widget/product_details.dart';
-
+export '../../../presentation/screens/discover/screens/discover_screen.dart';
 

@@ -69,12 +69,29 @@ class GroupRoutes {
           builder: (context, state) => DiscoverFullScreen()),
       GoRoute(
         path: RoutesName.profileSetting,
-        builder: (context, state) => ProfileApp(),),
-        GoRoute(path: RoutesName.myWishlist, builder: (context, state) => WishlistScreen()),
-        GoRoute(path: RoutesName.wishlistItem, builder: (context, state) => WishlistItem()),
-        GoRoute(path: RoutesName.settingsScreen, builder: (context, state) => SettingsScreen()),
-        GoRoute(path: RoutesName.profileScreen, builder: (context, state) => ProfileScreen()),
-        GoRoute(path: RoutesName.productDetails, builder: (context, state) => ProductDetails()),
+        builder: (context, state) => ProfileApp(),
+      ),
+      GoRoute(
+          path: RoutesName.myWishlist,
+          builder: (context, state) => WishlistScreen()),
+      GoRoute(
+          path: RoutesName.wishlistItem,
+          builder: (context, state) => WishlistItem()),
+      GoRoute(
+          path: RoutesName.settingsScreen,
+          builder: (context, state) => SettingsScreen()),
+      GoRoute(
+          path: RoutesName.profileScreen,
+          builder: (context, state) => ProfileScreen()),
+      GoRoute(
+          path: RoutesName.productDetails,
+          builder: (context, state) => ProductDetails()),
+          GoRoute(
+          name: RoutesName.foundResultScreen,
+          path: RoutesName.foundResultScreen,
+          builder: (context, state) {
+            return FoundResultScreen();
+          }),
     ],
   );
 }

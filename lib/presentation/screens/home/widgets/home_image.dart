@@ -9,6 +9,11 @@ class HomeImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> textList = [
+      'Autum',
+      'Collection',
+      '2025',
+    ];
     return Stack(
       children: [
         Image.asset(AppAssets.firstHomeImage),
@@ -18,22 +23,12 @@ class HomeImage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
-              Text(
-                'Autumn',
-                textScaler: TextScaler.noScaling,
-                style: TextStyles.text22,
-              ),
-              Text(
-                'Collection',
-                textScaler: TextScaler.noScaling,
-                style: TextStyles.text22,
-              ),
-              Text(
-                '2022',
-                textScaler: TextScaler.noScaling,
-                style: TextStyles.text22,
-              ),
+              for (int i = 0; i < textList.length; i++)
+                Text(
+                  textList[i],
+                  textScaler: TextScaler.noScaling,
+                  style: TextStyles.text22,
+                ),
             ],
           ),
         ),

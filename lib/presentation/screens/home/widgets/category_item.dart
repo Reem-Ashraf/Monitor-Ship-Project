@@ -1,20 +1,18 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:monitor_ship_project/presentation/screens/home/data/models/category_model.dart';
 import '../../../../core/utils/constants/colors.dart';
 import '../../../../core/utils/constants/text_style.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({
-    // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model with onTap, rate, and index to streamline argument handling.
-
     super.key,
-    required this.categoryname,
-    required this.image,
-    this.isActive = false,
+    required this.categoryModel,
+    required this.isActive,
   });
-  final String categoryname;
-  final String image;
+  final CategoryModel categoryModel;
   final bool isActive;
   @override
   Widget build(BuildContext context) {
@@ -44,7 +42,7 @@ class CategoryItem extends StatelessWidget {
                 child: Transform.scale(
                   scale: .6.r,
                   child: SvgPicture.asset(
-                    image,
+                    categoryModel.image,
                     colorFilter: ColorFilter.mode(
                         isActive != true ? AppColors.gray : AppColors.white,
                         BlendMode.srcIn),
@@ -54,11 +52,9 @@ class CategoryItem extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 5.h,
-        ),
+        SizedBox(height: 5.h),
         Text(
-          categoryname,
+          context.tr(categoryModel.categoryname),
           textScaler: TextScaler.noScaling,
           style: TextStyles.categoryTextStyle,
         )

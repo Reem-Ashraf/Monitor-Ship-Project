@@ -8,8 +8,7 @@ class TextStyles {
     color: Colors.black,
     fontSize: 18.sp,
     fontWeight: FontWeight.w700,
-    // TODO: Create a font families file, add fonts to it, and reference them here.
-    fontFamily: 'ProductSans',
+    fontFamily: Constants.productSansFont,
   );
   static TextStyle stepStyle = TextStyle(
     color: AppColors.darkGray,
@@ -58,7 +57,7 @@ class TextStyles {
     color: AppColors.brown,
     fontSize: 12.sp,
     fontWeight: FontWeight.w300,
-    fontFamily: 'ProductSans',
+    fontFamily: 'Constants.productSansFont',
   );
   static TextStyle text13 = TextStyle(
     color: AppColors.gray,
@@ -73,27 +72,27 @@ class TextStyles {
       color: AppColors.blackLight,
       fontSize: 20.sp,
       fontWeight: FontWeight.w300,
-      fontFamily: 'ProductSans');
+      fontFamily: 'Constants.productSansFont');
   static TextStyle text22 = TextStyle(
       color: AppColors.white,
       fontSize: 22.sp,
-      fontFamily: 'ProductSans',
+      fontFamily: 'Constants.productSansFont',
       fontWeight: FontWeight.w700);
   static TextStyle textw500 = TextStyle(
       color: AppColors.black,
       fontWeight: FontWeight.w500,
       fontSize: 13.sp,
-      fontFamily: 'ProductSans');
+      fontFamily: 'Constants.productSansFont');
   static TextStyle textw700 = TextStyle(
       color: AppColors.black,
       fontWeight: FontWeight.w700,
       fontSize: 16.sp,
-      fontFamily: 'ProductSans');
+      fontFamily: 'Constants.productSansFont');
   static TextStyle textw700Gray = TextStyle(
       color: AppColors.gray,
       fontWeight: FontWeight.w700,
       fontSize: 16.sp,
-      fontFamily: 'ProductSans');
+      fontFamily: 'Constants.productSansFont');
   //Nunito
   static TextStyle nunito = TextStyle(
       color: AppColors.gray,
