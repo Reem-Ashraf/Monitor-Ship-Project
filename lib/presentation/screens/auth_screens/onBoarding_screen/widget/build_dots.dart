@@ -7,7 +7,9 @@ import 'on_boarding_model.dart';
 int currentPage = 0;
 
 class BuildDots extends StatelessWidget {
-  const BuildDots({super.key});
+  final int currentPage;
+
+  const BuildDots({super.key, required this.currentPage});
 
   @override
   Widget build(BuildContext context) {

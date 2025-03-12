@@ -11,7 +11,7 @@ class AppTranslationKeys {
   static const onboarding2Subtitle = "onboarding_2_subtitle";
   static const onboarding3Title = "onboarding_3_title";
   static const onboarding3Subtitle = "onboarding_3_subtitle";
-  static const shoppingNow = "shopping_now";
+  static const shoppingNow = "Shopping_now";
   static const seamlessShopping = "enjoy_a_seamless_shopping_experience";
   static const subtotal = "subtotal";
   static const trackingNumber = "tracking_number";
