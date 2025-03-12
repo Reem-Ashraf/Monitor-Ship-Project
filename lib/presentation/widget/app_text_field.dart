@@ -117,7 +117,7 @@ class AppTextFormField extends StatelessWidget {
       onChanged: onChanged,
       onTapOutside:
           unfocusOnTapOutside ? (v) => FocusScope.of(context).unfocus() : null,
-      buildCounter: (showCounter && maxLength != null)
+      buildCounter: (showCounter && (maxLength != null))
           ? (
               BuildContext context, {
               required int currentLength,
@@ -129,7 +129,8 @@ class AppTextFormField extends StatelessWidget {
                 child: Text(
                   counterText ??
                       Constants.convertNumToArabic(
-                          context.tr('$maxLength ${AppTranslationKeys.charactersLimit}'), false),
+                          context.tr(' ${AppTranslationKeys.charactersLimit}'),
+                          false),
                   style: counterStyle ?? TextStyles.product12W400,
                 ),
               )
