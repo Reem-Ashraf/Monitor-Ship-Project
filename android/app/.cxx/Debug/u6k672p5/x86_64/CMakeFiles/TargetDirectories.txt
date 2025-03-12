@@ -1,0 +1,2 @@
+E:/ali/flutter/cv_projects/Monitor-Ship-Project/android/app/.cxx/Debug/u6k672p5/x86_64/CMakeFiles/edit_cache.dir
+E:/ali/flutter/cv_projects/Monitor-Ship-Project/android/app/.cxx/Debug/u6k672p5/x86_64/CMakeFiles/rebuild_cache.dir
