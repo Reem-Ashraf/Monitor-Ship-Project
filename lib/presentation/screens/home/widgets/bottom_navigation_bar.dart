@@ -45,7 +45,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
               icon: SvgPicture.asset(
                 AppAssets.homeIcon,
                 colorFilter: ColorFilter.mode(
-                    _selectedIndex != 0 ? AppColors.lightgray : AppColors.black,
+                    _selectedIndex != 0 ? AppColors.gray : AppColors.black,
                     BlendMode.srcIn),
               ),
               label: ''),
@@ -58,7 +58,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: AppColors.black,
-        unselectedItemColor: AppColors.lightgray,
+        unselectedItemColor: AppColors.neutralGray,
         onTap: _onItemTapped,
       ),
     );
