@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "817298228272",
+    "project_id": "mentor-ship-dev",
+    "storage_bucket": "mentor-ship-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817298228272:android:faf0b1eeb6199c97acd9f5",
+        "android_client_info": {
+          "package_name": "com.example.monitor_ship_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXAzuLK2iMPAfhmkyFRjRTxpARG9JSaO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817298228272:android:fd4f5d47ab11cbfaacd9f5",
+        "android_client_info": {
+          "package_name": "com.example.monitor_ship_project.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXAzuLK2iMPAfhmkyFRjRTxpARG9JSaO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
