@@ -13,7 +13,7 @@ export '../../../presentation/screens/order/presentation/screens/track_order.dar
 export '../../../presentation/screens/welcome_screen/welcome_screen.dart';
 export 'package:go_router/go_router.dart';
 
-export '../../../presentation/screens/discover/screens/search_screen.dart';
+export '../../../presentation/screens/discover/screens/recent_search_screen.dart';
 export '../../../presentation/screens/order/presentation/screens/details_order.dart';
 export '../../../presentation/screens/profile/presention/screens/profile_setting.dart';
 export '../../../presentation/screens/profile/presention/screens/my_wishlist_board.dart';
