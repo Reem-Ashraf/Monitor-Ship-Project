@@ -15,7 +15,7 @@ Widget profileHeader(BuildContext context) {
             children: [
               const CircleAvatar(
                   radius: 40,
-                  backgroundImage: AssetImage('images/profile.jpg')), //Todo:asset image path not found
+                  backgroundImage: AssetImage('assets/images/profile.jpg')), //Todo:asset image path not found
               const SizedBox(width: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

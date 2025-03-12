@@ -84,6 +84,7 @@ class GroupRoutes {
           path: RoutesName.profileScreen,
           builder: (context, state) => ProfileScreen()),
       GoRoute(
+         name: RoutesName.productDetails,
           path: RoutesName.productDetails,
           builder: (context, state) => ProductDetails()),
           GoRoute(

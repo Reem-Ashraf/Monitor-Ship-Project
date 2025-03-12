@@ -35,7 +35,7 @@ class _ProfileAppState extends State<ProfileApp> {
             Stack(
               alignment: Alignment.bottomRight,
               children: [
-                CircleAvatar(radius: 50, backgroundColor: Colors.pink[100], backgroundImage: const AssetImage('images/profile.jpg')),
+                CircleAvatar(radius: 50, backgroundColor: Colors.pink[100], backgroundImage: const AssetImage('assets/images/profile.jpg')),
                 CircleAvatar(
                   radius: 16, backgroundColor: Colors.black,
                   child: IconButton(icon: const Icon(Icons.camera_alt, size: 16, color: Colors.white), onPressed: () {}),

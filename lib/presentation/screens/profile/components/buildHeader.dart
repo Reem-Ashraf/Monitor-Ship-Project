@@ -12,7 +12,8 @@ Widget buildHeader(BuildContext context) {
       child: Row(
         children: [
           CircleAvatar(
-              radius: 30, backgroundImage: AssetImage('images/profile.jpg')),
+              radius: 30,
+              backgroundImage: AssetImage('assets/images/profile.jpg')),
           SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

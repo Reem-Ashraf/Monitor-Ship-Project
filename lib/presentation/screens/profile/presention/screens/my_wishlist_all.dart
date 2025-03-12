@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class WishlistItem extends StatelessWidget {
   final List<Product> products = [
-    Product('images/profile.jpg', "Front Tie Mini Dress", "\$59.00", 4.5, 38),
-    Product('images/profile.jpg', "Linen Dress", "\$52.00", 4.0, 64,
+    Product('assets/images/profile.jpg', "Front Tie Mini Dress", "\$59.00", 4.5, 38),
+    Product('assets/images/profile.jpg', "Linen Dress", "\$52.00", 4.0, 64,
         oldPrice: "\$90.00"),
-    Product('images/profile.jpg', "Ohara Dress", "\$85.00", 4.8, 50),
-    Product('images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
-    Product('images/profile.jpg', "Ohara Dress", "\$85.00", 4.8, 50),
-    Product('images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
+    Product('assets/images/profile.jpg', "Ohara Dress", "\$85.00", 4.8, 50),
+    Product('assets/images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
+    Product('assets/images/profile.jpg', "Ohara Dress", "\$85.00", 4.8, 50),
+    Product('assets/images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
   ];
 
    WishlistItem({super.key});

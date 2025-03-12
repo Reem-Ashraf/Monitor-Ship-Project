@@ -26,25 +26,25 @@ class _WishlistScreenState extends State<WishlistScreen> {
 
   final List<Category> categories = [
     Category([
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
     ], "Going out outfits", 36),
     Category([
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
     ], "Office Fashion", 20),
     Category([
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg",
-      "images/profile.jpg", //todo: path to image not found
-      "images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg",
+      "assets/images/profile.jpg", //todo: path to image not found
+      "assets/images/profile.jpg",
     ], "Office Fashion", 20),
   ];
 
@@ -77,7 +77,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomBottomNav(selectedIndex: 1),
+    //  bottomNavigationBar: CustomBottomNav(selectedIndex: 1),
     );
   }
 }

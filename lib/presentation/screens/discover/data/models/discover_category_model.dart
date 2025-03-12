@@ -39,7 +39,7 @@ static final List<DiscoverCategoryModel> discoverCategoryModellist = [
     bigCircleColor: AppColors.shoesBigCircle,
   ),
   DiscoverCategoryModel(
-    text1: 'COLLECTION',
+    text1: 'Collection',
     image: AppAssets.collectionImage,
     backgroundColor: AppColors.collectionBackground,
     smallCircleColor: AppColors.collectionSmallCircle,

@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
+import 'package:flutter_svg/svg.dart';
+import 'package:monitor_ship_project/presentation/screens/my_orders/my_orders.dart';
+import 'package:monitor_ship_project/presentation/screens/profile/presention/screens/profile.dart';
 import '../../../../../core/utils/constants/app_assets.dart';
 import '../../../../../core/utils/constants/colors.dart';
 import '../../discover/screens/discover_full.dart';
@@ -22,8 +23,8 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   static final List<Widget> _pages = <Widget>[
     const Homescreen(),
     const DiscoverFullScreen(),
-    Center(child: Text('cart Page', style: TextStyle(fontSize: 24.sp))),
-    Center(child: Text('Profile Page', style: TextStyle(fontSize: 24.sp))),
+    OrdersScreen(),
+    const ProfileScreen()
   ];
 
   void _onItemTapped(int index) {
@@ -44,7 +45,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
               icon: SvgPicture.asset(
                 AppAssets.homeIcon,
                 colorFilter: ColorFilter.mode(
-                    _selectedIndex != 0 ? AppColors.lightgray : AppColors.black,
+                    _selectedIndex != 0 ? AppColors.gray : AppColors.black,
                     BlendMode.srcIn),
               ),
               label: ''),
@@ -57,7 +58,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: AppColors.black,
-        unselectedItemColor: AppColors.lightgray,
+        unselectedItemColor: AppColors.neutralGray,
         onTap: _onItemTapped,
       ),
     );

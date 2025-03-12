@@ -27,7 +27,7 @@ class SearchTextField extends StatelessWidget {
           decoration: InputDecoration(
             icon: IconButton(
               onPressed: () {
-                context.goNamed(RoutesName.foundResultScreen);
+                context.push(RoutesName.foundResultScreen);
               },
               icon: Icon(Icons.search, color: AppColors.gray),
             ),
