@@ -1,3 +1,8 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../presentation/screens/auth_screens/login_screen/domain/usecases/login_usecase.dart';
+import '../../../presentation/screens/auth_screens/login_screen/presentation/cubit/auth_cubit.dart';
+import '../../injection_container.dart';
 import 'routes_exports.dart';
 import 'routes_name.dart';
 
@@ -17,7 +22,10 @@ class GroupRoutes {
       GoRoute(
         name: RoutesName.loginScreen,
         path: RoutesName.loginScreen,
-        builder: (context, state) => LoginScreen(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(getIt<LoginUseCase>()),
+          child: LoginScreen(),
+        ),
       ),
       GoRoute(
         name: RoutesName.checkOutScreen1,
@@ -84,10 +92,10 @@ class GroupRoutes {
           path: RoutesName.profileScreen,
           builder: (context, state) => ProfileScreen()),
       GoRoute(
-         name: RoutesName.productDetails,
+          name: RoutesName.productDetails,
           path: RoutesName.productDetails,
           builder: (context, state) => ProductDetails()),
-          GoRoute(
+      GoRoute(
           name: RoutesName.foundResultScreen,
           path: RoutesName.foundResultScreen,
           builder: (context, state) {
