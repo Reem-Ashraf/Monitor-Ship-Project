@@ -4,14 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:monitor_ship_project/core/utils/app_routes/routes_name.dart';
 import 'package:monitor_ship_project/core/utils/helpers/regx.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/forget_password_widget.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_by_social_media_implement.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/login_text_widget.dart';
-import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/widget/or_login_with_widget.dart';
-import '../../../../core/language/app_translation_key.dart';
-import '../../../widget/app_button.dart';
-import '../../../widget/app_text_field.dart';
-import '../../../../core/utils/helpers/spacing.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/presentation/widget/forget_password_widget.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/presentation/widget/login_by_social_media_implement.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/presentation/widget/login_text_widget.dart';
+import 'package:monitor_ship_project/presentation/screens/auth_screens/login_screen/presentation/widget/or_login_with_widget.dart';
+import '../../../../../core/language/app_translation_key.dart';
+import '../../../../widget/app_button.dart';
+import '../../../../widget/app_text_field.dart';
+import '../../../../../core/utils/helpers/spacing.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

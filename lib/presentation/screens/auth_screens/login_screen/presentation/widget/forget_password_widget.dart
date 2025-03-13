@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/language/app_translation_key.dart';
+import '../../../../../../core/language/app_translation_key.dart';
 
 class ForgetPasswordWidget extends StatelessWidget {
   ForgetPasswordWidget({super.key, required this.onTap});

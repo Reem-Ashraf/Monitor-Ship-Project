@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../../../../core/utils/constants/app_assets.dart';
+import '../../../../../../core/utils/constants/app_assets.dart';
 import 'login_by_social_media_model.dart';
 import 'login_by_social_media_widget.dart';
 
