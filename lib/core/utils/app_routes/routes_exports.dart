@@ -1,6 +1,6 @@
 // TODO: Import routes here for a cleaner, more organized routes page class.
 
-export '../../../presentation/screens/auth_screens/login_screen/login_screen.dart';
+export '../../../presentation/screens/auth_screens/login_screen/presentation/login_screen.dart';
 export '../../../presentation/screens/auth_screens/onBoarding_screen/onBoarding_screen1.dart';
 export '../../../presentation/screens/checkout_screen/checkout_screen1.dart';
 export '../../../presentation/screens/checkout_screen/checkout_screen2.dart';
