@@ -1,14 +1,15 @@
+
 import 'routes_exports.dart';
 import 'routes_name.dart';
 
 class GroupRoutes {
   static final GoRouter router = GoRouter(
     routes: [
-      GoRoute(
-        name: RoutesName.welcomeScreen,
-        path: RoutesName.welcomeScreen,
-        builder: (context, state) => const WelcomeScreen(),
-      ),
+      // GoRoute(
+      //   name: RoutesName.welcomeScreen,
+      //   path: RoutesName.welcomeScreen,
+      //   builder: (context, state) => const WelcomeScreen(),
+      // ),
       GoRoute(
         name: RoutesName.onBoardingScreen1,
         path: RoutesName.onBoardingScreen1,
@@ -92,6 +93,12 @@ class GroupRoutes {
           path: RoutesName.foundResultScreen,
           builder: (context, state) {
             return FoundResultScreen();
+          }),
+          GoRoute(
+          name: RoutesName.updateScreen,
+          path: RoutesName.updateScreen,
+          builder: (context, state) {
+            return UpdateScreen();
           }),
     ],
   );

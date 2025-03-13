@@ -1,5 +1,5 @@
 class RoutesName {
-  static const String welcomeScreen = "/";
+ // static const String welcomeScreen = "/";
   static const String onBoardingScreen1 = "/onBoardingScreen1";
   static const String onBoardingScreen2 = "/onBoardingScreen2";
   static const String onBoardingScreen3 = "/onBoardingScreen3";
@@ -27,4 +27,5 @@ class RoutesName {
   static final String profileScreen = '/profileScreen';
   static final String productDetails = '/productDetails';
   static final String foundResultScreen = '/foundResultScreen';
+  static final String updateScreen = '/';
 }

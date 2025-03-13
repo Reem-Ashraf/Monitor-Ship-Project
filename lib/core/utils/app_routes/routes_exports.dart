@@ -22,3 +22,4 @@ export '../../../presentation/screens/profile/presention/screens/setting.dart';
 export '../../../presentation/screens/profile/presention/screens/profile.dart';
 export '../../../presentation/screens/Search/presentation/view/widget/product_details.dart';
 export '../../../presentation/screens/discover/screens/found_result_search_screen.dart';
+export '../../../presentation/screens/update_screen/update_screen.dart';
