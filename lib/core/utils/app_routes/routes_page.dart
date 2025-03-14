@@ -1,15 +1,14 @@
-
 import 'routes_exports.dart';
 import 'routes_name.dart';
 
 class GroupRoutes {
   static final GoRouter router = GoRouter(
     routes: [
-      // GoRoute(
-      //   name: RoutesName.welcomeScreen,
-      //   path: RoutesName.welcomeScreen,
-      //   builder: (context, state) => const WelcomeScreen(),
-      // ),
+      GoRoute(
+        name: RoutesName.welcomeScreen,
+        path: RoutesName.welcomeScreen,
+        builder: (context, state) => const WelcomeScreen(),
+      ),
       GoRoute(
         name: RoutesName.onBoardingScreen1,
         path: RoutesName.onBoardingScreen1,
@@ -85,21 +84,29 @@ class GroupRoutes {
           path: RoutesName.profileScreen,
           builder: (context, state) => ProfileScreen()),
       GoRoute(
-         name: RoutesName.productDetails,
+          name: RoutesName.productDetails,
           path: RoutesName.productDetails,
           builder: (context, state) => ProductDetails()),
-          GoRoute(
+      GoRoute(
           name: RoutesName.foundResultScreen,
           path: RoutesName.foundResultScreen,
           builder: (context, state) {
             return FoundResultScreen();
           }),
-          GoRoute(
+      GoRoute(
           name: RoutesName.updateScreen,
           path: RoutesName.updateScreen,
           builder: (context, state) {
             return UpdateScreen();
           }),
     ],
+    redirect: (context, state) async {
+      bool updateRequired = await isUpdateRequired();
+      if (updateRequired) {
+        return RoutesName.updateScreen;
+      }
+
+      return null;
+    },
   );
 }

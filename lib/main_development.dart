@@ -13,6 +13,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   Bloc.observer = MyBlocObserver();
   await ScreenUtil.ensureScreenSize();
   await EasyLocalization.ensureInitialized();
@@ -25,6 +26,7 @@ void main() async {
       startLocale: const Locale('en'),
       child: const MyApp()));
 }
+
 
 
 

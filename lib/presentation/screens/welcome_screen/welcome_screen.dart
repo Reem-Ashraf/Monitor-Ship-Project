@@ -62,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                   child: BlurButton(
                     text: 'Get Started',
                     onTap: () {
-                      context.goNamed(RoutesName.onBoardingScreen1);
+                      context.go(RoutesName.onBoardingScreen1);
                     },
                   ),
                 )
