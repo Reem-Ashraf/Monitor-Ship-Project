@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/core/utils/constants/text_style.dart';
 import 'package:monitor_ship_project/core/utils/helpers/app_update_functions.dart';
 
@@ -23,8 +24,8 @@ class UpdateScreen extends StatelessWidget {
             GestureDetector(
               onTap: () => launchURL(),
               child: Platform.isAndroid
-                  ? Image.asset("assets/images/google_play.png", width: 100.w)
-                  : Image.asset("assets/images/apple_stor.png", width: 100.w),
+                  ? Image.asset(AppAssets.googlePlay, width: 100.w)
+                  : Image.asset(AppAssets.appleIcon, width: 100.w),
             ),
           ],
         ),
