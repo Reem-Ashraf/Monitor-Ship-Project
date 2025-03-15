@@ -1,3 +1,5 @@
+import 'package:monitor_ship_project/core/utils/helpers/app_update_functions.dart';
+
 import 'routes_exports.dart';
 import 'routes_name.dart';
 
