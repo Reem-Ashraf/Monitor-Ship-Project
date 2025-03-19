@@ -10,6 +10,7 @@ import 'package:monitor_ship_project/core/serices/firebase_remote_config_service
 import 'core/bloc_observer.dart';
 import 'firebase_options.dart';
 import 'my_app.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

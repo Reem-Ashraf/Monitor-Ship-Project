@@ -27,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ],
         ),
       ),
-      // bottomNavigationBar: CustomBottomNav(selectedIndex: 3), //Todo: Remove this line 
+     
     );
   }
 }

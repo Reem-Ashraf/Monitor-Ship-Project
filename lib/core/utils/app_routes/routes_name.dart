@@ -1,9 +1,9 @@
 class RoutesName {
-  static const String welcomeScreen = "/";
+  static const String welcomeScreen = "/welcome"; //TODO: change 
   static const String onBoardingScreen1 = "/onBoardingScreen1";
   static const String onBoardingScreen2 = "/onBoardingScreen2";
   static const String onBoardingScreen3 = "/onBoardingScreen3";
-  static const String loginScreen = "/loginScreen";
+  static const String loginScreen = "/"; //TODO:change
   static const String checkOutScreen1 = "/checkOutScreen1";
   static const String checkOutScreen2 = "/checkOutScreen2";
   static const String orderScreen = "/orderScreen";
