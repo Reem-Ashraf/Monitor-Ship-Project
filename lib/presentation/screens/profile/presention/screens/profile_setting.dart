@@ -22,7 +22,7 @@ class _ProfileAppState extends State<ProfileApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(icon: const Icon(Icons.arrow_back, color: Colors.black), onPressed: () {}),
+        leading: IconButton(icon: const Icon(Icons.arrow_back, color: Colors.black), onPressed: () { Navigator.pop(context);}),
         backgroundColor: Colors.transparent, elevation: 0,
         title: const Text("Profile Setting", style: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold)),
         centerTitle: true,

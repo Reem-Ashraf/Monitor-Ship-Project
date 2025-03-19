@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/firebase_options.dart';
 import 'core/bloc_observer.dart';
 import 'my_app.dart';
-
+import 'package:firebase_analytics/firebase_analytics.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
