@@ -1,8 +1,4 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../presentation/screens/auth_screens/login_screen/domain/usecases/login_usecase.dart';
-import '../../../presentation/screens/auth_screens/login_screen/presentation/cubit/auth_cubit.dart';
-import '../../injection_container.dart';
 import 'routes_exports.dart';
 import 'routes_name.dart';
 
@@ -101,6 +97,20 @@ class GroupRoutes {
           builder: (context, state) {
             return FoundResultScreen();
           }),
+      GoRoute(
+          name: RoutesName.updateScreen,
+          path: RoutesName.updateScreen,
+          builder: (context, state) {
+            return UpdateScreen();
+          }),
     ],
+    redirect: (context, state) async {
+      bool updateRequired = await isUpdateRequired();
+      if (updateRequired) {
+        return RoutesName.updateScreen;
+      }
+
+      return null;
+    },
   );
 }
