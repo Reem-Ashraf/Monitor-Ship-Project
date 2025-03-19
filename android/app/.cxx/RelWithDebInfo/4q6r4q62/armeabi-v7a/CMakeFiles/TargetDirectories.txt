@@ -1,0 +1,2 @@
+C:/Users/Google/Downloads/Monitor-Ship-Project-development/android/app/.cxx/RelWithDebInfo/4q6r4q62/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Google/Downloads/Monitor-Ship-Project-development/android/app/.cxx/RelWithDebInfo/4q6r4q62/armeabi-v7a/CMakeFiles/rebuild_cache.dir
