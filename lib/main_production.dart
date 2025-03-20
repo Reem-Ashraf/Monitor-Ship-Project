@@ -7,20 +7,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/firebase_options.dart';
 import 'core/bloc_observer.dart';
+import 'core/cache/cache_helper.dart';
 import 'my_app.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-   FlutterError.onError = (errorDetails) {
+  FlutterError.onError = (errorDetails) {
     FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
   };
   PlatformDispatcher.instance.onError = (error, stack) {
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
     return true;
   };
+  CacheHelper.init();
   Bloc.observer = MyBlocObserver();
   await ScreenUtil.ensureScreenSize();
   await EasyLocalization.ensureInitialized();

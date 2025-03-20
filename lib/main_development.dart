@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/injection_container.dart';
 import 'package:monitor_ship_project/core/serices/firebase_remote_config_service.dart';
 import 'core/bloc_observer.dart';
+import 'core/cache/cache_helper.dart';
 import 'firebase_options.dart';
 import 'my_app.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -24,8 +25,11 @@ void main() async {
     FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
     return true;
   };
-FirebaseRemoteConfigService firebaseRemoteConfigService=FirebaseRemoteConfigService();
-firebaseRemoteConfigService.initRemoteConfig();
+  FirebaseRemoteConfigService firebaseRemoteConfigService =
+      FirebaseRemoteConfigService();
+  firebaseRemoteConfigService.initRemoteConfig();
+  CacheHelper.init();
+
   Bloc.observer = MyBlocObserver();
   setupDependencyInjector();
   await ScreenUtil.ensureScreenSize();
@@ -39,8 +43,3 @@ firebaseRemoteConfigService.initRemoteConfig();
       startLocale: const Locale('en'),
       child: const MyApp()));
 }
-
-
-
-
-

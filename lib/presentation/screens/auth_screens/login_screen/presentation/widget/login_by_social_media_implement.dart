@@ -1,6 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../../core/cache/cache_helper.dart';
+import '../../../../../../core/utils/app_routes/routes_name.dart';
 import '../../../../../../core/utils/constants/app_assets.dart';
 import '../cubit/auth_cubit.dart';
 import 'login_by_social_media_model.dart';
@@ -11,7 +14,20 @@ class LoginBySocialMediaImplement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  BlocBuilder<AuthCubit, AuthState>(
+    return BlocConsumer<AuthCubit, AuthState>(
+      listener: (context, state) {
+        if (state is LoginFailure) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(state.message),
+            ),
+          );
+        }
+        if (state is LoginSuccess) {
+          CacheHelper.setSecureData(key: 'uid', value: state.user.uid);
+          context.go(RoutesName.bottomNavigationBarScreen);
+        }
+      },
       builder: (context, state) {
         return LoginBySocialMediaWidget(
           socialMediaButtons: [
@@ -20,7 +36,7 @@ class LoginBySocialMediaImplement extends StatelessWidget {
                 onTap: () => print("Apple Login")),
             SocialMediaModel(
                 iconPath: AppAssets.googleIcon,
-                onTap: () => context.read<AuthCubit>().logInWithGoogle() ),
+                onTap: () => context.read<AuthCubit>().logInWithGoogle()),
             SocialMediaModel(
                 iconPath: AppAssets.faceBookIcon,
                 onTap: () => print("Facebook Login")),

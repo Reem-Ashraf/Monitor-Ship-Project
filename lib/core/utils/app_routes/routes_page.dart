@@ -1,3 +1,4 @@
+import 'dart:developer';
 
 import 'routes_exports.dart';
 import 'routes_name.dart';
@@ -108,6 +109,10 @@ class GroupRoutes {
       bool updateRequired = await isUpdateRequired();
       if (updateRequired) {
         return RoutesName.updateScreen;
+      }
+      String? uid = await CacheHelper.getSecureData(key: 'uid');
+      if (uid != null) {
+        return RoutesName.bottomNavigationBarScreen;
       }
 
       return null;
