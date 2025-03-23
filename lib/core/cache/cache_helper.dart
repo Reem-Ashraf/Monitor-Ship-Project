@@ -1,6 +1,7 @@
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// TODO: Implement Singleton pattern with caching and limit cache size for faster access.
 class CacheHelper {
   static late SharedPreferences _sharedPreferences;
   static const _secureCache = FlutterSecureStorage();

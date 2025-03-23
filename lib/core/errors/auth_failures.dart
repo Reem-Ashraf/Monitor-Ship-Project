@@ -4,7 +4,7 @@ abstract class AuthFailure {
 }
 
 class LogInWithGoogleFailure extends AuthFailure {
-  LogInWithGoogleFailure(String message) : super(message);
+  LogInWithGoogleFailure(super.message);
 
   factory LogInWithGoogleFailure.fromCode(String code) {
     switch (code) {

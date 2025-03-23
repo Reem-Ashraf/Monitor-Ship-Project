@@ -12,6 +12,7 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  //TODO: Create a custom service for firebase analytics and use it across the app
 
     Future<void> _logAddToCart() async {
       await analytics.logEvent(

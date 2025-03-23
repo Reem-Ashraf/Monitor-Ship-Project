@@ -14,6 +14,7 @@ import 'my_app.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 
 void main() async {
+    //TODO: Create a seperated init services class  and use it here
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

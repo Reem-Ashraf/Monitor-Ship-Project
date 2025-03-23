@@ -17,6 +17,7 @@ class LoginBySocialMediaImplement extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is LoginFailure) {
+          // TODO: Create a custom snack bar and use it
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(state.message),
@@ -24,6 +25,7 @@ class LoginBySocialMediaImplement extends StatelessWidget {
           );
         }
         if (state is LoginSuccess) {
+          // TODO: Do not add any logic in UI
           CacheHelper.setSecureData(key: 'uid', value: state.user.uid);
           context.go(RoutesName.bottomNavigationBarScreen);
         }

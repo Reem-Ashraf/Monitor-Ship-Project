@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         builder: DevicePreview.appBuilder,
+        //TODO: Make a custom ThemeData
         theme: ThemeData(
           scaffoldBackgroundColor: AppColors.white,
           appBarTheme: AppBarTheme(
