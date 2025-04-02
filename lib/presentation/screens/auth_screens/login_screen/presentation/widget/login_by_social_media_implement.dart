@@ -25,8 +25,6 @@ class LoginBySocialMediaImplement extends StatelessWidget {
           );
         }
         if (state is LoginSuccess) {
-          // TODO: Do not add any logic in UI
-          CacheHelper.setSecureData(key: 'uid', value: state.user.uid);
           context.go(RoutesName.bottomNavigationBarScreen);
         }
       },

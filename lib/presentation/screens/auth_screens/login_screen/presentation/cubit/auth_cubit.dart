@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter/material.dart';
 
+import '../../../../../../core/cache/cache_helper.dart';
 import '../../domain/usecases/login_usecase.dart';
 
 part 'auth_state.dart';
@@ -14,7 +15,8 @@ class AuthCubit extends Cubit<AuthState> {
     emit(LoginLoading());
     try {
       final user = await _loginUseCase.logInWithGoogle();
-      emit(LoginSuccess(user!));
+      CacheHelper.setSecureData(key: 'uid', value: user!.uid);
+      emit(LoginSuccess(user));
     } catch (e) {
       emit(LoginFailure(e.toString()));
     }

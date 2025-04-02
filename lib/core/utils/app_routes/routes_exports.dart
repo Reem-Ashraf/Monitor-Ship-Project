@@ -27,6 +27,6 @@ export 'package:flutter_bloc/flutter_bloc.dart';
 
 export '../../../presentation/screens/auth_screens/login_screen/domain/usecases/login_usecase.dart';
 export '../../../presentation/screens/auth_screens/login_screen/presentation/cubit/auth_cubit.dart';
-export '../../injection_container.dart';
+export '../../initializer/injection_container.dart';
 export '../helpers/app_update_functions.dart';
 export '../../cache/cache_helper.dart';
