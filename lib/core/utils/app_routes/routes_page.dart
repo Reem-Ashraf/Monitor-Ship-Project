@@ -30,10 +30,12 @@ class GroupRoutes {
         builder: (context, state) => CheckoutScreen1(),
       ),
       GoRoute(
-        name: RoutesName.orderDetails,
-        path: RoutesName.orderDetails,
-        builder: (context, state) => OrderDetails(order: 'Order'),
-      ),
+          name: RoutesName.orderDetails,
+          path: RoutesName.orderDetails,
+          builder: (context, state) {
+            String order = "order ${state.extra}";
+            return OrderDetails(order: order);
+          }),
       GoRoute(
         name: RoutesName.checkOutScreen2,
         path: RoutesName.checkOutScreen2,
@@ -107,14 +109,13 @@ class GroupRoutes {
     ],
     redirect: (context, state) async {
       bool updateRequired = await isUpdateRequired();
-      if (updateRequired) {
+      if (updateRequired && state.uri.path != RoutesName.updateScreen) {
         return RoutesName.updateScreen;
       }
       String? uid = await CacheHelper.getSecureData(key: 'uid');
-      if (uid != null) {
+      if (uid != null && state.uri.path == RoutesName.loginScreen) {
         return RoutesName.bottomNavigationBarScreen;
       }
-
       return null;
     },
   );
