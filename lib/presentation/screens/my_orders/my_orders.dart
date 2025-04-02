@@ -32,7 +32,7 @@ class _OrdersScreenState extends State<OrdersScreen>
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "${context.tr(AppTranslationKeys.myOrders)}",
+          context.tr(AppTranslationKeys.myOrders),
           style: TextStyles.appBarText,
         ).tr(), // Localization support
         elevation: 0,
