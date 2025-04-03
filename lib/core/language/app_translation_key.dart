@@ -95,4 +95,6 @@ class AppTranslationKeys {
   static const enjoyASeamlessShoppingExperience =
       "Enjoy_a_seamless_shopping_experience";
   static const thankYouForPurchaseMessage = "thank_you_for_purchase";
+  static const recommended = "recommended";
+  static const topCollection = "Top Collection";
 }

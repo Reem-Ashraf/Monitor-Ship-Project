@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../../core/utils/app_routes/routes_name.dart';
+import '../../../../../../core/utils/constants/colors.dart';
 import 'build_rating.dart';
 import 'build_stack_product_details.dart';
 import 'custom_bottom.dart';
@@ -12,9 +15,9 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
-  //TODO: Create a custom service for firebase analytics and use it across the app
+    //TODO: Create a custom service for firebase analytics and use it across the app
 
-    Future<void> _logAddToCart() async {
+    Future<void> logAddToCart() async {
       await analytics.logEvent(
         name: 'add_to_cart',
         parameters: {
@@ -42,15 +45,21 @@ class ProductDetails extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Sportwear Set", style: TextStyle(fontSize: 18, color: Colors.black)),
+                      Text("Sportwear Set",
+                          style: TextStyle(fontSize: 18, color: Colors.black)),
                       BuildRating(),
                     ],
                   ),
-                  Text("\$ 80.88", style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600, color: Colors.black)),
+                  Text("\$ 80.88",
+                      style: TextStyle(
+                          fontSize: 26,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black)),
                 ],
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-              const Text("Description", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
+              const Text("Description",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
               const Text(
                 "Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.",
                 maxLines: 4,
@@ -59,13 +68,17 @@ class ProductDetails extends StatelessWidget {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.02),
               const ReviewCard(),
-              const Text("Similar Product", style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
+              const Text("Similar Product",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
               const SimilarProductListView(),
-              
-            
               GestureDetector(
-                onTap: _logAddToCart,
-                child: const CustomBottom(color: Color(0xff343434), title: "Add To Cart"),
+                onTap: () {
+                  logAddToCart();
+                  context.push(RoutesName.checkOutScreen1);
+                },
+                child: CustomBottom(
+                    color: AppColors.buttonBackgroundColor,
+                    title: "Add To Cart"),
               ),
             ],
           ),
