@@ -74,7 +74,7 @@ class ProductDetails extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   logAddToCart();
-                  context.push(RoutesName.checkOutScreen1);
+                  context.push(RoutesName.yourCart);
                 },
                 child: CustomBottom(
                     color: AppColors.buttonBackgroundColor,

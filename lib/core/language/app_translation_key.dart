@@ -97,4 +97,9 @@ class AppTranslationKeys {
   static const thankYouForPurchaseMessage = "thank_you_for_purchase";
   static const recommended = "recommended";
   static const topCollection = "Top Collection";
+  static const yourCart = "yourcart";
+  static const productprice = "Productprice";
+  static const proceedtocheckout = "Proceedtocheckout";
+  static const size = "Size";
+  static const color = "Color";
 }

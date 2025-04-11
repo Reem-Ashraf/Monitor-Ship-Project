@@ -95,6 +95,10 @@ class GroupRoutes {
           path: RoutesName.productDetails,
           builder: (context, state) => ProductDetails()),
       GoRoute(
+          name: RoutesName.yourCart,
+          path: RoutesName.yourCart,
+          builder: (context, state) => YourCart()),
+      GoRoute(
           name: RoutesName.foundResultScreen,
           path: RoutesName.foundResultScreen,
           builder: (context, state) {

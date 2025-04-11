@@ -24,6 +24,7 @@ export '../../../presentation/screens/Search/presentation/view/widget/product_de
 export '../../../presentation/screens/discover/screens/found_result_search_screen.dart';
 export '../../../presentation/screens/update_screen/update_screen.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
+export '../../../presentation/screens/order/presentation/screens/your_cart.dart';
 
 export '../../../presentation/screens/auth_screens/login_screen/domain/usecases/login_usecase.dart';
 export '../../../presentation/screens/auth_screens/login_screen/presentation/cubit/auth_cubit.dart';

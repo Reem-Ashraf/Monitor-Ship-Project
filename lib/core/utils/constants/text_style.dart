@@ -5,7 +5,7 @@ import 'constants.dart';
 
 class TextStyles {
   static TextStyle appBarText = TextStyle(
-    color: Colors.black,
+    color: AppColors.blackGray,
     fontSize: 18.sp,
     fontWeight: FontWeight.w700,
     fontFamily: Constants.productSansFont,
@@ -23,27 +23,27 @@ class TextStyles {
   static TextStyle greyShade3FontSize16 =
       TextStyle(color: AppColors.greyShade3, fontSize: 16.sp);
 
-  static TextStyle greyShade3FontSizeBold16 =
-  TextStyle(color: AppColors.greyShade3, fontSize: 16.sp,fontWeight: FontWeight.bold);
+  static TextStyle greyShade3FontSizeBold16 = TextStyle(
+      color: AppColors.greyShade3,
+      fontSize: 16.sp,
+      fontWeight: FontWeight.bold);
   static TextStyle greyShade3FontSize18 =
       TextStyle(fontWeight: FontWeight.bold, fontSize: 18.sp);
   static TextStyle greyShade3FontSize14 =
       TextStyle(color: AppColors.greyShade3, fontSize: 14.sp);
   static TextStyle greyFontSize14 =
-  TextStyle(color: AppColors.grey, fontSize: 14.sp);
-  static TextStyle fontSize16 =
-  TextStyle(fontSize: 16.sp);
+      TextStyle(color: AppColors.grey, fontSize: 14.sp);
+  static TextStyle fontSize16 = TextStyle(fontSize: 16.sp);
 
-  static TextStyle fontSize15 =
-  TextStyle(fontSize: 15.sp);
+  static TextStyle fontSize15 = TextStyle(fontSize: 15.sp);
   static TextStyle blackFont16 =
-  TextStyle(color: AppColors.black, fontSize: 16.sp);
+      TextStyle(color: AppColors.black, fontSize: 16.sp);
   static TextStyle blackFont14 =
-  TextStyle(color: AppColors.black, fontSize: 14.sp);
+      TextStyle(color: AppColors.black, fontSize: 14.sp);
   static TextStyle blackFont24 =
-  TextStyle(color: AppColors.black, fontSize: 24.sp);
+      TextStyle(color: AppColors.black, fontSize: 24.sp);
   static TextStyle blackFont14W400 =
-  TextStyle(color: Colors.black, fontSize: 14,fontWeight: FontWeight.w400);
+      TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w400);
   static TextStyle titleStyle = TextStyle(
     color: AppColors.darkGray,
     fontSize: 25.sp,
@@ -57,11 +57,18 @@ class TextStyles {
     color: AppColors.brown,
     fontSize: 12.sp,
     fontWeight: FontWeight.w300,
-    fontFamily: 'Constants.productSansFont',
+    fontFamily: Constants.productSansFont,
   );
   static TextStyle text13 = TextStyle(
     color: AppColors.gray,
     fontSize: 13.sp,
+  );
+  static TextStyle text13w700 = TextStyle(
+    color: AppColors.blackGray,
+    fontSize: 13.sp,
+    fontFamily: Constants.productSansFont,
+    fontWeight: FontWeight.w700,
+    height: 1.54,
   );
   static TextStyle inputStyle = TextStyle(
     color: AppColors.lightGray,
@@ -72,27 +79,27 @@ class TextStyles {
       color: AppColors.blackLight,
       fontSize: 20.sp,
       fontWeight: FontWeight.w300,
-      fontFamily: 'Constants.productSansFont');
+      fontFamily: Constants.productSansFont);
   static TextStyle text22 = TextStyle(
       color: AppColors.white,
       fontSize: 22.sp,
-      fontFamily: 'Constants.productSansFont',
+      fontFamily: Constants.productSansFont,
       fontWeight: FontWeight.w700);
   static TextStyle textw500 = TextStyle(
       color: AppColors.black,
       fontWeight: FontWeight.w500,
       fontSize: 13.sp,
-      fontFamily: 'Constants.productSansFont');
+      fontFamily: Constants.productSansFont);
   static TextStyle textw700 = TextStyle(
       color: AppColors.black,
       fontWeight: FontWeight.w700,
       fontSize: 16.sp,
-      fontFamily: 'Constants.productSansFont');
+      fontFamily: Constants.productSansFont);
   static TextStyle textw700Gray = TextStyle(
       color: AppColors.gray,
       fontWeight: FontWeight.w700,
       fontSize: 16.sp,
-      fontFamily: 'Constants.productSansFont');
+      fontFamily: Constants.productSansFont);
   //Nunito
   static TextStyle nunito = TextStyle(
       color: AppColors.gray,
@@ -132,6 +139,13 @@ class TextStyles {
     fontWeight: FontWeight.w600,
     height: 1.60,
     letterSpacing: -0.05,
+  );
+  static TextStyle text10w500 = TextStyle(
+    color: AppColors.colothingsmallcircle,
+    fontSize: 10.sp,
+    fontFamily: 'Product Sans Medium',
+    fontWeight: FontWeight.w500,
+    height: 2,
   );
   static TextStyle product14LightW400 = TextStyle(
     color: AppColors.black,
