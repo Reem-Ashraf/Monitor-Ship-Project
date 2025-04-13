@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import '../../../../../../core/errors/auth_failures.dart';
 import '../../domain/repositories/authentication_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
@@ -27,6 +29,7 @@ class AuthenticationRepository implements AuthenticationRepositoryBase {
           await _firebaseAuth.signInWithCredential(credential);
       return userCredential.user;
     } catch (e) {
+      log('Error during Google Sign In: $e');
       throw LogInWithGoogleFailure.fromCode(e.toString());
     }
   }

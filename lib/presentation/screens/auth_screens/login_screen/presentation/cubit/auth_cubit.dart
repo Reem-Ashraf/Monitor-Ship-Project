@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
@@ -18,6 +20,7 @@ class AuthCubit extends Cubit<AuthState> {
       CacheHelper.setSecureData(key: 'uid', value: user!.uid);
       emit(LoginSuccess(user));
     } catch (e) {
+      log(e.toString());
       emit(LoginFailure(e.toString()));
     }
   }
