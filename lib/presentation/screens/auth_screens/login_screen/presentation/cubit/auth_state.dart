@@ -25,3 +25,11 @@ class LoginFailure extends AuthState {
   @override
   List<Object?> get props => [message];
 }
+class LogoutLoading extends AuthState {}
+class LogoutSuccess extends AuthState {}
+class LogoutFailure extends AuthState {
+  final String message;
+  LogoutFailure(this.message);
+  @override
+  List<Object?> get props => [message];
+}

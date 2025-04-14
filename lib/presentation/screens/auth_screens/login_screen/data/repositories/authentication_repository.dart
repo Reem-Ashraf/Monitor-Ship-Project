@@ -1,5 +1,8 @@
 import 'dart:developer';
 
+import 'package:monitor_ship_project/core/utils/app_routes/routes_exports.dart';
+
+import '../../../../../../core/cache/cache_helper.dart';
 import '../../../../../../core/errors/auth_failures.dart';
 import '../../domain/repositories/authentication_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
@@ -38,5 +41,6 @@ class AuthenticationRepository implements AuthenticationRepositoryBase {
   Future<void> logOut() async {
     await _googleSignIn.signOut();
     await _firebaseAuth.signOut();
+    await CacheHelper.deleteSecureData(key: 'uid');
   }
 }

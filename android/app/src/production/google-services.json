@@ -48,50 +48,6 @@
           ]
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:817298228272:android:fd4f5d47ab11cbfaacd9f5",
-        "android_client_info": {
-          "package_name": "com.example.monitor_ship_project.dev"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "817298228272-c9fv43ontev205d9lq04gfkbpsd30t2l.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.monitor_ship_project.dev",
-            "certificate_hash": "9f5ae1d960416ecf5d0a455a082f7dcf89fb812b"
-          }
-        },
-        {
-          "client_id": "817298228272-33dlmktpvatnuf7pfs9d7ikdin5hjk6b.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAXAzuLK2iMPAfhmkyFRjRTxpARG9JSaO8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "817298228272-33dlmktpvatnuf7pfs9d7ikdin5hjk6b.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "817298228272-1k9pcstbthfl9ddgrl974omvn0u29vv7.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.monitorShipProject"
-              }
-            }
-          ]
-        }
-      }
     }
   ],
   "configuration_version": "1"

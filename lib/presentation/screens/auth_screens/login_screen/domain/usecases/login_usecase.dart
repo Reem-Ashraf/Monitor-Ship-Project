@@ -9,4 +9,7 @@ class LoginUseCase {
   Future<auth.User?> logInWithGoogle() {
     return _repository.logInWithGoogle();
   }
+  Future<void> logout(){
+    return _repository.logOut();
+  }
 }

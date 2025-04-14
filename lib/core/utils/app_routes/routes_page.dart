@@ -88,8 +88,12 @@ class GroupRoutes {
           path: RoutesName.settingsScreen,
           builder: (context, state) => SettingsScreen()),
       GoRoute(
-          path: RoutesName.profileScreen,
-          builder: (context, state) => ProfileScreen()),
+        path: RoutesName.profileScreen,
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(getIt<LoginUseCase>()),
+          child: ProfileScreen(),
+        ),
+      ),
       GoRoute(
           name: RoutesName.productDetails,
           path: RoutesName.productDetails,
@@ -117,6 +121,7 @@ class GroupRoutes {
         return RoutesName.updateScreen;
       }
       String? uid = await CacheHelper.getSecureData(key: 'uid');
+      log(uid.toString());
       if (uid != null && state.uri.path == RoutesName.loginScreen) {
         return RoutesName.bottomNavigationBarScreen;
       }
