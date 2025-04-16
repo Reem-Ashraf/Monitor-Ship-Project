@@ -111,7 +111,16 @@
   "show all":"show all",
   "Feature Products":"Feature Products",
   "Search":"Search",
-  "COLLECTION":"COLLECTION"
+  "COLLECTION":"COLLECTION",
+  "recommended":"recommended",
+  "TopCollection":"Top Collection",
+  "yourcart":"Your Cart",
+  "Productprice" :"Product price",
+  "Proceedtocheckout":"Proceed to checkout",
+  "Size":"Size",
+  "Color":"Color"
+
+
 
 
 

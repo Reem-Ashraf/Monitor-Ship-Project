@@ -35,7 +35,7 @@ class OrderActionButtons extends StatelessWidget {
                   context.pop();
                 },
                 child: Text(
-                  'Return home'.tr(),
+                  context.tr(AppTranslationKeys.returnHome),
                   textAlign: TextAlign.center,
                   style: TextStyles.buttonStyle
                       .copyWith(color: AppColors.lightGray),

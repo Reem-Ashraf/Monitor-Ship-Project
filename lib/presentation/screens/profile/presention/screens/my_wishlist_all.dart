@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:monitor_ship_project/presentation/screens/profile/data/models/Product.dart';
 
 class WishlistItem extends StatelessWidget {
+  //TODO: Create a custom service for firebase analytics and use it across the app
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
   final List<Product> products = [
-    Product('assets/images/profile.jpg', "Front Tie Mini Dress", "\$59.00", 4.5, 38),
+    Product('assets/images/profile.jpg', "Front Tie Mini Dress", "\$59.00", 4.5,
+        38),
     Product('assets/images/profile.jpg', "Linen Dress", "\$52.00", 4.0, 64,
         oldPrice: "\$90.00"),
     Product('assets/images/profile.jpg', "Ohara Dress", "\$85.00", 4.8, 50),
-    Product('assets/images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
+    Product(
+        'assets/images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
     Product('assets/images/profile.jpg', "Ohara Dress", "\$85.00", 4.8, 50),
-    Product('assets/images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
+    Product(
+        'assets/images/profile.jpg', "Tie Back Mini Dress", "\$67.00", 4.3, 39),
   ];
 
-   WishlistItem({super.key});
+  WishlistItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -94,9 +102,7 @@ class WishlistItem extends StatelessWidget {
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined, size: 28), label: ""),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search, size: 28),
-              label: "",
-            ),
+                icon: Icon(Icons.search, size: 28), label: ""),
             BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_bag_outlined, size: 28), label: ""),
             BottomNavigationBarItem(
@@ -108,10 +114,33 @@ class WishlistItem extends StatelessWidget {
   }
 }
 
-class ProductItem extends StatelessWidget {
+class ProductItem extends StatefulWidget {
   final Product product;
 
   const ProductItem({super.key, required this.product});
+
+  @override
+  _ProductItemState createState() => _ProductItemState();
+}
+
+class _ProductItemState extends State<ProductItem> {
+  bool isFavorite = false;
+  final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
+  void _toggleFavorite() {
+    setState(() {
+      isFavorite = !isFavorite;
+    });
+
+    analytics.logEvent(
+      name: isFavorite ? 'added_to_wishlist' : 'removed_from_wishlist',
+      parameters: {
+        'product_name': widget.product.name,
+        'price': widget.product.price,
+        'timestamp': DateTime.now().toIso8601String(),
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +152,7 @@ class ProductItem extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(
-                product.image,
+                widget.product.image,
                 height: 200,
                 width: 170,
                 fit: BoxFit.cover,
@@ -134,27 +163,35 @@ class ProductItem extends StatelessWidget {
               right: 10,
               child: CircleAvatar(
                 backgroundColor: Colors.white,
-                child: Icon(Icons.favorite, color: Colors.red),
+                radius: 18,
+                child: IconButton(
+                  icon: Icon(
+                    isFavorite ? Icons.favorite : Icons.favorite_border,
+                    color: isFavorite ? Colors.red : Colors.grey,
+                    size: 20,
+                  ),
+                  onPressed: _toggleFavorite,
+                ),
               ),
             ),
           ],
         ),
         SizedBox(height: 8),
         Text(
-          product.name,
+          widget.product.name,
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 4),
         Row(
           children: [
             Text(
-              product.price,
+              widget.product.price,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-            if (product.oldPrice != null) ...[
+            if (widget.product.oldPrice != null) ...[
               SizedBox(width: 5),
               Text(
-                product.oldPrice!,
+                widget.product.oldPrice!,
                 style: TextStyle(
                   fontSize: 14,
                   color: Colors.grey,
@@ -168,24 +205,12 @@ class ProductItem extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.star, color: Colors.amber, size: 16),
-            Text(" ${product.rating} ", style: TextStyle(fontSize: 14)),
-            Text("(${product.reviews})",
+            Text(" ${widget.product.rating} ", style: TextStyle(fontSize: 14)),
+            Text("(${widget.product.reviews})",
                 style: TextStyle(fontSize: 12, color: Colors.grey)),
           ],
         ),
       ],
     );
   }
-}
-
-class Product {
-  final String image;
-  final String name;
-  final String price;
-  final double rating;
-  final int reviews;
-  final String? oldPrice;
-
-  Product(this.image, this.name, this.price, this.rating, this.reviews,
-      {this.oldPrice});
 }

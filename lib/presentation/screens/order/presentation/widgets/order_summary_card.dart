@@ -14,6 +14,18 @@ class OrderSummaryCard extends StatelessWidget {
   const OrderSummaryCard({
     super.key,
   });
+  Widget _buildOrderDetailRow(
+      BuildContext context, String labelKey, String value,
+      {bool convertToArabic = false, bool isBold = false}) {
+    final displayValue =
+        convertToArabic ? Constants.convertNumToArabic(value, false) : value;
+    return OrderDetailsRow(
+      text1: context.tr(labelKey),
+      text2: displayValue,
+      style1: TextStyles.product14LightW400,
+      style2: TextStyles.productBold16,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,34 +61,17 @@ class OrderSummaryCard extends StatelessWidget {
                     ),
                 itemCount: 50),
           ),
-          // MyDivider(),
-          // TODO: Try to reduce repetition (Search about DRY principle) and how to handle repetitive code/widgets.
           SizedBox(
             height: 32.h,
           ),
-          OrderDetailsRow(
-            text1: context.tr(AppTranslationKeys.subtotal),
-            text2: '120.00',
-            style1: TextStyles.product14LightW400,
-            style2: TextStyles.productBold16,
-          ),
-          OrderDetailsRow(
-            text1: context.tr(AppTranslationKeys.shipping),
-            text2: '0.00',
-            style1: TextStyles.product14LightW400,
-            style2: TextStyles.productBold16,
-          ),
-
+          _buildOrderDetailRow(context, AppTranslationKeys.subtotal, '120.00'),
+          _buildOrderDetailRow(context, AppTranslationKeys.shipping, '0.00'),
           SizedBox(
             height: 12.h,
           ),
           MyDivider(),
-          OrderDetailsRow(
-            text1: context.tr(AppTranslationKeys.total),
-            text2: Constants.convertNumToArabic('120.00', false),
-            style1: TextStyles.product14LightW400,
-            style2: TextStyles.productBold16,
-          ),
+          _buildOrderDetailRow(context, AppTranslationKeys.total, '120.00',
+              convertToArabic: true),
         ],
       ),
     );

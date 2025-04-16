@@ -33,7 +33,7 @@ class _CheckoutScreen1State extends State<CheckoutScreen1> {
         ),
         centerTitle: true,
         title: Text(
-          "Check out",
+         context.tr(AppTranslationKeys.checkout),
           style: TextStyle(fontSize: 24.sp),
         ),
       ),

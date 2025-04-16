@@ -26,6 +26,7 @@ class _PageViewContentState extends State<PageViewContent> {
         },
         itemBuilder: (context, index) {
           return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               OnboardingContent(
                 onboardingItem: onboardingData[index],

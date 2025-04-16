@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '817298228272',
     projectId: 'mentor-ship-dev',
     storageBucket: 'mentor-ship-dev.firebasestorage.app',
+    androidClientId: '817298228272-4gsa0tduuv76scle634qqd2fn723kiul.apps.googleusercontent.com',
+    iosClientId: '817298228272-li30qado1rq2cfegta80mh1phhtcqflt.apps.googleusercontent.com',
     iosBundleId: 'com.example.monitorShipApp',
   );
 

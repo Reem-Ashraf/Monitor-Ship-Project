@@ -16,6 +16,7 @@ class AppTranslationKeys {
   static const subtotal = "subtotal";
   static const trackingNumber = "tracking_number";
   static const order = "order";
+  static const collection = "COLLECTION";
   static const quantity = "quantity";
   static const details = "details";
   static const cancelled = "cancelled";
@@ -36,7 +37,8 @@ class AppTranslationKeys {
   static const firstName = "first_name";
   static const lastName = "last_name";
   static const step1 = "step1";
-  static const thankYouForPurchaseViewOrderInMyOrders = "thank_you_for_purchase";
+  static const thankYouForPurchaseViewOrderInMyOrders =
+      "thank_you_for_purchase";
   static const woman = "woman";
   static const man = "man";
   static const accesory = "Accesory";
@@ -47,13 +49,15 @@ class AppTranslationKeys {
   static const fieldIsRequired = "Field is required";
   static const deliveryToHome = "Delivery to home";
   static const free = "Free";
-  static const deliveryFrom3To7BusinessDays = "Delivery from 3 to 7 business days";
+  static const deliveryFrom3To7BusinessDays =
+      "Delivery from 3 to 7 business days";
   static const thankYouMessage = "thank_you_message";
   static const thankYouForPurchase = "Thank you for your purchase.";
   static const continueShopping = "Continue shopping";
   static const canceledStatus = "CANCELED";
   static const yourOrderIsDelivered = "Your order is delivered";
-  static const rateProductToGet5PointsForCollect = "Rate product to get 5 points for collect.";
+  static const rateProductToGet5PointsForCollect =
+      "Rate product to get 5 points for collect.";
   static const orderNumber = "Order number";
   static const trackingNumberLabel = "Tracking Number";
   static const deliveryAddress = "Delivery address";
@@ -61,7 +65,8 @@ class AppTranslationKeys {
   static const returnHome = "Return home";
   static const rate = "Rate";
   static const rateProduct = "Rate Product";
-  static const wouldYouLikeToWriteAnythingAboutThisProduct = "Would you like to write anything about this product?";
+  static const wouldYouLikeToWriteAnythingAboutThisProduct =
+      "Would you like to write anything about this product?";
   static const charactersLimit = "50 characters";
   static const submitReview = "Submit Review";
   static const yourOrderIsOnTheWay = "Your order is on the way";
@@ -69,19 +74,32 @@ class AppTranslationKeys {
   static const trackOrder = "Track Order";
   static const deliveredOn = "Delivered on";
   static const trackingNumberColon = "Tracking Number :";
-  static const parcelIsSuccessfullyDelivered = "Parcel is successfully delivered";
+  static const parcelIsSuccessfullyDelivered =
+      "Parcel is successfully delivered";
   static const parcelIsOutForDelivery = "Parcel is out for delivery";
-  static const parcelIsReceivedAtDeliveryBranch = "Parcel is received at delivery Branch";
+  static const parcelIsReceivedAtDeliveryBranch =
+      "Parcel is received at delivery Branch";
   static const parcelIsInTransit = "Parcel is in transit";
   static const senderHasShippedYourParcel = "Sender has shipped your parcel";
-  static const senderIsPreparingToShipYourOrder = "Sender is preparing to ship your order";
+  static const senderIsPreparingToShipYourOrder =
+      "Sender is preparing to ship your order";
   static const thankYouForYourFeedback = "Thank you for your feedback!";
   static const weAppreciatedYourFeedback = "We appreciated your feedback.";
-  static const wellUseYourFeedbackToImproveYourExperience = "We’ll use your feedback to improve your experience.";
+  static const wellUseYourFeedbackToImproveYourExperience =
+      "We’ll use your feedback to improve your experience.";
   static const done = "Done";
-  static const whatIsYourOpinionOfGemStore = "What is your opinion of GemStore?";
+  static const whatIsYourOpinionOfGemStore =
+      "What is your opinion of GemStore?";
   static const shareYourFeedback = "Share your feedback";
   static const sendFeedback = "Send feedback";
-  static const enjoyASeamlessShoppingExperience = "Enjoy_a_seamless_shopping_experience";
+  static const enjoyASeamlessShoppingExperience =
+      "Enjoy_a_seamless_shopping_experience";
   static const thankYouForPurchaseMessage = "thank_you_for_purchase";
+  static const recommended = "recommended";
+  static const topCollection = "Top Collection";
+  static const yourCart = "yourcart";
+  static const productprice = "Productprice";
+  static const proceedtocheckout = "Proceedtocheckout";
+  static const size = "Size";
+  static const color = "Color";
 }

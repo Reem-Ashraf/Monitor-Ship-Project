@@ -16,7 +16,7 @@ class AppColors {
   static final Color grayish = Color(0xFF5A5A5A);
   static final Color shadowColor = Color(0x330E0E0E);
   static final Color tabBarColor = Color(0xFF43484B);
-  //static final Color darkGray = Color(0xFF1D1F22);
+  static final Color blackGray = Color(0xFF1D1F22);
 
   // Black
   static final Color black = Color(0xff000000);
