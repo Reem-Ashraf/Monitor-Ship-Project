@@ -1,8 +1,11 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:monitor_ship_project/core/utils/constants/app_assets.dart';
 import 'package:monitor_ship_project/presentation/screens/home/widgets/home_image_two.dart';
 import 'package:monitor_ship_project/presentation/screens/home/widgets/show_all_row.dart';
+
+import '../../../../core/language/app_translation_key.dart';
 
 class TopCollectionSection extends StatelessWidget {
   const TopCollectionSection({
@@ -14,7 +17,7 @@ class TopCollectionSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const ShowAllRow(text: 'Top Collection'),
+         ShowAllRow(text: context.tr(AppTranslationKeys.topCollection)),
         const HomeImage2(
           textList: ['Sale up to 40%', 'FOR SLIM', '&BEAUTY'],
           image: AppAssets.thirdHomeImage,

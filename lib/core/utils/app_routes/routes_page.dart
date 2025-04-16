@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'routes_exports.dart';
 import 'routes_name.dart';
 
@@ -17,7 +19,10 @@ class GroupRoutes {
       GoRoute(
         name: RoutesName.loginScreen,
         path: RoutesName.loginScreen,
-        builder: (context, state) => LoginScreen(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(getIt<LoginUseCase>()),
+          child: LoginScreen(),
+        ),
       ),
       GoRoute(
         name: RoutesName.checkOutScreen1,
@@ -25,10 +30,12 @@ class GroupRoutes {
         builder: (context, state) => CheckoutScreen1(),
       ),
       GoRoute(
-        name: RoutesName.orderDetails,
-        path: RoutesName.orderDetails,
-        builder: (context, state) => OrderDetails(order: 'Order'),
-      ),
+          name: RoutesName.orderDetails,
+          path: RoutesName.orderDetails,
+          builder: (context, state) {
+            String order = "order ${state.extra}";
+            return OrderDetails(order: order);
+          }),
       GoRoute(
         name: RoutesName.checkOutScreen2,
         path: RoutesName.checkOutScreen2,
@@ -84,15 +91,36 @@ class GroupRoutes {
           path: RoutesName.profileScreen,
           builder: (context, state) => ProfileScreen()),
       GoRoute(
-         name: RoutesName.productDetails,
+          name: RoutesName.productDetails,
           path: RoutesName.productDetails,
           builder: (context, state) => ProductDetails()),
-          GoRoute(
+      GoRoute(
+          name: RoutesName.yourCart,
+          path: RoutesName.yourCart,
+          builder: (context, state) => YourCart()),
+      GoRoute(
           name: RoutesName.foundResultScreen,
           path: RoutesName.foundResultScreen,
           builder: (context, state) {
             return FoundResultScreen();
           }),
+      GoRoute(
+          name: RoutesName.updateScreen,
+          path: RoutesName.updateScreen,
+          builder: (context, state) {
+            return UpdateScreen();
+          }),
     ],
+    redirect: (context, state) async {
+      bool updateRequired = await isUpdateRequired();
+      if (updateRequired && state.uri.path != RoutesName.updateScreen) {
+        return RoutesName.updateScreen;
+      }
+      String? uid = await CacheHelper.getSecureData(key: 'uid');
+      if (uid != null && state.uri.path == RoutesName.loginScreen) {
+        return RoutesName.bottomNavigationBarScreen;
+      }
+      return null;
+    },
   );
 }

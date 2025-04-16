@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -7,6 +9,7 @@ import 'package:monitor_ship_project/presentation/screens/my_orders/widget/quant
 import 'package:monitor_ship_project/presentation/screens/my_orders/widget/status_and_details_button_widget.dart';
 import '../../../../core/language/app_translation_key.dart';
 import '../../../../core/utils/constants/text_style.dart';
+import '../../order/presentation/screens/details_order.dart';
 import 'number_of_order_and_date.dart';
 import 'order_list_model.dart';
 
@@ -56,7 +59,13 @@ class OrderCard extends StatelessWidget {
             StatusAndDetailsButton(
               order: order,
               onTap: () {
-                context.push(RoutesName.orderDetails);
+                log('a');
+
+                context.push(
+                  RoutesName.orderDetails,
+                  extra: order.orderId,
+                );
+                log('b');
               },
             )
           ],

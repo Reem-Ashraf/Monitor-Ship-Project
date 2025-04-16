@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../core/utils/app_routes/routes_name.dart';
 import '../data/models/buildListTile.dart';
 import 'buildHeader.dart';
@@ -83,7 +82,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           Icon(Icons.wb_sunny, color: Colors.black),
                           SizedBox(width: 8),
                           Text(
-                            "LIGHT",
+                            "Light",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
@@ -101,7 +100,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           Icon(Icons.nightlight_round, color: Colors.black),
                           SizedBox(width: 8),
                           Text(
-                            "DARK",
+                            "Dark",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
@@ -134,7 +133,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                         ),
                         const SizedBox(width: 8),
                         Text(
-                          isDarkMode ? "DARK" : "LIGHT",
+                          isDarkMode ? "Dark" : "Light",
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,

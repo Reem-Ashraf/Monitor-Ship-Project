@@ -3,6 +3,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:monitor_ship_project/presentation/screens/profile/data/models/Product.dart';
 
 class WishlistItem extends StatelessWidget {
+  //TODO: Create a custom service for firebase analytics and use it across the app
   final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
   final List<Product> products = [
@@ -123,7 +124,7 @@ class ProductItem extends StatefulWidget {
 }
 
 class _ProductItemState extends State<ProductItem> {
-  bool isFavorite = false; 
+  bool isFavorite = false;
   final FirebaseAnalytics analytics = FirebaseAnalytics.instance;
 
   void _toggleFavorite() {

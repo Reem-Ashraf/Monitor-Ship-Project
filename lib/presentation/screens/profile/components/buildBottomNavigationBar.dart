@@ -19,7 +19,7 @@ class _CustomBottomNavState extends State<CustomBottomNav> {
 
   void _onItemTapped(int index) {
     setState(() => _selectedIndex = index);
-    // هنا ممكن تضيفي التنقل بين الشاشات حسب الزر المضغوط
+    
   }
 
   @override

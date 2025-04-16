@@ -72,4 +72,7 @@ class AppAssets {
   ///app assets
   static const String completedOrder = "${assetsPath}order completed .png";
   static const String productImage = "${assetsPath}order completed .png";
+
+  static const String googlePlay = "${path}images/google_play.png";
+  static const String appleStor = "${path}images/apple_stor.png";
 }

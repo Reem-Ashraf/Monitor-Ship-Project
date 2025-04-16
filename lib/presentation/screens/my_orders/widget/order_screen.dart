@@ -1,27 +1,13 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../core/language/app_translation_key.dart';
 import '../../../../core/utils/constants/colors.dart';
+import 'order_list_model.dart';
 
 class OrderCard extends StatelessWidget {
-  // TODO: In line with Clean Code guidelines (preferably <2 function arguments), create a model to streamline argument handling.
-  final String orderId;
-  final String trackingNumber;
-  final int quantity;
-  final int subtotal;
-  final String date;
-  final String status;
-  final Color statusColor;
-
-  const OrderCard({
-    super.key,
-    required this.orderId,
-    required this.trackingNumber,
-    required this.quantity,
-    required this.subtotal,
-    required this.date,
-    required this.status,
-    required this.statusColor,
-  });
+  final OrderModel order;
+  const OrderCard({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {
@@ -47,10 +33,10 @@ class OrderCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Order $orderId",
+                Text("${context.tr(AppTranslationKeys.order)} ${order.orderId}",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, fontSize: 18.sp)),
-                Text(date,
+                Text(order.date,
                     style: TextStyle(
                         color: AppColors.greyShade3, fontSize: 16.sp)),
               ],
@@ -58,10 +44,10 @@ class OrderCard extends StatelessWidget {
             SizedBox(height: 8.h),
             Row(
               children: [
-                Text("Tracking number: ",
+                Text(context.tr(AppTranslationKeys.trackingNumber),
                     style: TextStyle(
                         color: AppColors.greyShade3, fontSize: 14.sp)),
-                Text(trackingNumber,
+                Text(order.trackingNumber,
                     style: TextStyle(color: AppColors.black, fontSize: 14.sp)),
               ],
             ),
@@ -71,22 +57,22 @@ class OrderCard extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text("Quantity: ",
+                    Text(context.tr(AppTranslationKeys.quantity),
                         style: TextStyle(
                             color: AppColors.greyShade3, fontSize: 16.sp)),
-                    Text("$quantity",
+                    Text("$order.quantity",
                         style:
                             TextStyle(color: AppColors.black, fontSize: 16.sp)),
                   ],
                 ),
                 Row(
                   children: [
-                    Text("Subtotal: ",
+                    Text(context.tr(AppTranslationKeys.subtotal),
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16.sp,
                             color: AppColors.greyShade3)),
-                    Text("\$$subtotal",
+                    Text("\$$order.subtotal",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16.sp)),
                   ],
@@ -97,8 +83,9 @@ class OrderCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(status,
-                    style: TextStyle(color: statusColor, fontSize: 16.sp)),
+                Text(order.status,
+                    style:
+                        TextStyle(color: order.statusColor, fontSize: 16.sp)),
                 SizedBox(
                   height: 30.h,
                   child: ElevatedButton(
@@ -112,7 +99,8 @@ class OrderCard extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(33)),
                     ),
-                    child: Text("Details", style: TextStyle(fontSize: 16.sp)),
+                    child: Text(context.tr(AppTranslationKeys.details),
+                        style: TextStyle(fontSize: 16.sp)),
                   ),
                 ),
               ],

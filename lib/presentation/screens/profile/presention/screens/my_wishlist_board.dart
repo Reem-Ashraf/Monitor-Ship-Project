@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-
 import '../../../../../core/utils/app_routes/routes_name.dart';
 import '../../components/CategoryCard.dart';
-import '../../components/buildBottomNavigationBar.dart';
 import '../../components/bulidAppPar.dart';
 import '../../components/drawer.dart';
 import '../../data/models/category.dart';
@@ -17,13 +15,6 @@ class WishlistScreen extends StatefulWidget {
 }
 
 class _WishlistScreenState extends State<WishlistScreen> {
-  
-     int _selectedIndex = 3;
-
-  void _onItemTapped(int index) {
-    setState(() => _selectedIndex = index);
-  }
-
   final List<Category> categories = [
     Category([
       "assets/images/profile.jpg",
@@ -77,7 +68,7 @@ class _WishlistScreenState extends State<WishlistScreen> {
           ],
         ),
       ),
-    //  bottomNavigationBar: CustomBottomNav(selectedIndex: 1),
+      //  bottomNavigationBar: CustomBottomNav(selectedIndex: 1),
     );
   }
 }

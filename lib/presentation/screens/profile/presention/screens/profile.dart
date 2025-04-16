@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../components/profileHeader.dart';
-import '../../components/profileOptions.dart';
+import '../../components/profile_header.dart';
+import '../../components/profile_options.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -11,9 +11,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  int _selectedIndex = 3;
-  void _onItemTapped(int index) => setState(() => _selectedIndex = index);
-
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +19,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            profileHeader(context),
+            ProfileHeader(),
             const SizedBox(height: 20),
-            profileOptions(context),
+            ProfileOptions(),
           ],
         ),
       ),

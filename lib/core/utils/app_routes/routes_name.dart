@@ -27,4 +27,6 @@ class RoutesName {
   static final String profileScreen = '/profileScreen';
   static final String productDetails = '/productDetails';
   static final String foundResultScreen = '/foundResultScreen';
+  static final String updateScreen = '/updateScreen';
+  static final String yourCart = '/yourCart';
 }
