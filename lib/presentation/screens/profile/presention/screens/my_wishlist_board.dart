@@ -4,7 +4,6 @@ import 'package:monitor_ship_project/presentation/screens/profile/components/cat
 
 
 import '../../../../../core/utils/app_routes/routes_name.dart';
-import '../../components/buildBottomNavigationBar.dart';
 import '../../components/bulid_appPar.dart';
 import '../../components/drawer.dart';
 import '../../data/models/category.dart';

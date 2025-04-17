@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/divider.dart';
 import '../../components/drawer.dart';
-import '../../components/settingItem.dart';
+import '../../components/setting_Item.dart';
 
 class SettingsScreen extends StatefulWidget {
   // TODO: Refactor this code, Note: Keep file, class, or function under 50 lines.
